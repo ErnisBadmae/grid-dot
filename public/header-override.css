@@ -1,0 +1,100 @@
+/* Header Override - Exact Figma Specifications */
+
+/* Header Container */
+#page-header {
+  display: flex !important;
+  align-items: center !important;
+  height: 88px !important;
+  padding: 0 73px !important; /* Calculated from Figma positions */
+  gap: 48px !important; /* Space between logo and tagline */
+  background-color: #F2F0EF !important;
+  border-bottom: 1px solid #656565 !important;
+}
+
+@media (max-width: 639px) {
+  #page-header {
+    padding: 0 4% !important;
+    gap: 1rem !important;
+  }
+}
+
+/* Logo */
+.page-logo img {
+  height: 24px !important;
+  width: auto !important;
+}
+
+/* Tagline */
+.page-header__tagline {
+  color: #0033FF !important;
+  font-family: var(--font-overpass), 'Overpass Mono', monospace !important;
+  font-weight: 700 !important;
+  font-size: 24px !important;
+  line-height: 30px !important;
+  text-transform: lowercase !important;
+  margin-right: auto !important;
+  white-space: nowrap !important;
+}
+
+@media (max-width: 639px) {
+  .page-header__tagline {
+    font-size: 16px !important;
+    line-height: 20px !important;
+  }
+}
+
+/* Button "Book a Call" */
+.button.button--primary {
+  background-color: transparent !important;
+  border: 2px solid #0033FF !important;
+  color: #0033FF !important;
+  padding: 10px 24px 10px 24px !important;
+  font-family: 'Scandia', sans-serif !important;
+  font-size: 20px !important;
+  font-style: normal !important;
+  font-weight: 700 !important;
+  line-height: normal !important;
+  border-radius: 24px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  height: 39px !important;
+  min-width: 203px !important;
+  justify-content: center !important;
+  white-space: nowrap !important;
+  margin-left: 0 !important;
+  margin-right: 48px !important;
+}
+
+.button.button--primary:hover {
+  background-color: #0033FF !important;
+  color: #fff !important;
+}
+
+.button.button--primary img {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) saturate(100%) invert(17%) sepia(100%) saturate(7471%) hue-rotate(228deg) brightness(98%) contrast(143%);
+}
+
+.button.button--primary:hover img {
+  filter: brightness(0) saturate(100%) invert(100%);
+}
+
+@media (max-width: 639px) {
+  .display-hide-mobile {
+    display: none !important;
+  }
+}
+
+/* Menu Toggle */
+.mobile-menu-toggle-wrapper {
+  width: 40px;
+  height: 36px;
+}
+
+@media (min-width: 640px) {
+  .mobile-menu-toggle-wrapper {
+    display: none !important;
+  }
+}

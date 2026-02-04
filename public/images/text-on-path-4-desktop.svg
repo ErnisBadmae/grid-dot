@@ -1,0 +1,25 @@
+<svg width="1440" height="100%" viewBox="0 0 1440 1438" fill="none" xmlns="http://www.w3.org/2000/svg" style="overflow: visible;">
+  <defs>
+    <path 
+      id="curve-path-4" 
+      d="M-82.9995 3.45801C-66.9995 82.458 -27.4995 272.958 171 383.458C369.462 493.936 487.196 415.82 593.5 407.958C749 396.458 864.991 452.894 946.5 547.458C1074.5 695.958 946.5 987.458 1167.5 1235.46C1294.44 1377.91 1527.5 1400.46 1653 1425.96" 
+    />
+  </defs>
+  
+  <!-- Blue Background Line -->
+  <use href="#curve-path-4" stroke="#9AC2E4" stroke-width="24" stroke-linecap="round" fill="none" />
+
+  <!-- Animated Text -->
+  <text fill="#0033FF" font-size="24" font-family="'Overpass Mono', monospace" font-weight="500" letter-spacing="0.05em" dominant-baseline="middle">
+    <textPath href="#curve-path-4" startOffset="0%">
+      / data / product / ux / delivery / cms / cx / data-visualisation / ga4 / amazon / user-tools / modernisation / brands / global / emea / apac / data / product / ux / delivery / cms / cx / data-visualisation / ga4 / amazon / user-tools / modernisation / brands / global / emea / apac / data / product / ux / delivery / cms / cx / data-visualisation / ga4 / amazon / user-tools / modernisation / brands / global / emea / apac
+      <animate
+        attributeName="startOffset" 
+        from="-100%" 
+        to="0%"
+        dur="60s" 
+        repeatCount="indefinite" 
+      />
+    </textPath>
+  </text>
+</svg>

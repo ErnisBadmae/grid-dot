@@ -1,0 +1,34 @@
+<svg viewBox="0 0 2104 780" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <symbol id="path-symbol">
+        <path
+            id="text-path"
+            transform="translate(0 5)"
+            d="M16.5032,342.295 C16.5032,616.295 399.890759,861.068288 803.503,616.295 C1166.4644,396.174678 1328.9673,-37.3050079 1778.5,22.296 C2034.71617,56.2662574 2056.39901,308.823777 2088,458.796">
+        </path>
+    </symbol>
+
+    <g >
+        <use href="#path-symbol" stroke="white" stroke-width="30"
+            fill="none" />
+
+        <text transform="translate(0 2)" fill="#0033ff" fill-opacity="100%">
+            <textPath font-size="32" font-family="sans-serif" letter-spacing="3"
+                dominant-baseline="middle" href="#text-path"> Product Data CMS UX Product Data CMS
+                UX Product Data CMS UX Product Data CMS UX Product Data CMS UX Product Data CMS UX
+                Product Data CMS UX Product Data CMS UX Product Data CMS UX Product Data CMS UX
+                Product Data CMS UX Product Data CMS UX Product Data CMS UX Product Data CMS UX
+                Product Data CMS UX Product Data CMS UX Product Data CMS UX Product Data CMS UX
+                Product Data CMS UX Product Data CMS UX Product Data CMS UX Product Data CMS UX
+                Product Data CMS UX Product Data CMS UX Product Data CMS UX Product Data CMS UX
+                Product Data CMS UX Product Data CMS UX Product Data CMS UX Product Data CMS UX
+                Product Data CMS UX Product Data CMS UX Product Data CMS UX Product Data CMS UX
+                Product Data CMS UX Product Data CMS UX Product Data CMS UX Product Data CMS UX
+                Product Data CMS UX Product Data CMS UX Product Data CMS UX Product Data CMS UX <animate
+                    attributeName="startOffset" from="-100%" to="0%"
+                    dur="90s" repeatCount="indefinite" />
+            </textPath>
+        </text>
+    </g>
+</svg>

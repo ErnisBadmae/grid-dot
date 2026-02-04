@@ -1,0 +1,78 @@
+/* Mobile Figma Design Specifications */
+/* Based on Figma node-id: 530:73 (Mobile version) */
+
+@media (max-width: 639px) {
+  /* Mobile Header - Exact Figma specs */
+  #page-header {
+    height: auto !important;
+    min-height: 63px !important;
+    padding: 24px 16px 0 16px !important;
+  }
+
+  /* Logo Mobile */
+  .page-header__logo {
+    width: 98.42px !important;
+    height: 16px !important;
+  }
+
+  /* Tagline Mobile - CRITICAL: 12px not 24px! */
+  .page-header__tagline {
+    font-size: 12px !important;
+    line-height: 15.19px !important;
+    width: 148px;
+    height: 15px;
+  }
+
+  /* Mobile Menu Burger */
+  .page-header__menu-open {
+    width: 40px !important;
+    height: 36px !important;
+  }
+
+  /* Mobile Menu Toggle Wrapper */
+  .mobile-menu-toggle-wrapper {
+    width: 40px;
+    height: 36px;
+  }
+
+  /* Mobile Hero Section */
+  #section-1 h1 {
+    font-size: 72px !important;
+    line-height: 86.38px !important;
+  }
+
+  /* Mobile Running Line */
+  .mobile-running-line {
+    font-family: 'Overpass Mono', monospace;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 16.8px;
+    height: 17px;
+    background-color: #9AC2E4;
+    color: #0033FF;
+  }
+
+  /* Mobile Frame Width */
+  .sections-wrapper {
+    max-width: 390px;
+    margin: 0 auto;
+  }
+
+  /* Mobile Typography */
+  body {
+    font-size: 16px;
+  }
+
+  /* Mobile Padding */
+  .page-section {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+/* Tablet breakpoint (if needed) */
+@media (min-width: 640px) and (max-width: 1024px) {
+  #page-header {
+    padding: 24px 32px 0 32px;
+  }
+}

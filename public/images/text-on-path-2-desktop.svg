@@ -1,0 +1,35 @@
+<svg viewBox="0 0 2043 1459" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <symbol id="path-symbol">
+        <path
+            transform="translate(0 20)"
+            id="text-path"
+            d="M0.7725,9.6736 C382.272,41.0069 967.637784,92.4644035 1283.27,166.174 C2401.40762,427.292697 714.272,564.971918 714.272,866.674 C714.272,1031.87 1598.61,1190.17 2040.77,1248.67">
+        </path>
+    </symbol>
+
+    <g>
+        <use href="#path-symbol" stroke="white" stroke-width="30" fill="none" />
+
+        <text transform="translate(-3 2)" fill="#ff8000" fill-opacity="100%">
+            <textPath font-size="29"
+                font-family="sans-serif"
+                letter-spacing="3" dominant-baseline="middle" href="#text-path"> Product Data CMS UX
+                Product Data CMS UX Product Data CMS UX Product Data CMS UX Product Data CMS UX
+                Product Data CMS UX Product Data CMS UX Product Data CMS UX Product Data CMS UX
+                Product Data CMS UX Product Data CMS UX Product Data CMS UX Product Data CMS UX
+                Product Data CMS UX Product Data CMS UX Product Data CMS UX Product Data CMS UX
+                Product Data CMS UX Product Data CMS UX Product Data CMS UX Product Data CMS UX
+                Product Data CMS UX Product Data CMS UX Product Data CMS UX Product Data CMS UX
+                Product Data CMS UX Product Data CMS UX Product Data CMS UX Product Data CMS UX
+                Product Data CMS UX Product Data CMS UX Product Data CMS UX Product Data CMS UX
+                Product Data CMS UX Product Data CMS UX Product Data CMS UX Product Data CMS UX
+                Product Data CMS UX Product Data CMS UX Product Data CMS UX Product Data CMS UX
+                Product Data CMS UX <animate
+                    attributeName="startOffset" from="-100%" to="0%"
+                    dur="120s" repeatCount="indefinite" />
+            </textPath>
+        </text>
+    </g>
+</svg>

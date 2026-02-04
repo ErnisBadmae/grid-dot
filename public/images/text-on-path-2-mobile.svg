@@ -1,0 +1,30 @@
+<svg viewBox="0 0 394 605" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <symbol id="path-symbol">
+        <path
+            id="text-path"
+            d="M0 6C409.253 6.27888 299.671 232.699 260.581 383.011C236.874 474.169 246.374 576.211 392.353 598.408">
+        </path>
+    </symbol>
+    
+    <use href="#path-symbol" stroke="white" stroke-width="11"  fill="none" />
+
+    <text transform="translate(-1 0)" fill="#ff8000" fill-opacity="100%">
+        <textPath href="#text-path" font-size="12" font-family="sans-serif" letter-spacing="1" dominant-baseline="middle"> Product Data CMS UX Product Data CMS UX Product Data CMS UX
+            Product Data CMS UX Product Data CMS UX Product Data CMS UX Product Data CMS UX Product
+            Data CMS UX Product Data CMS UX Product Data CMS UX Product Data CMS UX Product Data CMS
+            UX Product Data CMS UX Product Data CMS UX Product Data CMS UX Product Data CMS UX
+            Product Data CMS UX Product Data CMS UX Product Data CMS UX Product Data CMS UX Product
+            Data CMS UX Product Data CMS UX Product Data CMS UX Product Data CMS UX Product Data CMS
+            UX Product Data CMS UX Product Data CMS UX Product Data CMS UX Product Data CMS UX
+            Product Data CMS UX Product Data CMS UX Product Data CMS UX Product Data CMS UX Product
+            Data CMS UX Product Data CMS UX Product Data CMS UX Product Data CMS UX Product Data CMS
+            UX Product Data CMS UX Product Data CMS UX Product Data CMS UX Product Data CMS UX <animate
+                attributeName="startOffset" from="-100%" to="0%"
+                dur="60s" repeatCount="indefinite" />
+        </textPath>
+    </text>
+    
+
+</svg>
