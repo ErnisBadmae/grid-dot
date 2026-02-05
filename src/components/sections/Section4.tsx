@@ -23,9 +23,9 @@ export default function Section4() {
       <img
         id="text-on-path-1-desktop"
         className="text-on-path"
-        src="/images/text-on-path-1-desktop.svg"
+        src="/images/text-on-path-new-desktop.svg"
         alt=""
-        style={{ top: '10px', zIndex: -1 }}
+        style={{ top: '50px', zIndex: -1, left: '-60px' }}
       />
       <img
         id="text-on-path-1-mobile"

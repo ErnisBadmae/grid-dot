@@ -231,6 +231,24 @@
   animation: fadeInUp 0.6s ease-out;
 }
 
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
 /* ===== SECTION SPECIFIC STYLES (from old site) ===== */
 
 /* Section 1 - Hero */
@@ -453,4 +471,22 @@ textarea.input-text {
 
 .position-absolute {
   position: absolute;
+}
+
+/* Contacts Section Responsive */
+.contacts-grid {
+  flex-wrap: nowrap !important;
+}
+
+@media screen and (max-width: 639px) {
+  .contacts-grid {
+    flex-direction: column !important;
+    flex-wrap: wrap !important;
+  }
+
+  .contacts-left,
+  .contacts-right {
+    max-width: 100% !important;
+    min-width: 100% !important;
+  }
 }

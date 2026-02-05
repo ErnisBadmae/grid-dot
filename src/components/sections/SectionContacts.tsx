@@ -14,10 +14,10 @@ export default function SectionContacts() {
                 backgroundColor: '#F2F0EF',
             }}
         >
-            <div style={{ maxWidth: '1440px', margin: '0 auto', display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: '60px' }}>
+            <div className="contacts-grid" style={{ maxWidth: '1440px', margin: '0 auto', display: 'flex', justifyContent: 'space-between', gap: '60px' }}>
 
                 {/* Left Column: Info & CTA */}
-                <div style={{ flex: '1 1 400px', maxWidth: '500px' }}>
+                <div className="contacts-left" style={{ flex: '1', minWidth: '300px', maxWidth: '500px' }}>
                     <h2
                         style={{
                             fontFamily: 'Scandia, sans-serif',
@@ -90,7 +90,7 @@ export default function SectionContacts() {
                 </div>
 
                 {/* Right Column: Form */}
-                <div style={{ flex: '1 1 600px', maxWidth: '800px' }}>
+                <div className="contacts-right" style={{ flex: '2', minWidth: '400px', maxWidth: '800px' }}>
                     <h2
                         style={{
                             fontFamily: 'Scandia, sans-serif',

@@ -166,7 +166,7 @@ export default function Section3() {
               color: '#0B1215',
               lineHeight: 1.2,
               margin: 0,
-              marginLeft: '-400px',
+              marginLeft: '-320px',
             }}
           >
             clarity at every step<br />

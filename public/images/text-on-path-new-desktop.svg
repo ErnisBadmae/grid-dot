@@ -1,0 +1,25 @@
+<svg width="1440" height="632" viewBox="0 0 1440 632" fill="none" xmlns="http://www.w3.org/2000/svg" style="overflow: visible;">
+  <defs>
+    <path 
+      id="curve-path" 
+      d="M-67.2686 72.171C-67.2686 72.171 72.2192 9.49271 204.864 19.3777C342.227 29.6141 516.392 72.1711 565.635 357.255C614.878 642.339 1019.71 636.306 1151.89 613.68C1257.63 595.579 1377.37 543.289 1424.02 519.406L1514.73 474.502"
+    />
+  </defs>
+  
+  <!-- Background Line -->
+  <use href="#curve-path" stroke="#F8F8F8" stroke-width="24" stroke-linecap="round" fill="none" />
+
+  <!-- Animated Text -->
+  <text fill="#0033FF" font-size="24" font-family="'Overpass Mono', monospace" font-weight="500" letter-spacing="0.05em">
+    <textPath href="#curve-path" startOffset="0%" dominant-baseline="middle">
+      / Frontend / Backend / QA / Content / CMS / Data / PM / Product / Design / Frontend / Backend / QA / Content / CMS / Data / PM / Product / Design / Frontend / Backend / QA / Content / CMS / Data / PM / Product / Design / Frontend / Backend / QA / Content / CMS / Data / PM / Product / Design / Frontend / Backend / QA / Content / CMS / Data / PM / Product / Design
+      <animate
+        attributeName="startOffset" 
+        from="-100%" 
+        to="0%"
+        dur="90s" 
+        repeatCount="indefinite" 
+      />
+    </textPath>
+  </text>
+</svg>

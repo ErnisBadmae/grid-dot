@@ -40,10 +40,25 @@ export default function ContactsSidebar() {
         </p>
 
         <button id="contact-sidebar-toggle" onClick={toggleSidebarDesktop}>
+          <span
+            style={{
+              writingMode: 'vertical-rl',
+              textOrientation: 'mixed',
+              fontFamily: "'Overpass Mono', monospace",
+              fontSize: '12px',
+              fontWeight: 600,
+              letterSpacing: '0.15em',
+              color: '#fff',
+              marginBottom: '10px',
+            }}
+          >
+            Contact Us
+          </span>
           <img
             src="/images/Vector for contacts slidebar.svg"
             alt="Toggle"
             style={{
+              width: '10px',
               transform: sidebarDesktopOn ? 'rotate(180deg)' : 'none',
               transition: 'transform 0.3s ease'
             }}
