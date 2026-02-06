@@ -45,9 +45,9 @@ export default function ContactsSidebar() {
             style={{
               writingMode: 'vertical-rl',
               textOrientation: 'mixed',
-              fontFamily: "'Overpass Mono', monospace",
-              fontSize: '12px',
-              fontWeight: 600,
+              fontFamily: "'Scandia', bold",
+              fontSize: '24px',
+              fontWeight: 700,
               letterSpacing: '0.15em',
               color: '#fff',
               marginBottom: '10px',

@@ -101,7 +101,6 @@ export default function Header() {
 
       {/* Burger Menu */}
       <button
-        onClick={toggleMobileMenu}
         style={{
           display: 'flex',
           flexDirection: 'column',
@@ -112,7 +111,7 @@ export default function Header() {
           height: '36px',
           background: 'none',
           border: 'none',
-          cursor: 'pointer',
+          cursor: 'default',
           padding: 0,
         }}
         aria-label="Toggle menu"
