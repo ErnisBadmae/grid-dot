@@ -1,6 +1,7 @@
 'use client'
 
 import { useApp } from '@/contexts/AppContext'
+import { basePath } from '@/lib/basePath'
 
 const TAGS = [
     'data', 'product', 'ux', 'delivery', 'cms', 'cx', 'data-visualisation', 'ga4', 'amazon', 'user-tools', 'modernisation',
@@ -21,7 +22,7 @@ export default function SectionSuccessStories() {
         >
             {/* Background Animated SVG */}
             <img
-                src="/images/text-on-path-4-desktop.svg"
+                src={`${basePath}/images/text-on-path-4-desktop.svg`}
                 alt=""
                 style={{
                     position: 'absolute',

@@ -1,6 +1,7 @@
 'use client'
 
 import React from 'react'
+import { basePath } from '@/lib/basePath'
 
 const LOGOS = [
     'estee lauder.png',
@@ -82,7 +83,7 @@ export default function SectionWorkWith() {
                                 }}
                             >
                                 <img
-                                    src={`/images/${logo}`}
+                                    src={`${basePath}/images/${logo}`}
                                     alt={logo.replace('.png', '')}
                                     style={{
                                         maxWidth: '100%',
@@ -99,7 +100,7 @@ export default function SectionWorkWith() {
                 {/* Footer Arrow */}
                 <div style={{ width: '100%' }}>
                     <img
-                        src="/images/Arrow Work with.svg"
+                        src={`${basePath}/images/Arrow Work with.svg`}
                         alt="Arrow"
                         style={{
                             display: 'block',

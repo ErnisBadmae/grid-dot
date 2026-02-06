@@ -2,6 +2,7 @@
 
 import React from 'react'
 import { useApp } from '@/contexts/AppContext'
+import { basePath } from '@/lib/basePath'
 
 export default function SectionContacts() {
     const { scrollTo } = useApp()
@@ -80,7 +81,7 @@ export default function SectionContacts() {
                         }}
                     >
                         Book a Call
-                        <img src="/images/Arrow 6.svg" alt="arrow" style={{ marginLeft: '12px', width: '14px', height: '14px', transform: 'rotate(-45deg)' }} />
+                        <img src={`${basePath}/images/Arrow 6.svg`} alt="arrow" style={{ marginLeft: '12px', width: '14px', height: '14px', transform: 'rotate(-45deg)' }} />
                         {/* Note: Arrow 6 usually points up-right, might need rotation if design implies horizontal or specific direction. 
                 Based on "Arrow 6.svg" often being a 45deg arrow. Left as is or rotated? 
                 Let's assume standard usage. If it's a "Go" arrow, usually 45deg up-right. 
@@ -142,7 +143,7 @@ export default function SectionContacts() {
                                     <option value="consulting">Consulting</option>
                                 </select>
                                 {/* Custom Arrow for select if needed, or browser default hidden */}
-                                <img src="/images/icon-arrow-horizontal.svg" style={{ transform: 'rotate(90deg)', width: '20px' }} alt="" />
+                                <img src={`${basePath}/images/icon-arrow-horizontal.svg`} style={{ transform: 'rotate(90deg)', width: '20px' }} alt="" />
                             </div>
                         </div>
 
@@ -164,7 +165,7 @@ export default function SectionContacts() {
                             </div>
 
                             <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '60px' }}>
-                                <img src="/images/Exclude.svg" alt="info" style={{ width: '16px', height: '16px' }} />
+                                <img src={`${basePath}/images/Exclude.svg`} alt="info" style={{ width: '16px', height: '16px' }} />
                                 <span style={{ fontFamily: 'Scandia, sans-serif', fontSize: '16px', fontWeight: 500, textDecoration: 'underline', color: '#0B1215' }}>
                                     How we use your data
                                 </span>
@@ -189,7 +190,7 @@ export default function SectionContacts() {
                                 }}
                             >
                                 Start a Conversation
-                                <img src="/images/Arrow 6.svg" alt="arrow" style={{ marginLeft: '12px', width: '20px' }} />
+                                <img src={`${basePath}/images/Arrow 6.svg`} alt="arrow" style={{ marginLeft: '12px', width: '20px' }} />
                             </button>
                         </div>
                     </form>

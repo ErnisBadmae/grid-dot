@@ -1,6 +1,7 @@
 'use client'
 
 import { useApp } from '@/contexts/AppContext'
+import { basePath } from '@/lib/basePath'
 
 export default function Header() {
   const { mobileMenuOn, toggleMobileMenu, scrollTo } = useApp()
@@ -22,30 +23,33 @@ export default function Header() {
       }}
       className={mobileMenuOn ? 'mobile-menu-on' : ''}
     >
-      {/* Logo */}
-      <a href="/" style={{ flexShrink: 0, textDecoration: 'none' }}>
-        <img
-          src="/images/Grid&Dot.svg"
-          alt="Grid&Dot"
-          style={{ height: '24px', width: 'auto' }}
-        />
-      </a>
+      <div className="header-brand-group" style={{ display: 'flex', alignItems: 'center', marginRight: 'auto' }}>
+        {/* Logo */}
+        <a href="/" style={{ flexShrink: 0, textDecoration: 'none' }}>
+          <img
+            src={`${basePath}/images/Grid&Dot.svg`}
+            alt="Grid&Dot"
+            className="header-logo-img"
+            style={{ height: '24px', width: 'auto' }}
+          />
+        </a>
 
-      {/* Tagline */}
-      <span
-        style={{
-          fontFamily: "'Overpass Mono', monospace",
-          fontSize: '24px',
-          fontWeight: 700,
-          color: '#0033FF',
-          textTransform: 'lowercase',
-          marginLeft: '48px',
-          marginRight: 'auto',
-          whiteSpace: 'nowrap',
-        }}
-      >
-        — extended expertise
-      </span>
+        {/* Tagline */}
+        <span
+          className="header-tagline"
+          style={{
+            fontFamily: "'Overpass Mono', monospace",
+            fontSize: '24px',
+            fontWeight: 700,
+            color: '#0033FF',
+            textTransform: 'lowercase',
+            marginLeft: '48px',
+            whiteSpace: 'nowrap',
+          }}
+        >
+          — extended expertise
+        </span>
+      </div>
 
       {/* Book a Call Button - Desktop */}
       <button
@@ -75,7 +79,7 @@ export default function Header() {
           e.currentTarget.style.backgroundColor = 'transparent';
           e.currentTarget.style.color = '#0033FF';
         }}
-        className="hidden md:flex"
+        className="book-call-btn hidden md:flex"
       >
         Book a Call
         <svg

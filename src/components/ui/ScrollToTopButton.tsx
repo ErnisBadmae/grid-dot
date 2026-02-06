@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useEffect, useState } from 'react'
+import { basePath } from '@/lib/basePath'
 
 export default function ScrollToTopButton() {
     const [isVisible, setIsVisible] = useState(false)
@@ -46,7 +47,7 @@ export default function ScrollToTopButton() {
             aria-label="Scroll to top"
         >
             <img
-                src="/images/Button up.svg"
+                src={`${basePath}/images/Button up.svg`}
                 alt="Scroll to top"
                 style={{
                     width: '60px', // Assuming standard visible size, adjusting if too big/small

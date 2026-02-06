@@ -1,6 +1,7 @@
 'use client'
 
 import React from 'react'
+import { basePath } from '@/lib/basePath'
 
 export default function SectionCommitment() {
     return (
@@ -71,7 +72,7 @@ export default function SectionCommitment() {
                             digital atelier
                         </span>
 
-                        <img src="/images/Arrow Our Commitment.svg" alt="arrow" style={{ width: '150px' }} />
+                        <img src={`${basePath}/images/Arrow Our Commitment.svg`} alt="arrow" style={{ width: '150px' }} />
 
                         <span
                             style={{
@@ -99,7 +100,7 @@ export default function SectionCommitment() {
                             extended expertise
                         </span>
 
-                        <img src="/images/Arrow Our Commitment.svg" alt="arrow" style={{ width: '150px' }} />
+                        <img src={`${basePath}/images/Arrow Our Commitment.svg`} alt="arrow" style={{ width: '150px' }} />
 
                         <span
                             style={{

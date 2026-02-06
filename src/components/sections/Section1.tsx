@@ -1,5 +1,7 @@
 'use client'
 
+import { basePath } from '@/lib/basePath'
+
 export default function Section1() {
   return (
     <section
@@ -64,7 +66,7 @@ export default function Section1() {
         {/* SVG Structure Layer */}
         {/* Placed absolutely to act as the grid lines and badges */}
         <img
-          src="/images/grid+vs+next.svg"
+          src={`${basePath}/images/grid+vs+next.svg`}
           alt=""
           style={{
             position: 'absolute',
@@ -157,7 +159,7 @@ export default function Section1() {
       {/* Animated Text Path */}
       {/* Animated Text Path Footer */}
       <img
-        src="/images/text-on-path-3-desktop.svg"
+        src={`${basePath}/images/text-on-path-3-desktop.svg`}
         alt=""
         className="text-on-path"
         style={{

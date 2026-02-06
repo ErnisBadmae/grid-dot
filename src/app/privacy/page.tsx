@@ -2,6 +2,7 @@
 
 import React from 'react'
 import Link from 'next/link'
+import { basePath } from '@/lib/basePath'
 
 export default function PrivacyPage() {
     return (
@@ -17,7 +18,7 @@ export default function PrivacyPage() {
         >
             {/* Close Button */}
             <Link href="/" style={{ position: 'fixed', top: '40px', right: '40px', cursor: 'pointer', zIndex: 10 }}>
-                <img src="/images/Close button.svg" alt="Close" style={{ width: '40px', height: '40px' }} />
+                <img src={`${basePath}/images/Close button.svg`} alt="Close" style={{ width: '40px', height: '40px' }} />
             </Link>
 
             <div style={{ maxWidth: '1400px', margin: '0 0' }}> {/* Increased width as requested */}

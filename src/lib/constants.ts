@@ -1,4 +1,5 @@
 // Контент сайта (извлечен из CraftCMS)
+import { basePath } from '@/lib/basePath'
 
 export const SITE_CONFIG = {
   title: 'Grid & Dot - Extended Expertise',
@@ -51,7 +52,7 @@ export const SECTION_4 = {
 export const SECTION_5 = {
   header: 'Our Partners',
   partners: [
-    { name: 'Partner 1', logo: '/images/partners/partner1.png' },
+    { name: 'Partner 1', logo: `${basePath}/images/partners/partner1.png` },
   ],
 }
 
