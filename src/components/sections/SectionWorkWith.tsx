@@ -4,13 +4,13 @@ import React from 'react'
 import { basePath } from '@/lib/basePath'
 
 const LOGOS = [
-    'Logos/Logos/LM%20logo.png',
-    'Logos/Logos/CL%20logo.png',
-    'Logos/Logos/JM%20logo.png',
-    'Logos/Logos/KL%20logo.png',
-    'Logos/Logos/AV%20logo.png',
-    'Logos/Logos/EL%20logo.png',
-    'Logos/Logos/MAC%20logo.png'
+    'Logos/Logos/LMlogo.png',
+    'Logos/Logos/CLlogo.png',
+    'Logos/Logos/JMlogo.png',
+    'Logos/Logos/KLlogo.png',
+    'Logos/Logos/AVlogo.png',
+    'Logos/Logos/ELlogo.png',
+    'Logos/Logos/MAClogo.png'
 ]
 
 export default function SectionWorkWith() {
