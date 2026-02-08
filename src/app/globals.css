@@ -39,6 +39,12 @@
     margin: 0 auto;
     max-width: 1600px;
     background-color: #F2F0EF;
+    font-family: 'Scandia', sans-serif; /* Explicitly set base font */
+  }
+
+  /* Ensure form elements inherit or use the correct font */
+  button, input, textarea, select {
+    font-family: inherit;
   }
 
   /* Typography */
