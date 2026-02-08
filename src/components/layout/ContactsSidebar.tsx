@@ -30,7 +30,7 @@ export default function ContactsSidebar() {
           whiteSpace: 'nowrap',
           opacity: sidebarDesktopOn ? 1 : 0,
           transition: 'opacity 0.3s ease',
-          fontFamily: "'Scandia', sans-serif",
+          // fontFamily: "'Scandia', sans-serif",
           fontSize: '18px',
           fontWeight: 700,
           color: '#FFFFFF'
