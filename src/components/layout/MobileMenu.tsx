@@ -157,7 +157,7 @@ export default function MobileMenu() {
         @media (max-width: 639px) {
           .mobile-menu-panel {
             width: 100%; /* Full width */
-            height: 60dvh; /* Full viewport height */
+            height: 70dvh; /* Full viewport height */
             padding: 20px; /* Smaller padding */
             overflow-y: auto; /* Allow scrolling */
             z-index: 2001; /* Ensure it's on top of everything */
