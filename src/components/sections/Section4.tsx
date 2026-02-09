@@ -17,8 +17,31 @@ export default function Section4() {
         padding: '30px 73px 80px',
       }}
     >
-      {/* Main headline with curved text */}
-      <div dangerouslySetInnerHTML={{ __html: SECTION_4.slogan }} style={{ position: 'relative', zIndex: 10 }} />
+      {/* Desktop: Responsive SVG Hero Text */}
+      <picture
+        className="desktop-only"
+        style={{
+          display: 'block',
+          width: '100%',
+          maxWidth: 'calc(100% - 146px)', // Account for 73px padding on each side
+          margin: '0 auto',
+          position: 'relative',
+          zIndex: 10
+        }}
+      >
+        <source media="(min-width: 2560px)" srcSet={`${basePath}/images/assemble-your-team-with-us-w2560.svg`} />
+        <source media="(min-width: 1920px)" srcSet={`${basePath}/images/assemble-your-team-with-us-w1920.svg`} />
+        <source media="(min-width: 1728px)" srcSet={`${basePath}/images/assemble-your-team-with-us-w1728.svg`} />
+        <source media="(min-width: 1512px)" srcSet={`${basePath}/images/assemble-your-team-with-us-w1512.svg`} />
+        <img
+          src={`${basePath}/images/assemble-your-team-with-us-w1440.svg`}
+          alt="Assemble your team with us"
+          style={{ width: '100%', height: 'auto', display: 'block' }}
+        />
+      </picture>
+
+      {/* Mobile: Original HTML Text */}
+      <div className="mobile-only" dangerouslySetInnerHTML={{ __html: SECTION_4.slogan }} style={{ position: 'relative', zIndex: 10 }} />
 
       <img
         id="text-on-path-1-desktop"
