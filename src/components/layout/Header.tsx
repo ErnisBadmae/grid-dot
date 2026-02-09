@@ -38,9 +38,10 @@ export default function Header() {
         <span
           className="header-tagline"
           style={{
-            fontFamily: "'Overpass Mono', monospace",
+            fontFamily: 'var(--font-overpass), monospace',
             fontSize: '24px',
-            fontWeight: 700,
+            fontWeight: 600, // SemiBold
+            letterSpacing: '0.02em', // 2%
             color: '#0033FF',
             textTransform: 'lowercase',
             marginLeft: '100px', /* Increased from 48px */

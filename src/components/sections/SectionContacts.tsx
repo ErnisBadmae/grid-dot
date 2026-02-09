@@ -166,7 +166,7 @@ export default function SectionContacts() {
                     >
                         Contact us via the form and we’ll respond<br />
                         promptly.<br />
-                        You can also request a case study to see how<br />
+                        You can also request a case study to see how
                         similar challenges were solved.
                     </p>
 

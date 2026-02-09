@@ -66,6 +66,11 @@ const overpass = localFont({
       weight: '700',
       style: 'normal',
     },
+    {
+      path: '../../public/fonts/overpass/OverpassMono-SemiBold.ttf',
+      weight: '600',
+      style: 'normal',
+    },
   ],
   variable: '--font-overpass',
 })
