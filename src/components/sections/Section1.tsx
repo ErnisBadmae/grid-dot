@@ -74,7 +74,7 @@ export default function Section1() {
             alt=""
             style={{
               position: 'absolute',
-              top: '0px',
+              // top: '0px', // Handled by CSS class grid-vs-next-img
               left: '50%',
               transform: 'translateX(-50%)',
               width: '100%',
@@ -83,6 +83,7 @@ export default function Section1() {
               zIndex: 1,
               pointerEvents: 'none',
             }}
+            className="grid-vs-next-img"
           />
 
           {/* Content Layer */}
@@ -276,6 +277,30 @@ export default function Section1() {
           display: 'block',
         }}
       />
-    </section >
+      <style jsx>{`
+        .grid-vs-next-img {
+          top: 0px;
+          transition: top 0.3s ease;
+        }
+        @media (min-width: 1501px) {
+          .grid-vs-next-img { top: -15px !important; }
+        }
+        @media (min-width: 1601px) {
+          .grid-vs-next-img { top: -30px !important; }
+        }
+        @media (min-width: 1701px) {
+          .grid-vs-next-img { top: -45px !important; }
+        }
+        // @media (min-width: 1801px) {
+        //   .grid-vs-next-img { top: -60px !important; }
+        // }
+        // @media (min-width: 1901px) {
+        //   .grid-vs-next-img { top: -75px !important; }
+        // }
+        // @media (min-width: 2001px) {
+        //    .grid-vs-next-img { top: -90px !important; }
+        // }
+      `}</style>
+    </section>
   )
 }
