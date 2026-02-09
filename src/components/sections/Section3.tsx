@@ -226,7 +226,7 @@ export default function Section3() {
           {/* Step 0.1 */}
           <div>
             <div style={{ marginBottom: '16px' }}>
-              <span style={{ fontFamily: 'Scandia, sans-serif', fontSize: '24px', fontWeight: 700, color: '#0033FF', marginRight: '10px' }}>[0.1]</span>
+              <span style={{ fontFamily: 'Scandia, sans-serif', fontSize: '24px', fontWeight: 700, color: '#0033FF', marginRight: '10px' }}>[1.0]</span>
               <span style={{ fontFamily: 'Scandia, sans-serif', fontSize: '20px', fontWeight: 700, color: '#0B1215' }}>we start with context</span>
             </div>
             <p style={{ fontFamily: 'Scandia, sans-serif', fontSize: '16px', fontWeight: 400, lineHeight: 1.5, color: '#0B1215', margin: 0 }}>
@@ -237,7 +237,7 @@ export default function Section3() {
           {/* Step 0.2 */}
           <div>
             <div style={{ marginBottom: '16px' }}>
-              <span style={{ fontFamily: 'Scandia, sans-serif', fontSize: '24px', fontWeight: 700, color: '#0033FF', marginRight: '10px' }}>[0.2]</span>
+              <span style={{ fontFamily: 'Scandia, sans-serif', fontSize: '24px', fontWeight: 700, color: '#0033FF', marginRight: '10px' }}>[2.0]</span>
               <span style={{ fontFamily: 'Scandia, sans-serif', fontSize: '20px', fontWeight: 700, color: '#0B1215' }}>we reach out — not outwards</span>
             </div>
             <p style={{ fontFamily: 'Scandia, sans-serif', fontSize: '16px', fontWeight: 400, lineHeight: 1.5, color: '#0B1215', margin: 0 }}>
@@ -249,7 +249,7 @@ export default function Section3() {
           {/* Step 0.3 */}
           <div>
             <div style={{ marginBottom: '16px' }}>
-              <span style={{ fontFamily: 'Scandia, sans-serif', fontSize: '24px', fontWeight: 700, color: '#0033FF', marginRight: '10px' }}>[0.3]</span>
+              <span style={{ fontFamily: 'Scandia, sans-serif', fontSize: '24px', fontWeight: 700, color: '#0033FF', marginRight: '10px' }}>[3.0]</span>
               <span style={{ fontFamily: 'Scandia, sans-serif', fontSize: '20px', fontWeight: 700, color: '#0B1215' }}>we stay involved</span>
             </div>
             <p style={{ fontFamily: 'Scandia, sans-serif', fontSize: '16px', fontWeight: 400, lineHeight: 1.5, color: '#0B1215', margin: 0 }}>
@@ -261,7 +261,7 @@ export default function Section3() {
           {/* Step 0.4 */}
           <div>
             <div style={{ marginBottom: '16px' }}>
-              <span style={{ fontFamily: 'Scandia, sans-serif', fontSize: '24px', fontWeight: 700, color: '#0033FF', marginRight: '10px' }}>[0.4]</span>
+              <span style={{ fontFamily: 'Scandia, sans-serif', fontSize: '24px', fontWeight: 700, color: '#0033FF', marginRight: '10px' }}>[4.0]</span>
               <span style={{ fontFamily: 'Scandia, sans-serif', fontSize: '20px', fontWeight: 700, color: '#0B1215' }}>we curate, not filter</span>
             </div>
             <p style={{ fontFamily: 'Scandia, sans-serif', fontSize: '16px', fontWeight: 400, lineHeight: 1.5, color: '#0B1215', margin: 0 }}>
@@ -273,7 +273,7 @@ export default function Section3() {
           {/* Step 0.5 */}
           <div>
             <div style={{ marginBottom: '16px' }}>
-              <span style={{ fontFamily: 'Scandia, sans-serif', fontSize: '24px', fontWeight: 700, color: '#0033FF', marginRight: '10px' }}>[0.5]</span>
+              <span style={{ fontFamily: 'Scandia, sans-serif', fontSize: '24px', fontWeight: 700, color: '#0033FF', marginRight: '10px' }}>[5.0]</span>
               <span style={{ fontFamily: 'Scandia, sans-serif', fontSize: '20px', fontWeight: 700, color: '#0B1215' }}>we adjust and improve</span>
             </div>
             <p style={{ fontFamily: 'Scandia, sans-serif', fontSize: '16px', fontWeight: 400, lineHeight: 1.5, color: '#0B1215', margin: 0 }}>
