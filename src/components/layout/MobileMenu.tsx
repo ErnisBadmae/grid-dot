@@ -161,11 +161,23 @@ export default function MobileMenu() {
             padding: 20px; /* Smaller padding */
             overflow-y: auto; /* Allow scrolling */
             z-index: 2001; /* Ensure it's on top of everything */
+            
+            /* Hide scrollbar for Chrome, Safari and Opera */
+            &::-webkit-scrollbar {
+              display: none;
+            }
+            /* Hide scrollbar for IE, Edge and Firefox */
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
           }
           
           .mobile-menu-nav {
               gap: 24px;
           }
+           /* Correcting filter to strictly match #0033FF */
+           .contact-icons img {
+              filter: invert(9%) sepia(99%) saturate(7489%) hue-rotate(246deg) brightness(97%) contrast(144%);
+           }
           
           .mobile-menu-nav a {
               font-size: 20px; 
