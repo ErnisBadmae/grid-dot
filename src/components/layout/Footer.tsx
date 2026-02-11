@@ -81,9 +81,6 @@ export default function Footer() {
             <a href="#section-1" style={{ fontFamily: "'Overpass Mono', monospace", fontSize: '16px', fontWeight: 600, letterSpacing: '0.02em', color: '#F8F8F8', textDecoration: 'none' }}>
               Why Extended Expertise
             </a>
-            <span style={{ fontFamily: "'Overpass Mono', monospace", fontSize: '16px', fontWeight: 600, letterSpacing: '0.02em', color: '#F8F8F8', textAlign: 'right' }}>
-              Grid & Dot ©️
-            </span>
           </div>
 
           {/* Row 2 */}
@@ -91,9 +88,9 @@ export default function Footer() {
             <a href="#section-2" style={{ fontFamily: "'Overpass Mono', monospace", fontSize: '16px', fontWeight: 600, letterSpacing: '0.02em', color: '#F8F8F8', textDecoration: 'none' }}>
               What We Offer — Our Expertise
             </a>
-            <a href="mailto:engagement@gridanddot.com" style={{ fontFamily: "'Overpass Mono', monospace", fontSize: '16px', fontWeight: 600, letterSpacing: '0.02em', color: '#F8F8F8', textDecoration: 'none', textAlign: 'right' }}>
-              engagement@gridanddot.com
-            </a>
+            <span style={{ fontFamily: "'Overpass Mono', monospace", fontSize: '16px', fontWeight: 600, letterSpacing: '0.02em', color: '#F8F8F8', textAlign: 'right' }}>
+              Grid & Dot &copy;
+            </span>
           </div>
 
           {/* Row 3 */}
@@ -101,9 +98,9 @@ export default function Footer() {
             <a href="#section-3" style={{ fontFamily: "'Overpass Mono', monospace", fontSize: '16px', fontWeight: 600, letterSpacing: '0.02em', color: '#F8F8F8', textDecoration: 'none' }}>
               How It Works — Simple & Transparent
             </a>
-            <span style={{ fontFamily: "'Overpass Mono', monospace", fontSize: '16px', fontWeight: 600, letterSpacing: '0.02em', color: '#F8F8F8', textAlign: 'right' }}>
-              Mayfair, London
-            </span>
+            <a href="mailto:engagement@gridanddot.com" style={{ fontFamily: "'Overpass Mono', monospace", fontSize: '16px', fontWeight: 600, letterSpacing: '0.02em', color: '#F8F8F8', textDecoration: 'none', textAlign: 'right' }}>
+              engagement@gridanddot.com
+            </a>
           </div>
 
           {/* Row 4 */}
@@ -111,9 +108,9 @@ export default function Footer() {
             <a href="#section-success-stories" style={{ fontFamily: "'Overpass Mono', monospace", fontSize: '16px', fontWeight: 600, letterSpacing: '0.02em', color: '#F8F8F8', textDecoration: 'none' }}>
               Success Stories — Case Highlights
             </a>
-            <a href={`${basePath}/privacy`} style={{ fontFamily: "'Overpass Mono', monospace", fontSize: '16px', fontWeight: 600, letterSpacing: '0.02em', color: '#F8F8F8', textDecoration: 'underline', textUnderlineOffset: '4px', textAlign: 'right' }}>
-              Privacy Policy
-            </a>
+            <span style={{ fontFamily: "'Overpass Mono', monospace", fontSize: '16px', fontWeight: 600, letterSpacing: '0.02em', color: '#F8F8F8', textAlign: 'right' }}>
+              Mayfair, London
+            </span>
           </div>
 
           {/* Row 5 */}
@@ -121,7 +118,9 @@ export default function Footer() {
             <a href="#section-commitment" style={{ fontFamily: "'Overpass Mono', monospace", fontSize: '16px', fontWeight: 600, letterSpacing: '0.02em', color: '#F8F8F8', textDecoration: 'none' }}>
               Our Commitment
             </a>
-            {/* Empty right side */}
+            <a href={`${basePath}/privacy`} style={{ fontFamily: "'Overpass Mono', monospace", fontSize: '16px', fontWeight: 600, letterSpacing: '0.02em', color: '#F8F8F8', textDecoration: 'underline', textUnderlineOffset: '4px', textAlign: 'right' }}>
+              Privacy Policy
+            </a>
           </div>
         </div>
 

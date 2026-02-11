@@ -43,7 +43,7 @@ export default function ScrollToTopButton() {
                 className="scroll-to-top-btn-mobile-hide"
                 style={{
                     position: 'fixed',
-                    bottom: '40px',
+                    bottom: '30px',
                     right: '40px',
                     zIndex: 99,
                     background: 'transparent',
