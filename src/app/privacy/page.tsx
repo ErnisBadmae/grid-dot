@@ -17,7 +17,7 @@ export default function PrivacyPage() {
             }}
         >
             {/* Close Button */}
-            <Link href="/" style={{ position: 'fixed', top: '40px', right: '40px', cursor: 'pointer', zIndex: 10 }}>
+            <Link href={`${basePath}/`} style={{ position: 'fixed', top: '40px', right: '40px', cursor: 'pointer', zIndex: 10 }}>
                 <img src={`${basePath}/images/Close button.svg`} alt="Close" style={{ width: '40px', height: '40px' }} />
             </Link>
 

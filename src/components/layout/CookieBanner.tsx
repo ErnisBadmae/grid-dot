@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { basePath } from '@/lib/basePath'
 
 export default function CookieBanner() {
   const [isVisible, setIsVisible] = useState(true) // Always visible for testing as requested
@@ -47,7 +48,7 @@ export default function CookieBanner() {
           </p>
           <p>
             By clicking "Accept", you consent to our use of<br />
-            cookies. <a href="/privacy" style={{ textDecoration: 'underline', color: '#0B1215' }}>Privacy policy</a>.
+            cookies. <a href={`${basePath}/privacy`} style={{ textDecoration: 'underline', color: '#0B1215' }}>Privacy policy</a>.
           </p>
         </div>
 
