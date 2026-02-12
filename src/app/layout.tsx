@@ -82,7 +82,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="stylesheet" href={`${basePath}/old-site.css`} />
         <link rel="stylesheet" href={`${basePath}/header-override.css`} />
         <link rel="stylesheet" href={`${basePath}/mobile-figma-styles.css`} />
-        <link rel="stylesheet" href={`${basePath}/cookie-banner.css`} />
       </head>
       <body style={{ fontFamily: 'var(--font-scandia), sans-serif' }}>
         <AppProvider>
