@@ -1,0 +1,12 @@
+<svg width="390" height="17" viewBox="0 0 390 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="1200" height="17" fill="#9AC2E4"/>
+<defs>
+  <path id="text-path-mobile-animated" d="M0 8.5H1200"/>
+</defs>
+<text fill="#0033FF" font-size="14" font-family="'Overpass Mono', monospace" font-weight="400" letter-spacing="0.05em" dominant-baseline="middle">
+  <textPath href="#text-path-mobile-animated" startOffset="0%">
+    / Product / Design / Frontend / Backend / QA / Content / CMS / Data / PM / Product / Design / Frontend / Backend / QA / Content / CMS / Data / PM / Product / Design / Frontend / Backend / QA / Content / CMS / Data / PM / Product / Design / Frontend / Backend / QA / Content / CMS / Data / PM
+    <animate attributeName="startOffset" from="0%" to="-100%" dur="30s" repeatCount="indefinite"/>
+  </textPath>
+</text>
+</svg>

@@ -50,19 +50,19 @@ export default function Section4() {
         alt=""
         style={{ top: '0px', zIndex: 0 /* Changed from -1 to 0 to sit above bg but below content? Or 10? User said white block covers it. If white block is Section 1, and Section 4 is Relative... actually, let's try 10 and pointer-events-none */, left: '0', width: '100%', pointerEvents: 'none' }}
       />
-      {/* Mobile Marquee 1 - Static SVG */}
+      {/* Mobile Marquee 1 - Animated SVG */}
       <img
         id="text-on-path-1-mobile"
         className="text-on-path mobile-only"
-        src={`${basePath}/images/text-on-path-0-mobile-new-v2.svg`}
+        src={`${basePath}/images/text-on-path-0-mobile-animated.svg`}
         alt=""
         style={{ position: 'absolute', top: '40px', left: '0', width: '100%', zIndex: 20, pointerEvents: 'none' }}
       />
-      {/* Mobile Marquee 2 - Static SVG */}
+      {/* Mobile Marquee 2 - Animated SVG */}
       <img
         id="text-on-path-2-mobile"
         className="text-on-path mobile-only"
-        src={`${basePath}/images/text-on-path-0-mobile-new-v2.svg`}
+        src={`${basePath}/images/text-on-path-0-mobile-animated.svg`}
         alt=""
         style={{ position: 'absolute', top: '340px', left: '0', width: '100%', zIndex: 20, pointerEvents: 'none' }}
       />
