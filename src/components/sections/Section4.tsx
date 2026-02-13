@@ -50,44 +50,22 @@ export default function Section4() {
         alt=""
         style={{ top: '0px', zIndex: 0 /* Changed from -1 to 0 to sit above bg but below content? Or 10? User said white block covers it. If white block is Section 1, and Section 4 is Relative... actually, let's try 10 and pointer-events-none */, left: '0', width: '100%', pointerEvents: 'none' }}
       />
-      {/* Mobile Marquee 1 - Inline SVG */}
-      <svg
+      {/* Mobile Marquee 1 - Static SVG */}
+      <img
         id="text-on-path-1-mobile"
         className="text-on-path mobile-only"
-        viewBox="0 0 390 60"
-        style={{ position: 'absolute', top: '10px', left: '0', width: '100%', zIndex: 20, pointerEvents: 'none' }}
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <defs>
-          <path id="text-path-mobile-1" d="M0 42H780" />
-        </defs>
-        <use href="#text-path-mobile-1" stroke="#9AC2E4" strokeWidth="16" fill="none" />
-        <text fill="#0033FF" fontSize="14" fontFamily="'Overpass Mono', monospace" fontWeight="400" letterSpacing="0.05em" dominantBaseline="middle">
-          <textPath href="#text-path-mobile-1" startOffset="0%">
-            / Frontend / Backend / QA / Content / CMS / Data / PM / Product / Design / Frontend / Backend / QA / Content / CMS / Data / PM / Product / Design / Frontend / Backend / QA / Content / CMS / Data / PM / Product / Design / Frontend / Backend / QA / Content / CMS / Data / PM / Product / Design
-            <animate attributeName="startOffset" from="-100%" to="0%" dur="30s" repeatCount="indefinite" />
-          </textPath>
-        </text>
-      </svg>
-      {/* Mobile Marquee 2 - Inline SVG */}
-      <svg
+        src={`${basePath}/images/text-on-path-0-mobile-new-v2.svg`}
+        alt=""
+        style={{ position: 'absolute', top: '40px', left: '0', width: '100%', zIndex: 20, pointerEvents: 'none' }}
+      />
+      {/* Mobile Marquee 2 - Static SVG */}
+      <img
         id="text-on-path-2-mobile"
         className="text-on-path mobile-only"
-        viewBox="0 0 390 60"
-        style={{ position: 'absolute', top: '310px', left: '0', width: '100%', zIndex: 20, pointerEvents: 'none' }}
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <defs>
-          <path id="text-path-mobile-2" d="M0 42H780" />
-        </defs>
-        <use href="#text-path-mobile-2" stroke="#9AC2E4" strokeWidth="16" fill="none" />
-        <text fill="#0033FF" fontSize="14" fontFamily="'Overpass Mono', monospace" fontWeight="400" letterSpacing="0.05em" dominantBaseline="middle">
-          <textPath href="#text-path-mobile-2" startOffset="0%">
-            / Frontend / Backend / QA / Content / CMS / Data / PM / Product / Design / Frontend / Backend / QA / Content / CMS / Data / PM / Product / Design / Frontend / Backend / QA / Content / CMS / Data / PM / Product / Design / Frontend / Backend / QA / Content / CMS / Data / PM / Product / Design
-            <animate attributeName="startOffset" from="-100%" to="0%" dur="30s" repeatCount="indefinite" />
-          </textPath>
-        </text>
-      </svg>
+        src={`${basePath}/images/text-on-path-0-mobile-new-v2.svg`}
+        alt=""
+        style={{ position: 'absolute', top: '340px', left: '0', width: '100%', zIndex: 20, pointerEvents: 'none' }}
+      />
 
       {/* Bottom content - two columns */}
       <div
