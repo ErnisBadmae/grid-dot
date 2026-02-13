@@ -4,7 +4,7 @@
     <defs>
         <path
             id="text-path-mobile-new"
-            d="M0 24H780">
+            d="M0 30H780">
         </path>
     </defs>
 
@@ -14,7 +14,7 @@
 
         <!-- Animated Text -->
         <text fill="#0033FF" font-size="14" font-family="'Overpass Mono', monospace" font-weight="500" letter-spacing="0.05em" dominant-baseline="middle">
-            <textPath href="#text-path-mobile-new" startOffset="0%">
+            <textPath href="#text-path-mobile-new" startOffset="0%" dy="5">
                 / Frontend / Backend / QA / Content / CMS / Data / PM / Product / Design / Frontend / Backend / QA / Content / CMS / Data / PM / Product / Design / Frontend / Backend / QA / Content / CMS / Data / PM / Product / Design / Frontend / Backend / QA / Content / CMS / Data / PM / Product / Design 
                 <animate
                     attributeName="startOffset" from="-100%" to="0%"
