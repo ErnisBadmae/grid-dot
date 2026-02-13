@@ -50,22 +50,50 @@ export default function Section4() {
         alt=""
         style={{ top: '0px', zIndex: 0 /* Changed from -1 to 0 to sit above bg but below content? Or 10? User said white block covers it. If white block is Section 1, and Section 4 is Relative... actually, let's try 10 and pointer-events-none */, left: '0', width: '100%', pointerEvents: 'none' }}
       />
-      {/* Mobile Marquee 1 - Animated SVG */}
-      <img
+      {/* Mobile Marquee 1 - Inline Animated SVG */}
+      <svg
         id="text-on-path-1-mobile"
         className="text-on-path mobile-only"
-        src={`${basePath}/images/text-on-path-0-mobile-animated.svg`}
-        alt=""
+        width="390"
+        height="17"
+        viewBox="0 0 390 17"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
         style={{ position: 'absolute', top: '40px', left: '0', width: '100%', zIndex: 20, pointerEvents: 'none' }}
-      />
-      {/* Mobile Marquee 2 - Animated SVG */}
-      <img
+      >
+        <rect width="1200" height="18" fill="#9AC2E4" />
+        <defs>
+          <path id="text-path-mobile-1" d="M0 8.5H1200" />
+        </defs>
+        <text fill="#0033FF" fontSize="14" fontFamily="var(--font-overpass)" fontWeight="400" letterSpacing="0.05em" dominantBaseline="middle">
+          <textPath href="#text-path-mobile-1" startOffset="0%">
+            / Product / Design / Frontend / Backend / QA / Content / CMS / Data / PM / Product / Design / Frontend / Backend / QA / Content / CMS / Data / PM / Product / Design / Frontend / Backend / QA / Content / CMS / Data / PM / Product / Design / Frontend / Backend / QA / Content / CMS / Data / PM
+            <animate attributeName="startOffset" from="0%" to="-100%" dur="30s" repeatCount="indefinite" />
+          </textPath>
+        </text>
+      </svg>
+      {/* Mobile Marquee 2 - Inline Animated SVG */}
+      <svg
         id="text-on-path-2-mobile"
         className="text-on-path mobile-only"
-        src={`${basePath}/images/text-on-path-0-mobile-animated.svg`}
-        alt=""
+        width="390"
+        height="17"
+        viewBox="0 0 390 17"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
         style={{ position: 'absolute', top: '340px', left: '0', width: '100%', zIndex: 20, pointerEvents: 'none' }}
-      />
+      >
+        <rect width="1200" height="18" fill="#9AC2E4" />
+        <defs>
+          <path id="text-path-mobile-2" d="M0 8.5H1200" />
+        </defs>
+        <text fill="#0033FF" fontSize="14" fontFamily="var(--font-overpass)" fontWeight="400" letterSpacing="0.05em" dominantBaseline="middle">
+          <textPath href="#text-path-mobile-2" startOffset="0%">
+            / Product / Design / Frontend / Backend / QA / Content / CMS / Data / PM / Product / Design / Frontend / Backend / QA / Content / CMS / Data / PM / Product / Design / Frontend / Backend / QA / Content / CMS / Data / PM / Product / Design / Frontend / Backend / QA / Content / CMS / Data / PM
+            <animate attributeName="startOffset" from="0%" to="-100%" dur="30s" repeatCount="indefinite" />
+          </textPath>
+        </text>
+      </svg>
 
       {/* Bottom content - two columns */}
       <div
