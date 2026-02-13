@@ -55,14 +55,14 @@ export default function Section4() {
         className="text-on-path mobile-only"
         src={`${basePath}/images/text-on-path-0-mobile-new.svg`}
         alt=""
-        style={{ top: '30px', left: '0', width: '390px', maxWidth: '100%', zIndex: 20, pointerEvents: 'none' }}
+        style={{ top: '30px', left: '0', width: '100%', zIndex: 20, pointerEvents: 'none' }}
       />
       <img
         id="text-on-path-2-mobile"
         className="text-on-path mobile-only"
         src={`${basePath}/images/text-on-path-0-mobile-new.svg`}
         alt=""
-        style={{ top: '320px', left: '0', width: '390px', maxWidth: '100%', zIndex: 20, pointerEvents: 'none' }}
+        style={{ top: '320px', left: '0', width: '100%', zIndex: 20, pointerEvents: 'none' }}
       />
 
       {/* Bottom content - two columns */}
@@ -106,7 +106,7 @@ export default function Section4() {
             We curate<br />specialists who<br />deliver.
           </p>
           <button
-            onClick={() => scrollTo('#section-7', '25%')}
+            onClick={() => window.open('https://calendly.com/et-gridanddot/30min', '_blank')}
             style={{
               display: 'inline-flex',
               alignItems: 'center',
@@ -208,7 +208,7 @@ export default function Section4() {
           </p>
         </div>
         <button
-          onClick={() => scrollTo('#section-7', '25%')}
+          onClick={() => window.open('https://calendly.com/et-gridanddot/30min', '_blank')}
           style={{
             display: 'flex',
             alignItems: 'center',

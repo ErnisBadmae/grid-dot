@@ -287,7 +287,7 @@ export default function SectionSuccessStories() {
                     >
                         Our long tenure has allowed us to bring institutional knowledge, established ways of working, and deliver high impact collaboration. Enforced by expertise, agility and scalability, ELC continues to benefit from a reliable,<br />
                         continuously embedded delivery capability - supporting initiative after initiative with consistent governance,<br />
-                        stronger measurement foundations, and the confidence that critical programmes can progress at pace without<br />
+                        stronger measurement foundations, and the confidence that critical programmes can progress at pace without
                         sacrificing quality or continuity on a global scale.
                     </p>
                 </div>
@@ -494,7 +494,7 @@ export default function SectionSuccessStories() {
                 {/* Part 3: Footer Link */}
                 <div style={{ marginTop: '60px' }}>
                     <button
-                        onClick={() => scrollTo('#section-contact', 'start')}
+                        onClick={() => scrollTo('#section-contacts', 'start')}
                         className="request-case-study-btn"
                         style={{
                             display: 'inline-flex',

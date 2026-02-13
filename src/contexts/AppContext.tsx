@@ -28,10 +28,13 @@ export function AppProvider({ children }: { children: ReactNode }) {
 
     const elementPosition = element.getBoundingClientRect().top + window.scrollY
     const windowHeight = window.innerHeight
-    
+
     let offsetPosition: number
-    
-    if (offset === 'center') {
+
+    if (offset === 'start') {
+      // Scroll to top of element with small offset for header
+      offsetPosition = elementPosition - 120 // 120px for header height
+    } else if (offset === 'center') {
       const elementHeight = element.getBoundingClientRect().height
       offsetPosition = elementPosition - windowHeight / 2 + elementHeight / 2
     } else {
@@ -40,7 +43,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
     }
 
     window.scrollTo({ top: offsetPosition, behavior: 'smooth' })
-    
+
     if (mobileMenuOn) setMobileMenuOn(false)
   }
 

@@ -41,7 +41,7 @@ export default function Header() {
 
       {/* Book a Call Button - Desktop */}
       <button
-        onClick={() => scrollTo('#section-7', '25%')}
+        onClick={() => window.open('https://calendly.com/et-gridanddot/30min', '_blank')}
         className="book-call-btn hidden md:flex"
       >
         Book a Call

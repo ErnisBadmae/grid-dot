@@ -186,6 +186,7 @@ export default function SectionContacts() {
                     </p>
 
                     <button
+                        onClick={() => window.open('https://calendly.com/et-gridanddot/30min', '_blank')}
                         className="book-call-btn-contacts"
                         style={{
                             display: 'inline-flex',

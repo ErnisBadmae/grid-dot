@@ -187,6 +187,7 @@ export default function Section3() {
           style={{
             fontFamily: 'Scandia, sans-serif',
             fontSize: '32px',
+            fontStyle: 'normal',
             fontWeight: 700,
             color: '#0B1215',
             lineHeight: 1.1,
@@ -243,7 +244,7 @@ export default function Section3() {
             <p style={{ fontFamily: 'Scandia, sans-serif', fontSize: '16px', fontWeight: 400, lineHeight: 1.5, color: '#0B1215', margin: 0 }}>
               Instead of searching everywhere, we approach a small number of specialists who are already relevant.<br />
               No mass outreach. No long lists. Just focused conversations.
-            </p> 
+            </p>
           </div>
 
           {/* Step 0.3 */}
