@@ -403,6 +403,18 @@
     overflow-x: hidden;
   }
 
+  #section-4 h1 {
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
+
+  #section-4 .offset-line-1,
+  #section-4 .offset-line-2,
+  #section-4 .offset-line-3 {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
   #section-4 .offset-line-3 {
     transform: none;
   }
