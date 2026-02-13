@@ -63,7 +63,7 @@ export default function Section4() {
       >
         <rect width="1200" height="19" fill="#9AC2E4" />
         <defs>
-          <path id="text-path-mobile-1" d="M0 11.5H1200" />
+          <path id="text-path-mobile-1" d="M0 12.5H1200" />
         </defs>
         <text fill="#0033FF" fontSize="14" fontFamily="var(--font-overpass)" fontWeight="400" letterSpacing="0.05em" dominantBaseline="middle">
           <textPath href="#text-path-mobile-1" startOffset="0%">
@@ -85,7 +85,7 @@ export default function Section4() {
       >
         <rect width="1200" height="19" fill="#9AC2E4" />
         <defs>
-          <path id="text-path-mobile-2" d="M0 11.5H1200" />
+          <path id="text-path-mobile-2" d="M0 12.5H1200" />
         </defs>
         <text fill="#0033FF" fontSize="14" fontFamily="var(--font-overpass)" fontWeight="400" letterSpacing="0.05em" dominantBaseline="middle">
           <textPath href="#text-path-mobile-2" startOffset="0%">
