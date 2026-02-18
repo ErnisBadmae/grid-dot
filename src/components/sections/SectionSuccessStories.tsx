@@ -5,7 +5,7 @@ import { useApp } from '@/contexts/AppContext'
 import { basePath } from '@/lib/basePath'
 
 const TAGS = [
-    'data', 'product', 'ux', 'delivery', 'cms', 'cx', 'data-visualisation', 'ga4', 'amazon', 'user-tools', 'modernisation',
+    'data', 'product', 'ux', 'delivery', 'cms', 'cx', 'data-visualisation', 'amazon', 'user-tools', 'modernisation',
     'brands', 'global', 'emea', 'apac'
 ]
 
@@ -140,7 +140,7 @@ export default function SectionSuccessStories() {
                             marginBottom: '8px',
                         }}
                     >
-                        The Estée Lauder Companies
+                        Global Beauty & Personal Care Company
                     </h3>
                     <p
                         style={{
@@ -195,10 +195,11 @@ export default function SectionSuccessStories() {
                                 color: '#0B1215',
                                 lineHeight: 1.5,
                                 marginBottom: '16px',
+                                width: '103%',
                             }}
                         >
-                            ELC is a global leader in luxury beauty, with 20 iconic brands including Clinique, MAC, La Mer, Bobbi Brown, and Tom Ford. Operating across owned platforms, retail partners, and<br />
-                            marketplaces, ELC must modernise at pace —<br />
+                            Global leader in luxury beauty. Operating across owned platforms, retail partners, and
+                            marketplaces, must modernise at pace —
                             while protecting brand consistency, measurement integrity, and governance across regions.
                         </p>
                         <p
@@ -208,9 +209,10 @@ export default function SectionSuccessStories() {
                                 fontWeight: 400,
                                 color: '#0B1215',
                                 lineHeight: 1.5,
+                                width: '102%',
                             }}
                         >
-                            For many years our Embedded Expertise has empowered ELC’s teams to deliver key global and regional initiatives<br />
+                            For many years our Embedded Expertise has empowered ELC’s teams to deliver key global and regional initiatives
                             across multiple markets and regions, aligning to global standards and customer experience excellence.
                         </p>
                     </div>
@@ -493,6 +495,19 @@ export default function SectionSuccessStories() {
 
                 {/* Part 3: Footer Link */}
                 <div style={{ marginTop: '60px' }}>
+                    <p
+                        style={{
+                            fontFamily: 'Scandia, sans-serif',
+                            fontSize: '16px',
+                            fontWeight: 400,
+                            color: '#0B1215',
+                            lineHeight: 1.5,
+                            marginBottom: '24px',
+                            maxWidth: '560px',
+                        }}
+                    >
+                        We'd love to show everything — but some projects are confidential. Tell us what you're working on and we'll pull together similar work we can share.
+                    </p>
                     <button
                         onClick={() => scrollTo('#section-contacts', 'start')}
                         className="request-case-study-btn"

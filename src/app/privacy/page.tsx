@@ -99,7 +99,7 @@ export default function PrivacyPage() {
                     </section>
 
                     {/* 3. How We Use Your Data */}
-                    <section>
+                    <section id="how-we-use-your-data">
                         <h2 style={{ fontSize: '24px', fontWeight: 600, letterSpacing: '0.02em', marginBottom: '24px' }}>3. How We Use Your Data</h2>
                         <div style={{ fontSize: '16px', fontWeight: 400, letterSpacing: '0em', lineHeight: 1.6 }}>
                             <p style={{ marginBottom: '16px' }}>We use personal data only for clear and specific purposes:</p>

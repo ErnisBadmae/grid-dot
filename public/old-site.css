@@ -3959,17 +3959,12 @@ body.figma-visible {
   z-index: 10000;
   transition: all 120ms ease-in;
   transform-origin: top right;
-  transform: translateX(calc(-100% + 65px));
-  min-height: 25px;
-  height: auto;
-  /* Allow expansion */
+  transform: translateX(calc(-100% + 32px));
+  height: 129px !important;
   display: flex;
   flex-direction: row;
-  /* Side-by-side layout (Contacts | Button) */
   justify-content: flex-end;
-  /* Align content to right */
   align-items: stretch;
-  /* Stretch children vertically */
 }
 
 @media screen and (max-width: 639px) {
@@ -3996,8 +3991,8 @@ body.figma-visible {
 }
 
 #contact-sidebar .svg-icon {
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
   top: 4px;
   position: relative;
   margin-right: 2px
@@ -4012,7 +4007,7 @@ body.figma-visible {
 #contact-sidebar #contact-sidebar-toggle {
   position: relative;
   /* Relative positioning */
-  width: 65px;
+  width: 32px;
   height: auto;
   /* Fit text */
   min-height: 25px;
@@ -4021,7 +4016,7 @@ body.figma-visible {
   align-items: center;
   justify-content: center;
   /* Removed absolute offsets */
-  font-size: 18px;
+  font-size: 14px;
   letter-spacing: .2;
   writing-mode: vertical-rl;
   text-align: center;
@@ -4036,8 +4031,8 @@ body.figma-visible {
 }
 
 #contact-sidebar #contact-sidebar-toggle .contact-sidebar-toggle__icon {
-  width: 32px;
-  height: 32px;
+  width: 20px;
+  height: 20px;
   margin-top: 10px
 }
 

@@ -70,7 +70,7 @@ export default function Section3() {
 
         {/* === ROW 2 === */}
         {/* Col 1: Step [0.1] */}
-        <div style={{ gridColumn: '1 / 2', }}>
+        <div style={{ gridColumn: '1 / 2', marginTop: '-70px' }}>
           <div style={{ marginBottom: '16px' }}>
             <span style={{ fontFamily: 'Scandia, sans-serif', fontSize: '24px', fontWeight: 700, color: '#0033FF', marginRight: '16px' }}>
               [1.0]
@@ -79,7 +79,7 @@ export default function Section3() {
               we start with context
             </span>
           </div>
-          <p style={{ fontFamily: 'Scandia, sans-serif', fontSize: '16px', fontWeight: 400, lineHeight: 1.5, color: '#0B1215', margin: 0, maxWidth: '450px' }}>
+          <p style={{ fontFamily: 'Scandia, sans-serif', fontSize: '16px', fontWeight: 400, lineHeight: 1.5, color: '#0B1215', margin: 0, maxWidth: '450px', paddingLeft: '72px' }}>
             Before talking about roles, we talk about your team, your product, and where you need support.
           </p>
         </div>
@@ -98,7 +98,7 @@ export default function Section3() {
               we reach out — not outwards
             </span>
           </div>
-          <p style={{ fontFamily: 'Scandia, sans-serif', fontSize: '16px', fontWeight: 400, lineHeight: 1.5, color: '#0B1215', margin: 0, maxWidth: '450px' }}>
+          <p style={{ fontFamily: 'Scandia, sans-serif', fontSize: '16px', fontWeight: 400, lineHeight: 1.5, color: '#0B1215', margin: 0, maxWidth: '450px', paddingLeft: '72px' }}>
             Instead of searching everywhere, we approach a small number of specialists who are already relevant.<br />
             No mass outreach. No long lists. Just focused conversations.
           </p>
@@ -114,7 +114,7 @@ export default function Section3() {
               we curate, not filter
             </span>
           </div>
-          <p style={{ fontFamily: 'Scandia, sans-serif', fontSize: '16px', fontWeight: 400, lineHeight: 1.5, color: '#0B1215', margin: 0, maxWidth: '450px' }}>
+          <p style={{ fontFamily: 'Scandia, sans-serif', fontSize: '16px', fontWeight: 400, lineHeight: 1.5, color: '#0B1215', margin: 0, maxWidth: '450px', paddingLeft: '72px' }}>
             Every specialist we introduce is reviewed for more than experience.<br />
             We look at how they think, communicate, and work inside a team. Fit is intentional.
           </p>
@@ -131,7 +131,7 @@ export default function Section3() {
               we stay involved
             </span>
           </div>
-          <p style={{ fontFamily: 'Scandia, sans-serif', fontSize: '16px', fontWeight: 400, lineHeight: 1.5, color: '#0B1215', margin: 0, maxWidth: '450px' }}>
+          <p style={{ fontFamily: 'Scandia, sans-serif', fontSize: '16px', fontWeight: 400, lineHeight: 1.5, color: '#0B1215', margin: 0, maxWidth: '450px', paddingLeft: '72px' }}>
             Once someone joins your team, our role doesn’t end.<br />
             We support onboarding, alignment, and day-to-day collaboration to make sure things actually work.
           </p>
@@ -147,7 +147,7 @@ export default function Section3() {
               we adjust and improve
             </span>
           </div>
-          <p style={{ fontFamily: 'Scandia, sans-serif', fontSize: '16px', fontWeight: 400, lineHeight: 1.5, color: '#0B1215', margin: 0, maxWidth: '450px' }}>
+          <p style={{ fontFamily: 'Scandia, sans-serif', fontSize: '16px', fontWeight: 400, lineHeight: 1.5, color: '#0B1215', margin: 0, maxWidth: '450px', paddingLeft: '72px' }}>
             If something isn’t right, we address it early.<br />
             Open feedback, clear decisions, no friction.
           </p>
@@ -171,7 +171,7 @@ export default function Section3() {
               color: '#0B1215',
               lineHeight: 1.5,
               margin: 0,
-              marginLeft: '-320px',
+              marginLeft: '-340px',
             }}
           >
             clarity at every step<br />

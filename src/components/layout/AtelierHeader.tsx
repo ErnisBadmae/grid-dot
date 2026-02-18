@@ -19,18 +19,20 @@ export default function AtelierHeader() {
                 borderBottom: '1px solid #656565',
             }}
         >
-            <div style={{ display: 'flex', alignItems: 'center', marginRight: 'auto' }}>
+            {/* Using header-brand-group so globals.css mobile styles apply automatically */}
+            <div className="header-brand-group" style={{ display: 'flex', alignItems: 'center', marginRight: 'auto' }}>
                 {/* Logo */}
                 <a href={`${basePath}/`} style={{ flexShrink: 0, textDecoration: 'none' }}>
                     <img
                         src={`${basePath}/images/Grid&Dot.svg`}
                         alt="Grid&Dot"
+                        className="header-logo-img"
                         style={{ height: '24px', width: 'auto' }}
                     />
                 </a>
 
                 {/* Atelier Tagline */}
-                <a href={`${basePath}/`} className="header-tagline">
+                <a href={`${basePath}/`} className="header-tagline atelier-tagline">
                     — atelier
                 </a>
             </div>

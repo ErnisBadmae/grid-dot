@@ -25,7 +25,7 @@ export default function SectionContacts() {
                 backgroundColor: '#F2F0EF',
             }}
         >
-            <div className="contacts-grid" style={{ maxWidth: '1440px', margin: '0 auto', display: 'flex', justifyContent: 'space-between', gap: '60px', alignItems: 'flex-start' }}>
+            <div className="contacts-grid" style={{ maxWidth: '1440px', margin: '0 auto', display: 'flex', justifyContent: 'space-between', gap: '120px', alignItems: 'flex-start' }}>
                 <style jsx>{`
                     .contacts-grid {
                         flex-direction: row;
@@ -35,7 +35,7 @@ export default function SectionContacts() {
                         font-weight: 700;
                         font-size: 48px;
                         line-height: 1.1;
-                        margin-bottom: 60px;
+                        margin-bottom: 30px;
                     }
                     .contact-huge-header {
                         font-family: 'Scandia', sans-serif;
@@ -43,7 +43,7 @@ export default function SectionContacts() {
                         font-weight: 700;
                         color: #0B1215;
                         line-height: 1;
-                        margin-bottom: 80px;
+                        margin-bottom: 50px;
                         letter-spacing: -0.02em;
                         margin-top: -25px; /* Optical adjustment for alignment */
                     }
@@ -65,7 +65,7 @@ export default function SectionContacts() {
                         position: relative; 
                         width: 100%;
                         background-color: transparent; /* Or match background */
-                        border-bottom: 2px solid #0B1215;
+                        border-bottom: 1px solid #0B1215;
                         /* border: 1px solid #0B1215; Removing box border, making it look integrated? 
                            Look at the image 2: It looks like a list appearing BELOW the line.
                            The line "what are you looking for?" is the header.
@@ -81,16 +81,16 @@ export default function SectionContacts() {
                            [Options List pushing content]
                            [Next Field]
                         */
-                        margin-top: 10px;
+                        margin-top: 20px;
                         margin-bottom: 20px;
                         border: none; /* Clean look */
                         overflow-y: hidden; /* For animation if we added it, but strictly distinct from absolute */
                     }
                     .custom-dropdown-option {
-                        padding: 12px 0; /* Align with text */
+                        padding: 12px 0;
                         font-family: 'Scandia', sans-serif;
-                        font-weight: 700;
-                        font-size: 20px;
+                        font-weight: 400;
+                        font-size: 14px;
                         color: #0B1215;
                         cursor: pointer;
                         transition: color 0.2s;
@@ -165,7 +165,7 @@ export default function SectionContacts() {
                         }}
                     >
                         Looking for the right expertise?<br />
-                        We help teams find specialists that truly fit —<br />
+                        We help teams find specialists that truly fit —
                         technically and culturally.
                     </p>
 
@@ -213,17 +213,12 @@ export default function SectionContacts() {
                             className="book-call-arrow-contacts"
                             style={{
                                 marginLeft: '12px',
-                                width: '14px',
-                                height: '14px',
+                                width: '20px',
+                                height: '20px',
                                 transition: 'filter 0.2s ease'
                             }}
                         />
                     </button>
-                    {/* Note: Button width on desktop was inline-flex. On mobile full width might be better. 
-                        Let's keep it consistent: inline-flex desktop, full width mobile? 
-                        Current style sets width: 100%. This will make it full width on desktop too if container allows. 
-                        Container is 500px max. Full width button there is okay. 
-                    */}
                 </div>
 
                 {/* Right Column: Form */}
@@ -236,32 +231,32 @@ export default function SectionContacts() {
                         {/* Name Row */}
                         <div className="form-row-name">
                             <div style={{ flex: 1 }}>
-                                <label style={{ display: 'block', fontFamily: 'Scandia, sans-serif', fontSize: '20px', fontWeight: 700, color: '#656565', marginBottom: '4px' }}>
+                                <label style={{ display: 'block', fontFamily: 'Scandia, sans-serif', fontSize: '14px', fontWeight: 400, color: '#656565', marginBottom: '8px' }}>
                                     first name*
                                 </label>
-                                <input type="text" style={{ width: '100%', border: 'none', borderBottom: '2px solid #0B1215', background: 'transparent', padding: '4px 0', outline: 'none', borderRadius: 0 }} />
+                                <input type="text" style={{ width: '100%', border: 'none', borderBottom: '1px solid #0B1215', background: 'transparent', padding: '4px 0', outline: 'none', borderRadius: 0 }} />
                             </div>
                             <div style={{ flex: 1 }}>
-                                <label style={{ display: 'block', fontFamily: 'Scandia, sans-serif', fontSize: '20px', fontWeight: 700, color: '#656565', marginBottom: '8px' }}>
+                                <label style={{ display: 'block', fontFamily: 'Scandia, sans-serif', fontSize: '14px', fontWeight: 400, color: '#656565', marginBottom: '8px' }}>
                                     last name*
                                 </label>
-                                <input type="text" style={{ width: '100%', border: 'none', borderBottom: '2px solid #0B1215', background: 'transparent', padding: '4px 0', outline: 'none', borderRadius: 0 }} />
+                                <input type="text" style={{ width: '100%', border: 'none', borderBottom: '1px solid #0B1215', background: 'transparent', padding: '4px 0', outline: 'none', borderRadius: 0 }} />
                             </div>
                         </div>
 
                         {/* Email */}
                         <div>
-                            <label style={{ display: 'block', fontFamily: 'Scandia, sans-serif', fontSize: '20px', fontWeight: 700, color: '#656565', marginBottom: '8px' }}>
+                            <label style={{ display: 'block', fontFamily: 'Scandia, sans-serif', fontSize: '14px', fontWeight: 400, color: '#656565', marginBottom: '8px' }}>
                                 e-mail address*
                             </label>
-                            <input type="email" style={{ width: '100%', border: 'none', borderBottom: '2px solid #0B1215', background: 'transparent', padding: '4px 0', outline: 'none', borderRadius: 0 }} />
+                            <input type="email" style={{ width: '100%', border: 'none', borderBottom: '1px solid #0B1215', background: 'transparent', padding: '4px 0', outline: 'none', borderRadius: 0 }} />
                         </div>
 
                         {/* Looking For (Custom Dropdown) */}
                         <div style={{ position: 'relative' }}>
                             {/* Dropdown Container (Border moves with content) */}
                             <div style={{
-                                borderBottom: '2px solid #0B1215',
+                                borderBottom: '1px solid #0B1215',
                                 paddingBottom: '8px',
                                 transition: 'height 0.2s ease'
                             }}>
@@ -277,9 +272,9 @@ export default function SectionContacts() {
                                 >
                                     <span style={{
                                         fontFamily: 'Scandia, sans-serif',
-                                        fontSize: '20px',
-                                        fontWeight: 700,
-                                        color: '#0B1215',
+                                        fontSize: '14px',
+                                        fontWeight: 400,
+                                        color: '#656565',
                                         minHeight: '24px'
                                     }}>
                                         {selectedOption || 'what are you looking for?*'}
@@ -288,7 +283,7 @@ export default function SectionContacts() {
                                         <img
                                             src={`${basePath}/images/Arrow 7.svg`}
                                             style={{
-                                                width: '25px',
+                                                width: '16px',
                                                 transform: dropdownOpen ? 'rotate(180deg)' : 'rotate(0deg)',
                                                 transition: 'transform 0.2s ease'
                                             }}
@@ -319,14 +314,14 @@ export default function SectionContacts() {
 
                         {/* Context */}
                         <div>
-                            <label style={{ display: 'block', fontFamily: 'Scandia, sans-serif', fontSize: '20px', fontWeight: 700, color: '#656565', marginBottom: '8px' }}>
+                            <label style={{ display: 'block', fontFamily: 'Scandia, sans-serif', fontSize: '14px', fontWeight: 400, color: '#656565', marginBottom: '8px' }}>
                                 tell us about your context
                             </label>
-                            <input type="text" style={{ width: '100%', border: 'none', borderBottom: '2px solid #0B1215', background: 'transparent', padding: '4px 0', outline: 'none', borderRadius: 0 }} />
+                            <input type="text" style={{ width: '100%', border: 'none', borderBottom: '1px solid #0B1215', background: 'transparent', padding: '4px 0', outline: 'none', borderRadius: 0 }} />
                         </div>
 
                         {/* Footer / Privacy */}
-                        <div style={{ marginTop: '40px' }}>
+                        <div style={{ marginTop: '5px' }}>
                             <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px', marginBottom: '24px' }}>
                                 <input
                                     type="checkbox"
@@ -351,11 +346,16 @@ export default function SectionContacts() {
                                 </label>
                             </div>
 
-                            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '60px' }}>
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '24px' }}>
                                 <img src={`${basePath}/images/Exclude.svg`} alt="info" style={{ width: '16px', height: '16px' }} />
-                                <span style={{ fontFamily: 'Scandia, sans-serif', fontSize: '18px', fontWeight: 500, textDecoration: 'underline', color: '#0B1215' }}>
+                                <a
+                                    href={`${basePath}/privacy#how-we-use-your-data`}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    style={{ fontFamily: 'Scandia, sans-serif', fontSize: '18px', fontWeight: 500, textDecoration: 'underline', color: '#0B1215' }}
+                                >
                                     How we use your data
-                                </span>
+                                </a>
                             </div>
 
                             <button

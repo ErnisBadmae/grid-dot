@@ -2,8 +2,10 @@
 
 import React from 'react'
 import { basePath } from '@/lib/basePath'
+import { useApp } from '@/contexts/AppContext'
 
 export default function SectionCommitment() {
+    const { scrollTo } = useApp()
     return (
         <section
             id="section-commitment"
@@ -58,6 +60,15 @@ export default function SectionCommitment() {
                             min-width: 0 !important;
                         }
                     }
+                    .commitment-link-atelier,
+                    .commitment-link-ee {
+                        text-decoration: none;
+                        text-underline-offset: 4px;
+                    }
+                    .commitment-link-atelier:hover,
+                    .commitment-link-ee:hover {
+                        text-decoration: underline;
+                    }
                 `}</style>
 
                 {/* Header */}
@@ -106,20 +117,27 @@ export default function SectionCommitment() {
 
                     {/* Row 1 */}
                     <div className="commitment-row">
-                        <span
-                            className="commitment-text"
-                            style={{
-                                fontFamily: "'Overpass Mono', monospace",
-                                fontSize: '24px',
-                                fontWeight: 600,
-                                letterSpacing: '0.02em',
-                                color: '#FF8000',
-                                width: '300px', // Fixed width for alignment
-                                textAlign: 'right',
-                            }}
+                        <a
+                            href="#"
+                            onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
+                            style={{ display: 'contents' }}
                         >
-                            digital atelier
-                        </span>
+                            <span
+                                className="commitment-text commitment-link-atelier"
+                                style={{
+                                    fontFamily: "'Overpass Mono', monospace",
+                                    fontSize: '24px',
+                                    fontWeight: 600,
+                                    letterSpacing: '0.02em',
+                                    color: '#FF8000',
+                                    width: '300px',
+                                    textAlign: 'right',
+                                    cursor: 'pointer',
+                                }}
+                            >
+                                digital atelier
+                            </span>
+                        </a>
 
                         <img className="commitment-arrow" src={`${basePath}/images/Arrow Our Commitment.svg`} alt="arrow" />
 
@@ -139,20 +157,27 @@ export default function SectionCommitment() {
 
                     {/* Row 2 */}
                     <div className="commitment-row">
-                        <span
-                            className="commitment-text"
-                            style={{
-                                fontFamily: "'Overpass Mono', monospace",
-                                fontSize: '24px',
-                                color: '#0033FF',
-                                width: '300px', // Fixed width for alignment
-                                textAlign: 'right',
-                                fontWeight: 600,
-                                letterSpacing: '0.02em',
-                            }}
+                        <a
+                            href="#"
+                            onClick={(e) => { e.preventDefault(); scrollTo('#section-1', 'start'); }}
+                            style={{ display: 'contents' }}
                         >
-                            extended expertise
-                        </span>
+                            <span
+                                className="commitment-text commitment-link-ee"
+                                style={{
+                                    fontFamily: "'Overpass Mono', monospace",
+                                    fontSize: '24px',
+                                    color: '#0033FF',
+                                    width: '300px',
+                                    textAlign: 'right',
+                                    fontWeight: 600,
+                                    letterSpacing: '0.02em',
+                                    cursor: 'pointer',
+                                }}
+                            >
+                                extended expertise
+                            </span>
+                        </a>
 
                         <img className="commitment-arrow" src={`${basePath}/images/Arrow Our Commitment.svg`} alt="arrow" />
 

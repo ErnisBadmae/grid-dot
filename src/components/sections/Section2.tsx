@@ -41,24 +41,62 @@ export default function Section2() {
       id="section-2"
       style={{
         position: 'relative',
-        padding: '100px 73px',
+        padding: '100px 73px 10px',
       }}
     >
-      {/* Header */}
-      <h2
+      {/* Header row with description */}
+      <div
         style={{
-          fontFamily: 'Scandia, sans-serif',
-          fontWeight: 700,
-          color: '#0B1215',
-          lineHeight: 1.1,
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          flexWrap: 'wrap',
+          gap: '40px',
           marginBottom: '80px',
-          margin: '0 0 80px 0',
         }}
-        className="section-2-title"
       >
-        What We Offer —<br />
-        Our Expertise
-      </h2>
+        <h2
+          style={{
+            fontFamily: 'Scandia, sans-serif',
+            fontWeight: 700,
+            color: '#0B1215',
+            lineHeight: 1.1,
+            margin: 0,
+          }}
+          className="section-2-title"
+        >
+          What We Offer —<br />
+          Our Expertise
+        </h2>
+
+        <div
+          style={{
+            backgroundColor: '#F8F8F8',
+            padding: '50px',
+            minHeight: '220px',
+            maxWidth: '500px',
+            flex: '1 1 300px',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+          }}
+        >
+          <p
+            style={{
+              fontFamily: "'Overpass Mono', monospace",
+              fontSize: '16px',
+              fontWeight: 400,
+              letterSpacing: '0em',
+              color: '#0B1215',
+              lineHeight: 1.6,
+              margin: 0,
+            }}
+          >
+            Our aim is to deliver specialists who are T shaped – this makes projects move faster and delivers better outcomes
+          </p>
+        </div>
+      </div>
+
 
       <style jsx>{`
         .section-2-title {

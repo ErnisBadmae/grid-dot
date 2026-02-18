@@ -8,7 +8,7 @@ export default function Section1() {
       id="section-1"
       style={{
         position: 'relative',
-        padding: '100px 73px 180px', // Increased bottom padding
+        padding: '80px 73px 180px', // Increased bottom padding
         backgroundColor: '#F2F0EF',
       }}
     >
@@ -19,10 +19,10 @@ export default function Section1() {
           style={{
             display: 'flex',
             justifyContent: 'space-between',
-            alignItems: 'flex-start',
+            alignItems: 'cente5',
             flexWrap: 'wrap',
             gap: '40px',
-            marginBottom: '60px',
+            marginBottom: '50px',
           }}
         >
           <h2
@@ -62,7 +62,7 @@ export default function Section1() {
                 margin: 0,
               }}
             >
-              Unlike traditional recruiters who send lists of CVs and hope for the best, we curate talent that fits your culture, workflows, and goals.
+              Unlike traditional who send lists of CVs and hope for the best, we curate talent that fits your culture, workflows, and goals.
             </p>
           </div>
         </div >
@@ -105,7 +105,7 @@ export default function Section1() {
               <h3
                 style={{
                   fontSize: '24px',
-                  fontWeight: 700,
+                  fontWeight: 500,
                   color: '#656565',
                   margin: 0,
                 }}
@@ -118,7 +118,7 @@ export default function Section1() {
               <h3
                 style={{
                   fontSize: '24px',
-                  fontWeight: 700,
+                  fontWeight: 500,
                   color: '#0033FF',
                   margin: 0,
                 }}
@@ -135,7 +135,7 @@ export default function Section1() {
                     key={item}
                     style={{
                       fontSize: '24px',
-                      fontWeight: 400,
+                      fontWeight: 500,
                       color: '#656565',
                     }}
                   >
@@ -152,7 +152,7 @@ export default function Section1() {
                     key={item}
                     style={{
                       fontSize: '24px',
-                      fontWeight: 700,
+                      fontWeight: 500,
                       color: '#0B1215',
                     }}
                   >
@@ -230,12 +230,12 @@ export default function Section1() {
             }}
           >
             <div style={{ paddingBottom: '30px', textAlign: 'center' }}>
-              <h3 style={{ fontSize: '16px', fontWeight: 700, color: '#656565', margin: 0 }}>
+              <h3 style={{ fontSize: '16px', fontWeight: 500, color: '#656565', margin: 0 }}>
                 Traditional<br />recruiters
               </h3>
             </div>
             <div style={{ paddingBottom: '30px', textAlign: 'center' }}>
-              <h3 style={{ fontSize: '16px', fontWeight: 700, color: '#0033FF', margin: 0 }}>
+              <h3 style={{ fontSize: '16px', fontWeight: 500, color: '#0033FF', margin: 0 }}>
                 Extended<br />Expertise
               </h3>
             </div>
@@ -250,7 +250,7 @@ export default function Section1() {
             <div style={{ textAlign: 'center' }}>
               <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '32px' }}>
                 {['Curate specialists', 'Quality-driven', 'Long-term fit', 'Ongoing support'].map(item => (
-                  <li key={item} style={{ fontSize: '16px', fontWeight: 700, color: '#0B1215' }}>{item}</li>
+                  <li key={item} style={{ fontSize: '16px', fontWeight: 500, color: '#0B1215' }}>{item}</li>
                 ))}
               </ul>
             </div>
@@ -267,7 +267,7 @@ export default function Section1() {
         style={{
           position: 'absolute',
           top: 'auto',
-          bottom: '-350px',
+          bottom: '-250px',
           left: '50%',
           transform: 'translateX(-50%)',
           width: '100vw',

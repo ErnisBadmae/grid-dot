@@ -16,84 +16,71 @@ export default function ContactsSidebar() {
 
   return (
     <>
-      {/* Desktop Sidebar */}
+      {/* Desktop Sidebar — matches old site 1:1 */}
       <aside
         id="contact-sidebar"
         className={`${sidebarDesktopOn ? 'visible' : ''} ${sidebarDesktopHover ? 'hover' : ''}`}
         onMouseEnter={() => setSidebarDesktopHover(true)}
         onMouseLeave={() => setSidebarDesktopHover(false)}
       >
-        <div style={{
-          display: sidebarDesktopOn ? 'flex' : 'none',
-          flexDirection: 'column',
-          gap: '12px',
-          whiteSpace: 'nowrap',
-          opacity: sidebarDesktopOn ? 1 : 0,
-          transition: 'opacity 0.3s ease',
-          padding: '20px', /* Added padding for text */
-          // fontFamily: "'Scandia', sans-serif",
-          fontSize: '18px',
-          fontWeight: 700,
-          color: '#FFFFFF'
-        }}>
+        {/* Content panel */}
+        <div style={{ padding: '16px 38px 16px 28px' }}>
           {/* Line 1: Messengers */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+          <p>
             <span>You can get in touch with us by</span>
-            <a href={`https://wa.me/${CONTACTS.whatsapp}`} target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '4px', color: '#FFF', textDecoration: 'underline', textUnderlineOffset: '4px' }}>
-              <img src={`${basePath}/images/icon-whatsapp.svg`} alt="" style={{ width: '20px', height: '20px', filter: 'brightness(0) invert(1)' }} />
-              WhatsApp
-            </a>
-            <a href={`https://t.me/${CONTACTS.telegram}`} target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '4px', color: '#FFF', textDecoration: 'underline', textUnderlineOffset: '4px' }}>
-              <img src={`${basePath}/images/icon-telegram.svg`} alt="" style={{ width: '20px', height: '20px', filter: 'brightness(0) invert(1)' }} />
-              Telegram
-            </a>
-          </div>
+            {CONTACTS.whatsapp && (
+              <a href={`https://wa.me/${CONTACTS.whatsapp}`} className="link" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                <img className="svg-icon" src={`${basePath}/images/icon-whatsapp.svg`} alt="WhatsApp" style={{ filter: 'brightness(0) invert(1)' }} />
+                WhatsApp
+              </a>
+            )}
+            {CONTACTS.telegram && (
+              <a href={`https://t.me/${CONTACTS.telegram}`} className="link" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+                <img className="svg-icon" src={`${basePath}/images/icon-telegram.svg`} alt="Telegram" style={{ filter: 'brightness(0) invert(1)' }} />
+                Telegram
+              </a>
+            )}
+          </p>
 
           {/* Line 2: Email */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-            <span>Send a message to our email</span>
-            <a href={`mailto:${CONTACTS.email}`} style={{ display: 'flex', alignItems: 'center', gap: '4px', color: '#FFF', textDecoration: 'underline', textUnderlineOffset: '4px' }}>
-              <img src={`${basePath}/images/icon-email.svg`} alt="" style={{ width: '20px', height: '20px', filter: 'brightness(0) invert(1)' }} />
-              {CONTACTS.email}
-            </a>
-          </div>
+          {CONTACTS.email && (
+            <p>
+              <span>Send a message to our email</span>
+              <a href={`mailto:${CONTACTS.email}`} className="link" aria-label="Email">
+                <img className="svg-icon" src={`${basePath}/images/icon-email.svg`} alt="Email" style={{ filter: 'brightness(0) invert(1)' }} />
+                {CONTACTS.email}
+              </a>
+            </p>
+          )}
 
           {/* Line 3: Phone */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-            <span>or give us a call at</span>
-            <a href={`tel:${CONTACTS.phone}`} style={{ display: 'flex', alignItems: 'center', gap: '4px', color: '#FFF', textDecoration: 'underline', textUnderlineOffset: '4px' }}>
-              <img src={`${basePath}/images/icon-phone-2.svg`} alt="" style={{ width: '20px', height: '20px', filter: 'brightness(0) invert(1)' }} />
-              {CONTACTS.phone}
-            </a>
-          </div>
+          {CONTACTS.phone && (
+            <p>
+              <span>or give us a call at</span>
+              <a href={`tel:${CONTACTS.phone}`} className="link" aria-label="Phone">
+                <img className="svg-icon" src={`${basePath}/images/icon-phone-2.svg`} alt="Phone" style={{ filter: 'brightness(0) invert(1)' }} />
+                {CONTACTS.phone}
+              </a>
+            </p>
+          )}
         </div>
 
-        <button id="contact-sidebar-toggle" onClick={toggleSidebarDesktop} style={{ padding: '12px 0' /* Reduced padding */ }}>
-          <span
-            style={{
-              writingMode: 'vertical-rl',
-              textOrientation: 'mixed',
-              // fontFamily: "'Scandia'",
-              fontSize: '16px', /* Reduced from 24px */
-              fontWeight: 700,
-              letterSpacing: '0.15em',
-              color: '#fff',
-              marginBottom: '10px',
-            }}
-          >
-            Contact Us
-          </span>
+        {/* Toggle tab — div like in old site */}
+        <div
+          id="contact-sidebar-toggle"
+          className="contact-sidebar-toggle"
+          onClick={toggleSidebarDesktop}
+        >
+          Contact Us
           <img
-            src={`${basePath}/images/Vector for contacts slidebar.svg`}
-            alt="Toggle"
-            style={{
-              width: '10px',
-              transform: sidebarDesktopOn ? 'rotate(180deg)' : 'none',
-              transition: 'transform 0.3s ease'
-            }}
+            src={`${basePath}/images/icon-arrow-horizontal.svg`}
+            className="contact-sidebar-toggle__icon"
+            alt=""
+            style={{ filter: 'brightness(0) invert(1)' }}
           />
-        </button>
+        </div>
       </aside>
+
 
       {/* Mobile Bottom Sheet */}
       <aside id="contact-sidebar-mobile" className={sidebarMobileExpanded ? 'visible' : ''}>

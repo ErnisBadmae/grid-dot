@@ -48,7 +48,7 @@ export default function Section4() {
         className="text-on-path"
         src={`${basePath}/images/text-on-path-new-desktop.svg`}
         alt=""
-        style={{ top: '0px', zIndex: 0 /* Changed from -1 to 0 to sit above bg but below content? Or 10? User said white block covers it. If white block is Section 1, and Section 4 is Relative... actually, let's try 10 and pointer-events-none */, left: '0', width: '100%', pointerEvents: 'none' }}
+        style={{ top: '20px', zIndex: 0 /* Changed from -1 to 0 to sit above bg but below content? Or 10? User said white block covers it. If white block is Section 1, and Section 4 is Relative... actually, let's try 10 and pointer-events-none */, left: '0', width: '100%', pointerEvents: 'none' }}
       />
       {/* Mobile Marquee 1 - Inline Animated SVG */}
       <svg
@@ -103,7 +103,7 @@ export default function Section4() {
           justifyContent: 'flex-start', // Left aligned
           alignItems: 'flex-start',
           gap: '80px', // Increased gap
-          marginTop: '60px',
+          marginTop: '150px',
           flexWrap: 'wrap',
           position: 'relative',
           zIndex: 10,
@@ -140,6 +140,7 @@ export default function Section4() {
             style={{
               display: 'inline-flex',
               alignItems: 'center',
+              gap: '10px',
               padding: '16px 48px',
               backgroundColor: 'transparent',
               border: '2px solid #0033FF',
@@ -154,13 +155,22 @@ export default function Section4() {
             onMouseEnter={(e) => {
               e.currentTarget.style.backgroundColor = '#0033FF';
               e.currentTarget.style.color = '#FFFFFF';
+              const arrow = e.currentTarget.querySelector('img') as HTMLImageElement | null;
+              if (arrow) arrow.style.filter = 'brightness(0) invert(1)';
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.backgroundColor = 'transparent';
               e.currentTarget.style.color = '#0033FF';
+              const arrow = e.currentTarget.querySelector('img') as HTMLImageElement | null;
+              if (arrow) arrow.style.filter = 'none';
             }}
           >
             Let's Talk
+            <img
+              src={`${basePath}/images/Arrow 6.svg`}
+              alt=""
+              className="book-call-arrow"
+            />
           </button>
         </div>
 
