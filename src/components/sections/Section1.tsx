@@ -1,6 +1,6 @@
-'use client'
+'use client';
 
-import { basePath } from '@/lib/basePath'
+import { basePath } from '@/lib/basePath';
 
 export default function Section1() {
   return (
@@ -9,20 +9,20 @@ export default function Section1() {
       style={{
         position: 'relative',
         padding: '80px 73px 180px', // Increased bottom padding
-        backgroundColor: '#F2F0EF',
+        backgroundColor: '#F2F0EF'
       }}
     >
       {/* Desktop Layout */}
-      < div className="desktop-only" >
+      <div className="desktop-only">
         {/* Top Row: Headline and Description */}
-        < div
+        <div
           style={{
             display: 'flex',
             justifyContent: 'space-between',
             alignItems: 'cente5',
             flexWrap: 'wrap',
             gap: '40px',
-            marginBottom: '50px',
+            marginBottom: '50px'
           }}
         >
           <h2
@@ -33,10 +33,12 @@ export default function Section1() {
               color: '#0B1215',
               lineHeight: 1.1,
               maxWidth: '500px',
-              margin: 0,
+              margin: 0
             }}
           >
-            Why Extended<br />Expertise
+            Why Extended
+            <br />
+            Expertise
           </h2>
 
           <div
@@ -59,18 +61,20 @@ export default function Section1() {
                 letterSpacing: '0em',
                 color: '#0B1215',
                 lineHeight: 1.6,
-                margin: 0,
+                margin: 0
               }}
             >
-              Unlike traditional who send lists of CVs and hope for the best, we curate talent that fits your culture, workflows, and goals.
+              Unlike traditional recruiters who send lists of CVs and hope for
+              the best, we curate talent that fits your culture, workflows, and
+              goals.
             </p>
           </div>
-        </div >
+        </div>
 
         {/* Comparison Grid with SVG Background */}
-        < div style={{ position: 'relative' }}>
+        <div style={{ position: 'relative' }}>
           {/* SVG Structure Layer */}
-          < img
+          <img
             src={`${basePath}/images/grid+vs+next.svg`}
             alt=""
             style={{
@@ -82,7 +86,7 @@ export default function Section1() {
               maxWidth: '1440px', // Cap width to prevent vertical scaling drift
               height: 'auto',
               zIndex: 1,
-              pointerEvents: 'none',
+              pointerEvents: 'none'
             }}
             className="grid-vs-next-img"
           />
@@ -97,30 +101,43 @@ export default function Section1() {
               position: 'relative',
               zIndex: 2,
               maxWidth: '1440px', // Match SVG max-width
-              margin: '0 auto',   // Center the grid
+              margin: '0 auto' // Center the grid
             }}
           >
             {/* Row 1 Headers */}
-            <div style={{ gridColumn: '1 / 2', paddingRight: '40px', marginBottom: '90px' }}>
+            <div
+              style={{
+                gridColumn: '1 / 2',
+                paddingRight: '40px',
+                marginBottom: '90px'
+              }}
+            >
               <h3
                 style={{
                   fontSize: '24px',
                   fontWeight: 500,
                   color: '#656565',
-                  margin: 0,
+                  margin: 0
                 }}
               >
                 Traditional recruiters
               </h3>
             </div>
 
-            <div className="section-1-extended-header" style={{ gridColumn: '3 / 4', paddingLeft: '40px', marginBottom: '90px' }}>
+            <div
+              className="section-1-extended-header"
+              style={{
+                gridColumn: '3 / 4',
+                paddingLeft: '40px',
+                marginBottom: '90px'
+              }}
+            >
               <h3
                 style={{
                   fontSize: '24px',
                   fontWeight: 500,
                   color: '#0033FF',
-                  margin: 0,
+                  margin: 0
                 }}
               >
                 Extended Expertise
@@ -129,14 +146,28 @@ export default function Section1() {
 
             {/* Row 2 Content Lists */}
             <div style={{ gridColumn: '1 / 2', paddingRight: '40px' }}>
-              <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '32px' }}>
-                {['Send CVs', 'Volume-driven', 'One-off hiring', 'Minimal follow-up'].map((item) => (
+              <ul
+                style={{
+                  listStyle: 'none',
+                  padding: 0,
+                  margin: 0,
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '32px'
+                }}
+              >
+                {[
+                  'Send CVs',
+                  'Volume-driven',
+                  'One-off hiring',
+                  'Minimal follow-up'
+                ].map((item) => (
                   <li
                     key={item}
                     style={{
                       fontSize: '24px',
                       fontWeight: 500,
-                      color: '#656565',
+                      color: '#656565'
                     }}
                   >
                     {item}
@@ -145,15 +176,32 @@ export default function Section1() {
               </ul>
             </div>
 
-            <div className="section-1-extended-list" style={{ gridColumn: '3 / 4', paddingLeft: '40px' }}>
-              <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '32px' }}>
-                {['Curate specialists', 'Quality-driven', 'Long-term fit', 'Ongoing support'].map((item) => (
+            <div
+              className="section-1-extended-list"
+              style={{ gridColumn: '3 / 4', paddingLeft: '40px' }}
+            >
+              <ul
+                style={{
+                  listStyle: 'none',
+                  padding: 0,
+                  margin: 0,
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '32px'
+                }}
+              >
+                {[
+                  'Curate specialists',
+                  'Quality-driven',
+                  'Long-term fit',
+                  'Ongoing support'
+                ].map((item) => (
                   <li
                     key={item}
                     style={{
                       fontSize: '24px',
                       fontWeight: 500,
-                      color: '#0B1215',
+                      color: '#0B1215'
                     }}
                   >
                     {item}
@@ -162,11 +210,11 @@ export default function Section1() {
               </ul>
             </div>
           </div>
-        </div >
-      </div >
+        </div>
+      </div>
 
       {/* Mobile Layout */}
-      < div className="mobile-only" >
+      <div className="mobile-only">
         <h2
           style={{
             fontFamily: 'Scandia, sans-serif',
@@ -174,17 +222,19 @@ export default function Section1() {
             fontWeight: 700,
             color: '#0B1215',
             lineHeight: 1.1,
-            margin: '0 0 32px 0',
+            margin: '0 0 32px 0'
           }}
         >
-          Why Extended<br />Expertise
+          Why Extended
+          <br />
+          Expertise
         </h2>
 
         <div
           style={{
             backgroundColor: '#F8F8F8',
             padding: '24px',
-            marginBottom: '40px',
+            marginBottom: '40px'
           }}
         >
           <p
@@ -194,10 +244,11 @@ export default function Section1() {
               fontWeight: 400,
               color: '#0033FF',
               lineHeight: 1.6,
-              margin: 0,
+              margin: 0
             }}
           >
-            Unlike traditional recruiters who send lists of CVs and hope for the best, we curate talent that fits your culture, workflows, and goals.
+            Unlike traditional recruiters who send lists of CVs and hope for the
+            best, we curate talent that fits your culture, workflows, and goals.
           </p>
         </div>
 
@@ -226,37 +277,101 @@ export default function Section1() {
               columnGap: '20px',
               fontFamily: 'Scandia, sans-serif',
               position: 'relative',
-              zIndex: 2,
+              zIndex: 2
             }}
           >
             <div style={{ paddingBottom: '30px', textAlign: 'center' }}>
-              <h3 style={{ fontSize: '16px', fontWeight: 500, color: '#656565', margin: 0 }}>
-                Traditional<br />recruiters
+              <h3
+                style={{
+                  fontSize: '16px',
+                  fontWeight: 500,
+                  color: '#656565',
+                  margin: 0
+                }}
+              >
+                Traditional
+                <br />
+                recruiters
               </h3>
             </div>
             <div style={{ paddingBottom: '30px', textAlign: 'center' }}>
-              <h3 style={{ fontSize: '16px', fontWeight: 500, color: '#0033FF', margin: 0 }}>
-                Extended<br />Expertise
+              <h3
+                style={{
+                  fontSize: '16px',
+                  fontWeight: 500,
+                  color: '#0033FF',
+                  margin: 0
+                }}
+              >
+                Extended
+                <br />
+                Expertise
               </h3>
             </div>
 
             <div style={{ textAlign: 'center' }}>
-              <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '32px' }}>
-                {['Send CVs', 'Volume-driven', 'One-off hiring', 'Minimal follow-up'].map(item => (
-                  <li key={item} style={{ fontSize: '16px', fontWeight: 500, color: '#656565' }}>{item}</li>
+              <ul
+                style={{
+                  listStyle: 'none',
+                  padding: 0,
+                  margin: 0,
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '32px'
+                }}
+              >
+                {[
+                  'Send CVs',
+                  'Volume-driven',
+                  'One-off hiring',
+                  'Minimal follow-up'
+                ].map((item) => (
+                  <li
+                    key={item}
+                    style={{
+                      fontSize: '16px',
+                      fontWeight: 500,
+                      color: '#656565'
+                    }}
+                  >
+                    {item}
+                  </li>
                 ))}
               </ul>
             </div>
             <div style={{ textAlign: 'center' }}>
-              <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '32px' }}>
-                {['Curate specialists', 'Quality-driven', 'Long-term fit', 'Ongoing support'].map(item => (
-                  <li key={item} style={{ fontSize: '16px', fontWeight: 500, color: '#0B1215' }}>{item}</li>
+              <ul
+                style={{
+                  listStyle: 'none',
+                  padding: 0,
+                  margin: 0,
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '32px'
+                }}
+              >
+                {[
+                  'Curate specialists',
+                  'Quality-driven',
+                  'Long-term fit',
+                  'Ongoing support'
+                ].map((item) => (
+                  <li
+                    key={item}
+                    style={{
+                      fontSize: '16px',
+                      fontWeight: 500,
+                      color: '#0B1215'
+                    }}
+                  >
+                    {item}
+                  </li>
                 ))}
               </ul>
             </div>
           </div>
         </div>
-      </div >
+      </div>
 
       {/* Animated Text Path */}
       {/* Animated Text Path Footer */}
@@ -275,7 +390,7 @@ export default function Section1() {
           height: 'auto',
           pointerEvents: 'none',
           zIndex: 0,
-          display: 'block',
+          display: 'block'
         }}
       />
       <style jsx>{`
@@ -284,13 +399,19 @@ export default function Section1() {
           transition: top 0.3s ease;
         }
         @media (min-width: 1501px) {
-          .grid-vs-next-img { top: -15px !important; }
+          .grid-vs-next-img {
+            top: -15px !important;
+          }
         }
         @media (min-width: 1601px) {
-          .grid-vs-next-img { top: -30px !important; }
+          .grid-vs-next-img {
+            top: -30px !important;
+          }
         }
         @media (min-width: 1701px) {
-          .grid-vs-next-img { top: -45px !important; }
+          .grid-vs-next-img {
+            top: -45px !important;
+          }
         }
         // @media (min-width: 1801px) {
         //   .grid-vs-next-img { top: -60px !important; }
@@ -303,5 +424,5 @@ export default function Section1() {
         // }
       `}</style>
     </section>
-  )
+  );
 }
