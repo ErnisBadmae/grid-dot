@@ -1,0 +1,114 @@
+{
+  "company": {
+    "name": "Grid & Dot",
+    "legalName": "Grid and Dot",
+    "type": "Recruitment Agency",
+    "specialty": "Extended Expertise Talent Curation",
+    "tagline": "No CVs—Real Expertise",
+    "description": "London-based extended expertise recruitment agency specializing in curated digital talent for product strategy, data architecture, and delivery teams.",
+    "founded": "2024",
+    "location": {
+      "city": "London",
+      "region": "Mayfair",
+      "country": "United Kingdom",
+      "countryCode": "GB"
+    },
+    "contact": {
+      "email": "engagement@gridanddot.com",
+      "phone": "+447782795174",
+      "whatsapp": "+447782795174",
+      "telegram": "@gridanddot"
+    },
+    "website": "https://gridanddot.com",
+    "social": {
+      "note": "Add social media profiles here if available"
+    }
+  },
+  "services": {
+    "primary": "Extended Expertise Recruitment",
+    "approach": "Quality-driven curation of digital specialists with long-term fit focus and ongoing support",
+    "differentiators": [
+      "No CVs - curated specialists only",
+      "Quality over volume approach",
+      "Long-term cultural fit focus",
+      "Ongoing partnership and support",
+      "Deep understanding of team workflows and culture"
+    ],
+    "expertise_areas": [
+      {
+        "area": "Product Strategy",
+        "description": "Product managers, strategists, and leaders who drive product vision and roadmap"
+      },
+      {
+        "area": "Data Architecture",
+        "description": "Data architects, engineers, and scientists who build scalable data solutions"
+      },
+      {
+        "area": "Delivery & Agile",
+        "description": "Delivery managers, scrum masters, and agile coaches who ensure successful execution"
+      },
+      {
+        "area": "UX & Design",
+        "description": "UX designers, researchers, and design leads who create exceptional user experiences"
+      },
+      {
+        "area": "Content Strategy",
+        "description": "Content strategists and managers who craft compelling digital narratives"
+      }
+    ]
+  },
+  "target_market": {
+    "client_types": "Digital-first teams, global brands, enterprise companies undergoing digital transformation",
+    "industries": [
+      "Technology",
+      "Digital",
+      "E-commerce",
+      "Financial Services",
+      "Retail & Fashion",
+      "Consumer Goods"
+    ],
+    "geographic_focus": "UK, EMEA, APAC"
+  },
+  "case_studies": {
+    "featured": [
+      {
+        "client": "The Estée Lauder Companies",
+        "challenge": "Global platform modernisation and omni-channel expansion",
+        "expertise_provided": [
+          "Data Architecture",
+          "Product Strategy",
+          "Delivery Management",
+          "Brand Experience"
+        ],
+        "outcome": "Successfully scaled digital capabilities across multiple brands and regions"
+      }
+    ]
+  },
+  "values": {
+    "quality_over_quantity": "We focus on the right fit, not the fastest placement",
+    "no_cv_approach": "Real expertise and cultural fit matter more than resume keywords",
+    "long_term_partnership": "We support ongoing success, not just initial placement",
+    "cultural_alignment": "Deep understanding of team workflows, culture, and goals"
+  },
+  "faq": [
+    {
+      "question": "What is Extended Expertise?",
+      "answer": "Extended expertise is a talent model focused on curated specialists rather than CV volume. We match digital specialists for product strategy, data architecture, and delivery to your team's culture and workflows."
+    },
+    {
+      "question": "How is Grid & Dot different from traditional recruiters?",
+      "answer": "Unlike traditional agencies that send CVs, we curate specialists that fit your culture, workflows, and goals. We focus on quality over volume, long-term fit, and ongoing support."
+    },
+    {
+      "question": "What industries do you serve?",
+      "answer": "We specialize in digital-first teams requiring product strategy, data architecture, delivery, and content expertise. Our clients include global brands like The Estée Lauder Companies."
+    }
+  ],
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2026-02-15",
+    "format": "JSON",
+    "purpose": "Machine-readable company information for AI agents and automated systems",
+    "schema": "https://gridanddot.com/api/metadata.json"
+  }
+}
