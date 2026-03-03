@@ -31,31 +31,48 @@ export default function AtelierHeader() {
                     />
                 </a>
 
-                {/* Atelier Tagline */}
-                <a href={`${basePath}/`} className="header-tagline atelier-tagline">
-                    — atelier
-                </a>
+                {/* Tagline Navigation */}
+                <div className="header-tagline">
+                    <a href={`${basePath}/`} className="tagline-link tagline-ee">
+                        extended expertise
+                    </a>
+                    <span className="tagline-separator">|</span>
+                    <span className="tagline-active">[ atelier ]</span>
+                </div>
             </div>
 
             <style jsx>{`
         .header-tagline {
-          font-family: var(--font-overpass), monospace;
-          font-size: 24px;
-          font-weight: 600;
-          letter-spacing: 0.02em;
-          color: #FF6B00;
-          text-transform: lowercase;
-          margin-left: 100px;
-          white-space: nowrap;
-          transition: text-decoration 0.2s ease;
-          cursor: pointer;
-          text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            font-family: var(--font-overpass), monospace;
+            font-size: 24px;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            text-transform: lowercase;
+            margin-left: 100px;
+            white-space: nowrap;
         }
-        .header-tagline:hover {
-          text-decoration: underline;
-          text-decoration-color: #FF6B00;
-          text-decoration-thickness: 2px;
-          text-underline-offset: 4px;
+        .tagline-active {
+            color: #FF6B00;
+        }
+        .tagline-separator {
+            color: #0033FF;
+        }
+        .tagline-link {
+            text-decoration: none;
+            cursor: pointer;
+            transition: text-decoration 0.2s ease;
+        }
+        .tagline-link.tagline-ee {
+            color: #0033FF;
+        }
+        .tagline-link.tagline-ee:hover {
+            text-decoration: underline;
+            text-decoration-color: #0033FF;
+            text-decoration-thickness: 2px;
+            text-underline-offset: 4px;
         }
       `}</style>
         </header>

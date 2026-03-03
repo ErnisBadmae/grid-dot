@@ -429,7 +429,7 @@ export default function SectionSuccessStories() {
           >
             Our long tenure has allowed us to bring institutional knowledge,
             established ways of working, and deliver high impact collaboration.
-            Enforced by expertise, agility and scalability, the client continues
+            Enforced by expertise, agility and scalability, ELC continues
             to benefit from a reliable,
             <br />
             continuously embedded delivery capability - supporting initiative

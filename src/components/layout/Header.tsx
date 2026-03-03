@@ -34,9 +34,14 @@ export default function Header() {
           />
         </a>
 
-        <a href={`${basePath}/not-found`} className="header-tagline">
-          — extended expertise
-        </a>
+        {/* Tagline Navigation */}
+        <div className="header-tagline">
+          <span className="tagline-active">[ extended expertise ]</span>
+          <span className="tagline-separator">|</span>
+          <a href={`${basePath}/not-found`} className="tagline-link tagline-atelier">
+            atelier
+          </a>
+        </div>
       </div>
 
       {/* Book a Call Button - Desktop */}
@@ -55,20 +60,34 @@ export default function Header() {
       <style jsx>{`
         /* Tagline Styles */
         .header-tagline {
+            display: flex;
+            align-items: center;
+            gap: 16px;
             font-family: var(--font-overpass), monospace;
             font-size: 24px;
             font-weight: 600;
             letter-spacing: 0.02em;
-            color: #0033FF;
             text-transform: lowercase;
             margin-left: 100px;
             white-space: nowrap;
-            transition: text-decoration 0.2s ease;
-            cursor: pointer;
         }
-        .header-tagline:hover {
+        .tagline-active {
+            color: #0033FF;
+        }
+        .tagline-separator {
+            color: #0033FF;
+        }
+        .tagline-link {
+            text-decoration: none;
+            cursor: pointer;
+            transition: text-decoration 0.2s ease;
+        }
+        .tagline-link.tagline-atelier {
+            color: #FF6B00;
+        }
+        .tagline-link.tagline-atelier:hover {
             text-decoration: underline;
-            text-decoration-color: #0033FF;
+            text-decoration-color: #FF6B00;
             text-decoration-thickness: 2px;
             text-underline-offset: 4px;
         }

@@ -156,6 +156,7 @@
     .sections-wrapper {
       position: relative;
       top: -32px;
+      overflow: visible;
     }
   }
 
@@ -400,7 +401,7 @@
 
 @media (max-width: 639px) {
   #section-4 {
-    overflow-x: hidden;
+    overflow-x: visible;
   }
 
   #section-4 h1 {
@@ -635,7 +636,7 @@ textarea.input-text {
 /* Header Responsive */
 @media screen and (max-width: 639px) {
   header {
-    padding: 0 20px !important;
+    padding: 0 16px !important;
     /* Smaller padding on mobile */
   }
 
@@ -697,12 +698,12 @@ textarea.input-text {
 
   /* Section 1 padding */
   #section-1 {
-    padding: 60px 20px !important;
+    padding: 60px 16px !important;
   }
 
   /* Section 3 padding */
   #section-3 {
-    padding: 60px 20px !important;
+    padding: 60px 16px !important;
   }
 
   /* Section Work With padding */
@@ -710,11 +711,18 @@ textarea.input-text {
   #section-commitment,
   #section-contacts,
   #page-footer {
-    padding: 60px 20px !important;
+    padding: 60px 16px !important;
   }
 
   /* Scroll To Top hide on mobile */
   .scroll-to-top-btn-mobile-hide {
     display: none !important;
+  }
+}
+
+/* Force sections-wrapper overflow visible on mobile so marquee lines can extend full-width */
+@media screen and (max-width: 639px) {
+  .sections-wrapper {
+    overflow: visible !important;
   }
 }

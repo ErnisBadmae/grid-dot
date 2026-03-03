@@ -75,9 +75,7 @@ export default function SectionWorkWith() {
                         animation: marquee-scroll 20s linear infinite;
                     }
 
-                    .marquee-track:hover {
-                        animation-play-state: paused;
-                    }
+
 
                     @keyframes marquee-scroll {
                         0% {

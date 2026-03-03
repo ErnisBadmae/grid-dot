@@ -9,6 +9,7 @@ export default function SectionContacts() {
     const [dropdownOpen, setDropdownOpen] = React.useState(false)
     const [selectedOption, setSelectedOption] = React.useState('')
     const [privacyAccepted, setPrivacyAccepted] = React.useState(false)
+    const [dataPopupOpen, setDataPopupOpen] = React.useState(false)
 
     const options = [
         'extended team support',
@@ -346,16 +347,53 @@ export default function SectionContacts() {
                                 </label>
                             </div>
 
-                            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '24px' }}>
-                                <img src={`${basePath}/images/Exclude.svg`} alt="info" style={{ width: '16px', height: '16px' }} />
-                                <a
-                                    href={`${basePath}/privacy#how-we-use-your-data`}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    style={{ fontFamily: 'Scandia, sans-serif', fontSize: '18px', fontWeight: 500, textDecoration: 'underline', color: '#0B1215' }}
+                            <div style={{ position: 'relative', marginBottom: '24px' }}>
+                                <div
+                                    style={{ display: 'flex', alignItems: 'center', gap: '8px', cursor: 'pointer' }}
+                                    onClick={() => setDataPopupOpen(!dataPopupOpen)}
                                 >
-                                    How we use your data
-                                </a>
+                                    <img src={`${basePath}/images/Exclude.svg`} alt="info" style={{ width: '16px', height: '16px' }} />
+                                    <span
+                                        style={{ fontFamily: 'Scandia, sans-serif', fontSize: '18px', fontWeight: 500, textDecoration: 'underline', color: '#0B1215' }}
+                                    >
+                                        How we use your data
+                                    </span>
+                                </div>
+
+                                {dataPopupOpen && (
+                                    <>
+                                        {/* Invisible overlay to close on click outside */}
+                                        <div
+                                            onClick={() => setDataPopupOpen(false)}
+                                            style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', zIndex: 99 }}
+                                        />
+                                        <div
+                                            onClick={() => setDataPopupOpen(false)}
+                                            style={{
+                                                marginTop: '12px',
+                                                backgroundColor: '#FFFFFF',
+                                                border: '1px solid #E0E0E0',
+                                                padding: '20px 24px',
+                                                zIndex: 100,
+                                                maxWidth: '560px',
+                                                boxShadow: '0 4px 16px rgba(0,0,0,0.08)',
+                                                cursor: 'pointer',
+                                            }}
+                                        >
+                                            <p style={{
+                                                fontFamily: "'Overpass Mono', monospace",
+                                                fontSize: '14px',
+                                                fontWeight: 400,
+                                                color: '#0B1215',
+                                                lineHeight: 1.6,
+                                                margin: 0,
+                                            }}>
+                                                We'll only use your information to respond to your enquiry.
+                                                We do not share your data with third parties.
+                                            </p>
+                                        </div>
+                                    </>
+                                )}
                             </div>
 
                             <button
@@ -374,7 +412,7 @@ export default function SectionContacts() {
                                     color: '#0033FF',
                                     textDecoration: 'underline',
                                     textUnderlineOffset: '4px',
-                                    float: 'left', // Align left
+                                    float: 'right',
                                 }}
                             >
                                 Start a Conversation

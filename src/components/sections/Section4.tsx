@@ -59,7 +59,7 @@ export default function Section4() {
         viewBox="0 0 390 17"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        style={{ position: 'absolute', top: '40px', left: '0', width: '100%', zIndex: 20, pointerEvents: 'none' }}
+        style={{ position: 'absolute', top: '40px', left: 'calc(-15vw)', width: '100vw', zIndex: 20, pointerEvents: 'none' }}
       >
         <rect width="1200" height="19" fill="#9AC2E4" />
         <defs>
@@ -74,14 +74,14 @@ export default function Section4() {
       </svg>
       {/* Mobile Marquee 2 - Inline Animated SVG */}
       <svg
-        id="text-on-path-2-mobile"
+        id="text-on-path-1-mobile"
         className="text-on-path mobile-only"
         width="390"
         height="17"
         viewBox="0 0 390 17"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        style={{ position: 'absolute', top: '340px', left: '0', width: '100%', zIndex: 20, pointerEvents: 'none' }}
+        style={{ position: 'absolute', top: '340px', left: 'calc(-15vw)', width: '100vw', zIndex: 20, pointerEvents: 'none' }}
       >
         <rect width="1200" height="19" fill="#9AC2E4" />
         <defs>

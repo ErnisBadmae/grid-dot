@@ -118,8 +118,7 @@ export default function SectionCommitment() {
                     {/* Row 1 */}
                     <div className="commitment-row">
                         <a
-                            href="#"
-                            onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
+                            href={`${basePath}/not-found`}
                             style={{ display: 'contents' }}
                         >
                             <span
@@ -159,7 +158,7 @@ export default function SectionCommitment() {
                     <div className="commitment-row">
                         <a
                             href="#"
-                            onClick={(e) => { e.preventDefault(); scrollTo('#section-1', 'start'); }}
+                            onClick={(e) => { e.preventDefault(); scrollTo('#section-4', 'start'); }}
                             style={{ display: 'contents' }}
                         >
                             <span

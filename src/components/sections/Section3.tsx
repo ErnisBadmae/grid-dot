@@ -169,14 +169,15 @@ export default function Section3() {
               fontSize: '44px',
               fontWeight: 700,
               color: '#0B1215',
-              lineHeight: 1.5,
+              lineHeight: 1.8,
               margin: 0,
               marginLeft: '-340px',
+              whiteSpace: 'normal',
             }}
           >
             clarity at every step<br />
             fewer introductions, better matches<br />
-            specialists who work as part of your team
+            specialists who work as{' '}<span style={{ whiteSpace: 'nowrap' }}>part of your team</span>
           </h3>
         </div>
       </div>
