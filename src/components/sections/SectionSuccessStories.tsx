@@ -36,11 +36,10 @@ const ACCORDION_ITEMS = [
             marginBottom: '16px'
           }}
         >
-          ELC is a global leader in luxury beauty, with 20 iconic brands
-          including Clinique, MAC, La Mer, Bobbi Brown, and Tom Ford. Operating
-          across owned platforms, retail partners, and marketplaces, ELC must
-          modernise at pace — while protecting brand consistency, measurement
-          integrity, and governance across regions.
+          Global leader in luxury beauty. Operating across owned platforms,
+          retail partners, and marketplaces, must modernise at pace — while
+          protecting brand consistency, measurement integrity, and governance
+          across regions.
         </p>
         <p
           style={{
@@ -51,7 +50,7 @@ const ACCORDION_ITEMS = [
             lineHeight: 1.5
           }}
         >
-          For many years our Embedded Expertise has empowered the client's teams
+          For many years our Embedded Expertise has empowered the client’s teams
           to deliver key global and regional initiatives across multiple markets
           and regions, aligning to global standards and customer experience
           excellence.
@@ -460,7 +459,7 @@ export default function SectionSuccessStories() {
               marginBottom: '8px'
             }}
           >
-            The Estée Lauder Companies
+            Global Beauty & Personal Care Company
           </h3>
           <p
             style={{
