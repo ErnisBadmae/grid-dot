@@ -4,8 +4,6 @@ const path = require('path');
 
 async function generateOGImage() {
   try {
-    console.log('Starting OG image generation...');
-
     const logoPath = path.join(__dirname, '../public/images/Grid&Dot.svg');
     const outputPath = path.join(__dirname, '../public/og-image.jpg');
 
@@ -43,8 +41,6 @@ async function generateOGImage() {
       .jpeg({ quality: 90 })
       .toBuffer();
 
-    // Composite logo onto background
-    console.log('Compositing logo onto background...');
     await sharp(baseImage)
       .composite([
         {
