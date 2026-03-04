@@ -268,10 +268,10 @@ export default function SectionSuccessStories() {
                 width: '102%'
               }}
             >
-              For many years our Embedded Expertise has empowered ELC’s teams to
-              deliver key global and regional initiatives across multiple
-              markets and regions, aligning to global standards and customer
-              experience excellence.
+              For many years our Embedded Expertise has empowered the client
+              teams to deliver key global and regional initiatives across
+              multiple markets and regions, aligning to global standards and
+              customer experience excellence.
             </p>
           </div>
 
@@ -429,7 +429,7 @@ export default function SectionSuccessStories() {
           >
             Our long tenure has allowed us to bring institutional knowledge,
             established ways of working, and deliver high impact collaboration.
-            Enforced by expertise, agility and scalability, ELC continues
+            Enforced by expertise, agility and scalability, the client continues
             to benefit from a reliable,
             <br />
             continuously embedded delivery capability - supporting initiative
