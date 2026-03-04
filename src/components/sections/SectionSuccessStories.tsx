@@ -650,9 +650,9 @@ export default function SectionSuccessStories() {
             >
               Our long tenure has allowed us to bring institutional knowledge,
               established ways of working, and deliver high impact
-              collaboration. Enforced by expertise, agility and scalability, ELC
-              continues to benefit from a reliable, continuously embedded
-              delivery capability - supporting initiative after initiative with
+              collaboration. Enforced by expertise, agility and scalability, the
+              client continues to benefit from a reliable, continuously embedded
+              delivery capability – supporting initiative after initiative with
               consistent governance, stronger measurement foundations, and the
               confidence that critical programmes can progress at pace without
               sacrificing quality or continuity on a global scale.
