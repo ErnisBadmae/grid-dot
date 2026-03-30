@@ -157,6 +157,8 @@
       position: relative;
       top: -32px;
       overflow: visible;
+      padding-left: 0;
+      padding-right: 0;
     }
   }
 

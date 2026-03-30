@@ -4,12 +4,28 @@ import React from 'react'
 import { useApp } from '@/contexts/AppContext'
 import { basePath } from '@/lib/basePath'
 
+type FormStatus = 'idle' | 'success' | 'error' | 'server-error'
+
+interface FieldErrors {
+    firstName?: string
+    lastName?: string
+    email?: string
+    privacy?: string
+}
+
 export default function SectionContacts() {
-    const { scrollTo } = useApp()
+    useApp()
     const [dropdownOpen, setDropdownOpen] = React.useState(false)
     const [selectedOption, setSelectedOption] = React.useState('')
     const [privacyAccepted, setPrivacyAccepted] = React.useState(false)
     const [dataPopupOpen, setDataPopupOpen] = React.useState(false)
+
+    const [firstName, setFirstName] = React.useState('')
+    const [lastName, setLastName] = React.useState('')
+    const [email, setEmail] = React.useState('')
+    const [context, setContext] = React.useState('')
+    const [formStatus, setFormStatus] = React.useState<FormStatus>('idle')
+    const [fieldErrors, setFieldErrors] = React.useState<FieldErrors>({})
 
     const options = [
         'extended team support',
@@ -17,6 +33,71 @@ export default function SectionContacts() {
         'requesting a case',
         'not sure yet'
     ]
+
+    const validate = (): FieldErrors => {
+        const errors: FieldErrors = {}
+        if (!firstName.trim()) errors.firstName = "Don't forget to fill in your first name"
+        if (!lastName.trim()) errors.lastName = "Don't forget to fill in your last name"
+        if (!email.trim()) errors.email = "We need your email to get back to you"
+        if (!privacyAccepted) errors.privacy = "Please agree to the Privacy Policy to continue"
+        return errors
+    }
+
+    const clearFieldError = (field: keyof FieldErrors) => {
+        setFieldErrors(prev => { const next = { ...prev }; delete next[field]; return next })
+    }
+
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault()
+
+        const errors = validate()
+        if (Object.keys(errors).length > 0) {
+            setFieldErrors(errors)
+            setFormStatus('error')
+            return
+        }
+
+        setFieldErrors({})
+
+        try {
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    name: `${firstName} ${lastName}`.trim(),
+                    email,
+                    message: context,
+                    projectType: selectedOption,
+                }),
+            })
+
+            if (response.ok) {
+                setFormStatus('success')
+            } else {
+                setFormStatus('server-error')
+            }
+        } catch {
+            setFormStatus('server-error')
+        }
+    }
+
+    const inputStyle: React.CSSProperties = {
+        width: '100%',
+        border: 'none',
+        borderBottom: '1px solid #0B1215',
+        background: 'transparent',
+        padding: '4px 0',
+        outline: 'none',
+        borderRadius: 0,
+        fontFamily: 'Scandia, sans-serif',
+        fontSize: '14px',
+        color: '#0B1215',
+    }
+
+    const inputErrorStyle: React.CSSProperties = {
+        ...inputStyle,
+        borderBottom: '1px solid #C00000',
+    }
 
     return (
         <section
@@ -46,46 +127,24 @@ export default function SectionContacts() {
                         line-height: 1;
                         margin-bottom: 50px;
                         letter-spacing: -0.02em;
-                        margin-top: -25px; /* Optical adjustment for alignment */
+                        margin-top: -25px;
                     }
                     .form-row-name {
                         display: flex;
                         gap: 40px;
                     }
                     .custom-dropdown-overlay {
-                        display: none; /* Disable overlay for accordion style, or keep if we want click-outside. 
-                                          If it pushes content, usually we don't use a full screen blocker. 
-                                          User said "appear and shift content down". 
-                                          I'll remove the overlay concept for this "accordion" mode or make it transparent/non-blocking if not needed.
-                                          Actually, let's remove the overlay div usage in JSX effectively by hiding it or removing it.
-                                          But wait, if I remove overlay, I need another way to close it? 
-                                          Accordion usually closes by clicking the header again. Use toggle logic. */
+                        display: none;
                     }
                     .custom-dropdown-options {
-                        /* "Push content down" -> Not absolute */
-                        position: relative; 
+                        position: relative;
                         width: 100%;
-                        background-color: transparent; /* Or match background */
+                        background-color: transparent;
                         border-bottom: 1px solid #0B1215;
-                        /* border: 1px solid #0B1215; Removing box border, making it look integrated? 
-                           Look at the image 2: It looks like a list appearing BELOW the line.
-                           The line "what are you looking for?" is the header.
-                           The options appear below.
-                           Image 2 shows:
-                           Header
-                           Option 1
-                           Option 2...
-                           Line (border-bottom) might be below the options?
-                           Or options satisfy the "form row" look.
-                           Let's standardise: 
-                           Header
-                           [Options List pushing content]
-                           [Next Field]
-                        */
                         margin-top: 20px;
                         margin-bottom: 20px;
-                        border: none; /* Clean look */
-                        overflow-y: hidden; /* For animation if we added it, but strictly distinct from absolute */
+                        border: none;
+                        overflow-y: hidden;
                     }
                     .custom-dropdown-option {
                         padding: 12px 0;
@@ -99,6 +158,26 @@ export default function SectionContacts() {
                     .custom-dropdown-option:hover {
                          color: #0033FF;
                          background-color: transparent;
+                    }
+                    .form-field-error {
+                        font-family: 'Scandia', sans-serif;
+                        font-size: 13px;
+                        color: #C00000;
+                        margin-top: 5px;
+                    }
+                    .form-status-success {
+                        font-family: 'Scandia', sans-serif;
+                        font-size: 18px;
+                        font-weight: 700;
+                        color: #0033FF;
+                        margin-bottom: 24px;
+                    }
+                    .form-status-error {
+                        font-family: 'Scandia', sans-serif;
+                        font-size: 18px;
+                        font-weight: 700;
+                        color: #C00000;
+                        margin-bottom: 24px;
                     }
                     @media (max-width: 639px) {
                         .contacts-grid {
@@ -115,7 +194,7 @@ export default function SectionContacts() {
                             margin-bottom: 40px !important;
                         }
                         .contact-huge-header {
-                            font-size: 80px !important; /* User requested 80px */
+                            font-size: 80px !important;
                             margin-bottom: 40px !important;
                         }
                         .form-row-name {
@@ -150,9 +229,9 @@ export default function SectionContacts() {
                             textAlign: 'left',
                         }}
                     >
-                        Let’s talk,<br />
-                        we are here to<br />
-                        help
+                        Let's talk,<br />
+                        we are here<br />
+                        to help
                     </h2>
 
                     <p
@@ -180,7 +259,7 @@ export default function SectionContacts() {
                             marginBottom: '32px',
                         }}
                     >
-                        Contact us via the form and we’ll respond<br />
+                        Contact us via the form and we'll respond<br />
                         promptly.<br />
                         You can also request a case study to see how
                         similar challenges were solved.
@@ -202,7 +281,7 @@ export default function SectionContacts() {
                             fontWeight: 700,
                             cursor: 'pointer',
                             marginTop: '40px',
-                            width: '70%',
+                            width: '100%',
                             maxWidth: '100%',
                             transition: 'all 0.2s ease',
                         }}
@@ -228,20 +307,42 @@ export default function SectionContacts() {
                         contact
                     </h2>
 
-                    <form style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+                    {formStatus === 'success' && (
+                        <p className="form-status-success">Thank you! We'll get back to you shortly.</p>
+                    )}
+                    {formStatus === 'server-error' && (
+                        <p className="form-status-error">Sorry, there was an error submitting the form. Please try again.</p>
+                    )}
+                    {formStatus === 'error' && (
+                        <p className="form-status-error">Sorry, there was an error submitting the form. Please try again.</p>
+                    )}
+
+                    <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '20px' }} noValidate>
                         {/* Name Row */}
                         <div className="form-row-name">
                             <div style={{ flex: 1 }}>
                                 <label style={{ display: 'block', fontFamily: 'Scandia, sans-serif', fontSize: '14px', fontWeight: 400, color: '#656565', marginBottom: '8px' }}>
                                     first name*
                                 </label>
-                                <input type="text" style={{ width: '100%', border: 'none', borderBottom: '1px solid #0B1215', background: 'transparent', padding: '4px 0', outline: 'none', borderRadius: 0 }} />
+                                <input
+                                    type="text"
+                                    value={firstName}
+                                    onChange={e => { setFirstName(e.target.value); clearFieldError('firstName') }}
+                                    style={fieldErrors.firstName ? inputErrorStyle : inputStyle}
+                                />
+                                {fieldErrors.firstName && <p className="form-field-error">{fieldErrors.firstName}</p>}
                             </div>
                             <div style={{ flex: 1 }}>
                                 <label style={{ display: 'block', fontFamily: 'Scandia, sans-serif', fontSize: '14px', fontWeight: 400, color: '#656565', marginBottom: '8px' }}>
                                     last name*
                                 </label>
-                                <input type="text" style={{ width: '100%', border: 'none', borderBottom: '1px solid #0B1215', background: 'transparent', padding: '4px 0', outline: 'none', borderRadius: 0 }} />
+                                <input
+                                    type="text"
+                                    value={lastName}
+                                    onChange={e => { setLastName(e.target.value); clearFieldError('lastName') }}
+                                    style={fieldErrors.lastName ? inputErrorStyle : inputStyle}
+                                />
+                                {fieldErrors.lastName && <p className="form-field-error">{fieldErrors.lastName}</p>}
                             </div>
                         </div>
 
@@ -250,18 +351,22 @@ export default function SectionContacts() {
                             <label style={{ display: 'block', fontFamily: 'Scandia, sans-serif', fontSize: '14px', fontWeight: 400, color: '#656565', marginBottom: '8px' }}>
                                 e-mail address*
                             </label>
-                            <input type="email" style={{ width: '100%', border: 'none', borderBottom: '1px solid #0B1215', background: 'transparent', padding: '4px 0', outline: 'none', borderRadius: 0 }} />
+                            <input
+                                type="email"
+                                value={email}
+                                onChange={e => { setEmail(e.target.value); clearFieldError('email') }}
+                                style={fieldErrors.email ? inputErrorStyle : inputStyle}
+                            />
+                            {fieldErrors.email && <p className="form-field-error">{fieldErrors.email}</p>}
                         </div>
 
                         {/* Looking For (Custom Dropdown) */}
                         <div style={{ position: 'relative' }}>
-                            {/* Dropdown Container (Border moves with content) */}
                             <div style={{
                                 borderBottom: '1px solid #0B1215',
                                 paddingBottom: '8px',
                                 transition: 'height 0.2s ease'
                             }}>
-                                {/* Dropdown Trigger */}
                                 <div
                                     onClick={() => setDropdownOpen(!dropdownOpen)}
                                     style={{
@@ -293,7 +398,6 @@ export default function SectionContacts() {
                                     </div>
                                 </div>
 
-                                {/* Dropdown Menu (Accordion) */}
                                 {dropdownOpen && (
                                     <div className="custom-dropdown-options">
                                         {options.map((option) => (
@@ -318,36 +422,54 @@ export default function SectionContacts() {
                             <label style={{ display: 'block', fontFamily: 'Scandia, sans-serif', fontSize: '14px', fontWeight: 400, color: '#656565', marginBottom: '8px' }}>
                                 tell us about your context
                             </label>
-                            <input type="text" style={{ width: '100%', border: 'none', borderBottom: '1px solid #0B1215', background: 'transparent', padding: '4px 0', outline: 'none', borderRadius: 0 }} />
+                            <textarea
+                                value={context}
+                                onChange={e => setContext(e.target.value)}
+                                rows={3}
+                                style={{
+                                    width: '100%',
+                                    border: 'none',
+                                    borderBottom: '1px solid #0B1215',
+                                    background: 'transparent',
+                                    padding: '4px 0',
+                                    outline: 'none',
+                                    borderRadius: 0,
+                                    resize: 'none',
+                                    fontFamily: 'Scandia, sans-serif',
+                                    fontSize: '14px',
+                                    color: '#0B1215',
+                                }}
+                            />
                         </div>
 
                         {/* Footer / Privacy */}
                         <div style={{ marginTop: '5px' }}>
-                            <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px', marginBottom: '24px' }}>
+                            <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px', marginBottom: '8px' }}>
                                 <input
                                     type="checkbox"
                                     id="privacy"
                                     checked={privacyAccepted}
-                                    onChange={(e) => setPrivacyAccepted(e.target.checked)}
+                                    onChange={(e) => { setPrivacyAccepted(e.target.checked); clearFieldError('privacy') }}
                                     className="privacy-checkbox"
                                     style={{
                                         marginTop: '4px',
                                         width: '16px',
                                         height: '16px',
-                                        border: '1px solid #0B1215',
+                                        border: fieldErrors.privacy ? '1px solid #C00000' : '1px solid #0B1215',
                                         borderRadius: 0,
                                         flexShrink: 0,
                                         cursor: 'pointer',
-                                        appearance: 'auto', /* Ensure native OS style */
-                                        accentColor: '#0B1215' /* Black checkmark background */
+                                        appearance: 'auto',
+                                        accentColor: '#0B1215'
                                     }}
                                 />
                                 <label htmlFor="privacy" style={{ fontFamily: 'Scandia, sans-serif', fontSize: '18px', color: '#0B1215', lineHeight: 1.4, cursor: 'pointer' }}>
                                     I agree to the processing of my personal data in accordance with the <a href={`${basePath}/privacy`} target="_blank" rel="noopener noreferrer" style={{ fontFamily: 'Scandia, sans-serif', fontWeight: 500, textDecoration: 'underline', color: 'inherit' }}>Privacy Policy.</a>
                                 </label>
                             </div>
+                            {fieldErrors.privacy && <p className="form-field-error" style={{ marginBottom: '16px' }}>{fieldErrors.privacy}</p>}
 
-                            <div style={{ position: 'relative', marginBottom: '24px' }}>
+                            <div style={{ position: 'relative', marginBottom: '24px', marginTop: fieldErrors.privacy ? '8px' : '16px' }}>
                                 <div
                                     style={{ display: 'flex', alignItems: 'center', gap: '8px', cursor: 'pointer' }}
                                     onClick={() => setDataPopupOpen(!dataPopupOpen)}
@@ -362,7 +484,6 @@ export default function SectionContacts() {
 
                                 {dataPopupOpen && (
                                     <>
-                                        {/* Invisible overlay to close on click outside */}
                                         <div
                                             onClick={() => setDataPopupOpen(false)}
                                             style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', zIndex: 99 }}
@@ -372,12 +493,11 @@ export default function SectionContacts() {
                                             style={{
                                                 marginTop: '12px',
                                                 backgroundColor: '#FFFFFF',
-                                                border: '1px solid #E0E0E0',
                                                 padding: '20px 24px',
                                                 zIndex: 100,
                                                 maxWidth: '560px',
-                                                boxShadow: '0 4px 16px rgba(0,0,0,0.08)',
                                                 cursor: 'pointer',
+                                                boxShadow: 'none',
                                             }}
                                         >
                                             <p style={{

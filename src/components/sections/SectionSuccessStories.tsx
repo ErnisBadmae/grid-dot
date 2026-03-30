@@ -1,93 +1,144 @@
 'use client';
 
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { useApp } from '@/contexts/AppContext';
 import { basePath } from '@/lib/basePath';
 
-const TAGS = [
-  'data',
-  'product',
-  'ux',
-  'delivery',
-  'cms',
-  'cx',
-  'data-visualisation',
-  'amazon',
-  'user-tools',
-  'modernisation',
-  'brands',
-  'global',
-  'emea',
-  'apac'
-];
+interface GridRow {
+  label: string;
+  content: string[];
+}
 
-const ACCORDION_ITEMS = [
+interface CaseStudy {
+  title: string;
+  subtitle: string;
+  tags: string[];
+  clientContextP1: string;
+  clientContextP2: string;
+  grid: GridRow[];
+  closingP1: string;
+  closingP2?: string;
+}
+
+const CASE_STUDIES: CaseStudy[] = [
   {
-    title: 'Client Context',
-    content: (
-      <>
-        <p
-          style={{
-            fontFamily: 'Scandia, sans-serif',
-            fontSize: '16px',
-            fontWeight: 400,
-            color: '#0B1215',
-            lineHeight: 1.5,
-            marginBottom: '16px'
-          }}
-        >
-          Global leader in luxury beauty. Operating across owned platforms,
-          retail partners, and marketplaces, must modernise at pace — while
-          protecting brand consistency, measurement integrity, and governance
-          across regions.
-        </p>
-        <p
-          style={{
-            fontFamily: 'Scandia, sans-serif',
-            fontSize: '16px',
-            fontWeight: 400,
-            color: '#0B1215',
-            lineHeight: 1.5
-          }}
-        >
-          For many years our Embedded Expertise has empowered the client’s teams
-          to deliver key global and regional initiatives across multiple markets
-          and regions, aligning to global standards and customer experience
-          excellence.
-        </p>
-      </>
-    )
+    title: 'Global Beauty & Personal Care Company',
+    subtitle: 'global platform modernisation, omni-channel expansion, brand experience innovation',
+    tags: ['data', 'product', 'ux', 'delivery', 'cms', 'cx', 'data-visualisation', 'amazon', 'user-tools', 'modernisation', 'brands', 'global', 'emea', 'apac'],
+    clientContextP1: 'Global leader in luxury beauty. Operating across owned platforms, retail partners, and marketplaces, must modernise at pace — while protecting brand consistency, measurement integrity, and governance across regions.',
+    clientContextP2: 'For many years our Extended Expertise has empowered the client teams to deliver key global and regional initiatives across multiple markets and regions, aligning to global standards and customer experience excellence.',
+    grid: [
+      {
+        label: 'Global Data',
+        content: ['data stream and GA4 architecture creation, data visualisation for non-technical stakeholder enablement and accessibility.']
+      },
+      {
+        label: 'Global Product',
+        content: ['Amazon/brand integration across marketplace and brands, establishing channel expansion.']
+      },
+      {
+        label: 'Regional Delivery\nEMEA, APAC',
+        content: ['platform modernisation and CMS delivery to support regional speed and consistency.']
+      },
+      {
+        label: 'Brand Experience',
+        content: ['user tool innovation, creating a richer, more personalised customer experiences.']
+      }
+    ],
+    closingP1: 'Our long tenure has allowed us to bring institutional knowledge, established ways of working, and deliver high impact collaboration. Enforced by expertise, agility and scalability, the client continues to benefit from a reliable, continuously embedded delivery capability - supporting initiative after initiative with consistent governance, stronger measurement foundations, and the confidence that critical programmes can progress at pace without sacrificing quality or continuity on a global scale.'
   },
   {
-    title: 'Global Data',
-    content:
-      'data stream and GA4 architecture creation, data visualisation for non-technical stakeholder enablement and accessibility.'
+    title: 'Digital Banking & Premium Current Accounts',
+    subtitle: 'partner bonus journey optimisation, premium experience clarity, conversion enablement',
+    tags: ['ux', 'product', 'ba', 'qa', 'delivery', 'cx', 'product-design', 'journey', 'conversion', 'partners', 'emea'],
+    clientContextP1: 'Digital bank leader operating a premium subscription model across EMEA markets. As Premium adoption scaled, partner-bonus benefits became a critical value driver — yet customer journeys across discovery, eligibility, activation, and redemption required greater clarity, consistency, and operational alignment.',
+    clientContextP2: 'Premium customers expect seamless access to benefits they pay for. The client needed to strengthen the end‑to‑end partner bonus experience — reducing friction, improving transparency, and coordinating across internal product teams and external partner dependencies without disrupting ongoing delivery velocity.',
+    grid: [
+      {
+        label: 'UX & Product',
+        content: [
+          '"I pay for a Premium account — how do I quickly see, understand, and use my benefits?" Redesigned discovery within the Premium area, clarified eligibility logic and benefit states, and streamlined activation and redemption journeys to minimise friction and drop‑off.'
+        ]
+      },
+      {
+        label: 'CX & Journey Design',
+        content: [
+          'Created clearer status communication: what is available, what has been claimed, what is pending, and what has expired.',
+          'Resolved edge cases including partial eligibility, failed activations, expired offers, and partner handoffs — ensuring continuity across touchpoints and reducing ambiguity in the experience.'
+        ]
+      },
+      {
+        label: 'Delivery, BA & QA',
+        content: [
+          'Aligned cross-functional teams and partner dependencies through structured BA governance and quality gates.',
+          'Standardised UI states, tracking logic, and copy frameworks to ensure consistency across releases — enabling smoother deployments and stronger measurement foundations.'
+        ]
+      }
+    ],
+    closingP1: 'Extended Expertise enabled the establishment of a scalable and repeatable delivery model for Premium experience and partner integrations — strengthening user clarity, advocacy, conversion performance, and cross‑functional alignment across teams and markets.',
+    closingP2: 'Through integrated UX, product, BA, QA, and delivery expertise, the client benefits from a dependable, continuously evolving capability — supporting new partner onboarding, improved governance, clearer measurement frameworks, and the confidence that Premium value can scale without compromising experience quality, operational control, or customer trust.'
   },
   {
-    title: 'Global Product',
-    content:
-      'Amazon/brand integration across marketplace and brands, establishing channel expansion.'
-  },
-  {
-    title: 'Regional Delivery EMEA, APAC',
-    content:
-      'platform modernisation and CMS delivery to support regional speed and consistency.'
-  },
-  {
-    title: 'Brand Experience',
-    content:
-      'user tool innovation, creating a richer, more personalised customer experiences.'
+    title: 'Fintech & Payment Platform',
+    subtitle: 'Financial Crime Behaviour Intelligence: llm‑assisted analytics, scalable risk decision support, compliance‑grade model governance',
+    tags: ['data', 'product', 'delivery', 'llm', 'mlops', 'risk', 'compliance', 'governance', 'data-quality', 'casemanagement', 'model-monitoring', 'emea', 'na'],
+    clientContextP1: 'Fintech operating at significant transaction scale across EMEA and North America, processing high volumes of activity spanning current accounts, transfers, and payments. Compliance, Risk, and Data teams are required to transform behavioural data into defensible, actionable risk signals — aligned to evolving regulatory expectations and regional governance standards.',
+    clientContextP2: 'As operational scale increased, traditional rule-based approaches and manual review workflows faced limitations. The client sought to enhance behaviour intelligence through LLM‑enabled analytics and data science — improving detection quality while preserving auditability, explainability, and regulatory control.',
+    grid: [
+      {
+        label: 'Data & Behaviour\nIntelligence',
+        content: [
+          'Designed LLM‑assisted behavioural analysis across large‑scale activity streams, strengthening signal quality and contextual risk interpretation.',
+          'Enhanced data‑quality controls and traceability to ensure outputs remained defensible, auditable, and aligned with fincrime standards.'
+        ]
+      },
+      {
+        label: 'Product & Risk\nDecisioning',
+        content: [
+          'Translated model intelligence into practical decision‑support tools embedded within case‑management workflows.',
+          'Enabled clearer prioritisation, faster reviews, and consistent risk handling — balancing advanced analytics with regulatory explainability.'
+        ]
+      },
+      {
+        label: 'Delivery, MLOps &\nGovernance',
+        content: [
+          'Established scalable MLOps foundations including monitoring, performance oversight, and structured governance controls.',
+          'Aligned regional compliance expectations (EMEA and NA) within a unified delivery model — ensuring sustainability, audit readiness, and operational resilience.'
+        ]
+      }
+    ],
+    closingP1: 'Embedded data, product, and delivery capability enabled the client to scale behavioural intelligence without eroding governance integrity or regulatory confidence.',
+    closingP2: 'By combining LLM innovation with disciplined MLOps, compliance alignment, and operational integration, the organisation strengthened risk detection quality while maintaining control, transparency, and delivery momentum — ensuring financial crime controls could evolve at pace with business growth and regulatory complexity.'
   }
+  // Uncomment to add more cards:
+  // {
+  //   title: '',
+  //   subtitle: '',
+  //   tags: [],
+  //   clientContextP1: '',
+  //   clientContextP2: '',
+  //   grid: [],
+  //   closingP1: ''
+  // },
+  // {
+  //   title: '',
+  //   subtitle: '',
+  //   tags: [],
+  //   clientContextP1: '',
+  //   clientContextP2: '',
+  //   grid: [],
+  //   closingP1: ''
+  // }
 ];
 
 export default function SectionSuccessStories() {
   const { scrollTo } = useApp();
-  // State for mobile accordion
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-  const [isFooterExpanded, setIsFooterExpanded] = useState(false);
+  const [expandedCards, setExpandedCards] = useState<boolean[]>(
+    CASE_STUDIES.map(() => false)
+  );
 
-  const toggleAccordion = (index: number) => {
-    setOpenIndex(openIndex === index ? null : index);
+  const toggleCard = (index: number) => {
+    setExpandedCards(prev => prev.map((v, i) => (i === index ? !v : v)));
   };
 
   return (
@@ -104,6 +155,30 @@ export default function SectionSuccessStories() {
           #section-success-stories {
             padding: 60px 20px !important;
           }
+          .context-preview {
+            display: none;
+          }
+          .context-label {
+            display: none;
+          }
+          .case-study-grid {
+            grid-template-columns: 1fr !important;
+            row-gap: 4px !important;
+          }
+          .case-study-grid-content {
+            margin-bottom: 20px;
+          }
+          .card-arrow {
+            margin-top: 4px !important;
+          }
+          .context-p1-mobile {
+            display: block !important;
+          }
+        }
+        @media (min-width: 640px) {
+          .context-p1-mobile {
+            display: none;
+          }
         }
       `}</style>
 
@@ -119,22 +194,15 @@ export default function SectionSuccessStories() {
           transform: 'translateX(-50%)',
           width: '100vw',
           minWidth: '1440px',
-          height: '100%',
+          height: 'auto',
           pointerEvents: 'none',
           zIndex: 0,
-          objectFit: 'cover',
           maxWidth: 'none'
         }}
       />
 
-      <div
-        style={{
-          position: 'relative',
-          zIndex: 1,
-          maxWidth: '1000px',
-          margin: '0'
-        }}
-      >
+      <div style={{ position: 'relative', zIndex: 1, maxWidth: '1000px', margin: '0' }}>
+
         {/* Mobile Header */}
         <h2
           className="mobile-only"
@@ -167,548 +235,256 @@ export default function SectionSuccessStories() {
           Case Highlights
         </h2>
 
-        {/* Desktop Content */}
-        <div
-          className="desktop-only"
-          style={{
-            backgroundColor: '#F8F8F8',
-            padding: '60px',
-            borderRadius: '0'
-          }}
-        >
-          {/* Card Header */}
-          <h3
-            style={{
-              fontFamily: 'Scandia, sans-serif',
-              fontSize: '24px',
-              fontWeight: 500,
-              color: '#0B1215',
-              marginBottom: '8px'
-            }}
-          >
-            Global Beauty & Personal Care Company
-          </h3>
-          <p
-            style={{
-              fontFamily: 'Scandia, sans-serif',
-              fontSize: '16px',
-              fontWeight: 400,
-              color: '#0B1215',
-              marginBottom: '32px'
-            }}
-          >
-            global platform modernisation, omni-channel expansion, brand
-            experience innovation
-          </p>
-
-          {/* Tags */}
-          <div
-            style={{
-              display: 'flex',
-              flexWrap: 'wrap',
-              gap: '8px',
-              marginBottom: '48px'
-            }}
-          >
-            {TAGS.map((tag, i) => (
-              <span
-                key={i}
+        {/* Cards */}
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+          {CASE_STUDIES.map((study, index) => {
+            const isExpanded = expandedCards[index];
+            return (
+              <div
+                key={index}
                 style={{
-                  backgroundColor: '#0033FF',
-                  color: '#FFFFFF',
-                  padding: '6px 16px',
-                  borderRadius: '999px',
-                  fontFamily: 'Scandia, sans-serif',
-                  fontSize: '14px',
-                  fontWeight: 400
+                  backgroundColor: '#F8F8F8',
+                  padding: '30px',
+                  position: 'relative'
                 }}
               >
-                {tag}
-              </span>
-            ))}
-          </div>
-
-          {/* Client Context */}
-          <div style={{ marginBottom: '48px' }}>
-            <h4
-              style={{
-                fontFamily: 'Scandia, sans-serif',
-                fontSize: '16px',
-                fontWeight: 500,
-                color: '#0B1215',
-                marginBottom: '16px'
-              }}
-            >
-              Client Context:
-            </h4>
-            <p
-              style={{
-                fontFamily: 'Scandia, sans-serif',
-                fontSize: '16px',
-                fontWeight: 400,
-                color: '#0B1215',
-                lineHeight: 1.5,
-                marginBottom: '16px',
-                width: '103%'
-              }}
-            >
-              Global leader in luxury beauty. Operating across owned platforms,
-              retail partners, and marketplaces, must modernise at pace — while
-              protecting brand consistency, measurement integrity, and
-              governance across regions.
-            </p>
-            <p
-              style={{
-                fontFamily: 'Scandia, sans-serif',
-                fontSize: '16px',
-                fontWeight: 400,
-                color: '#0B1215',
-                lineHeight: 1.5,
-                width: '102%'
-              }}
-            >
-              For many years our Embedded Expertise has empowered the client
-              teams to deliver key global and regional initiatives across
-              multiple markets and regions, aligning to global standards and
-              customer experience excellence.
-            </p>
-          </div>
-
-          {/* Grid of Details */}
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'minmax(200px, auto) 1fr',
-              rowGap: '32px',
-              columnGap: '32px',
-              marginBottom: '48px'
-            }}
-          >
-            {/* Row 1 */}
-            <div>
-              <h5
-                style={{
-                  fontFamily: 'Scandia, sans-serif',
-                  fontSize: '16px',
-                  fontWeight: 500,
-                  color: '#0B1215',
-                  margin: 0
-                }}
-              >
-                Global Data
-              </h5>
-            </div>
-            <div>
-              <p
-                style={{
-                  fontFamily: 'Scandia, sans-serif',
-                  fontSize: '16px',
-                  fontWeight: 400,
-                  color: '#0B1215',
-                  margin: 0,
-                  lineHeight: 1.5
-                }}
-              >
-                data stream and GA4 architecture creation, data
-                <br />
-                visualisation for non-technical stakeholder enablement
-                <br />
-                and accessibility.
-              </p>
-            </div>
-
-            {/* Row 2 */}
-            <div>
-              <h5
-                style={{
-                  fontFamily: 'Scandia, sans-serif',
-                  fontSize: '16px',
-                  fontWeight: 500,
-                  color: '#0B1215',
-                  margin: 0
-                }}
-              >
-                Global Product
-              </h5>
-            </div>
-            <div>
-              <p
-                style={{
-                  fontFamily: 'Scandia, sans-serif',
-                  fontSize: '16px',
-                  fontWeight: 400,
-                  color: '#0B1215',
-                  margin: 0,
-                  lineHeight: 1.5
-                }}
-              >
-                Amazon/brand integration across
-                <br />
-                marketplace and brands, establishing
-                <br />
-                channel expansion.
-              </p>
-            </div>
-
-            {/* Row 3 */}
-            <div>
-              <h5
-                style={{
-                  fontFamily: 'Scandia, sans-serif',
-                  fontSize: '16px',
-                  fontWeight: 500,
-                  color: '#0B1215',
-                  margin: 0
-                }}
-              >
-                Regional Delivery
-                <br />
-                EMEA, APAC
-              </h5>
-            </div>
-            <div>
-              <p
-                style={{
-                  fontFamily: 'Scandia, sans-serif',
-                  fontSize: '16px',
-                  fontWeight: 400,
-                  color: '#0B1215',
-                  margin: 0,
-                  lineHeight: 1.5
-                }}
-              >
-                platform modernisation and CMS delivery to
-                <br />
-                support regional speed and consistency.
-              </p>
-            </div>
-
-            {/* Row 4 */}
-            <div>
-              <h5
-                style={{
-                  fontFamily: 'Scandia, sans-serif',
-                  fontSize: '16px',
-                  fontWeight: 500,
-                  color: '#0B1215',
-                  margin: 0
-                }}
-              >
-                Brand Experience
-              </h5>
-            </div>
-            <div>
-              <p
-                style={{
-                  fontFamily: 'Scandia, sans-serif',
-                  fontSize: '16px',
-                  fontWeight: 400,
-                  color: '#0B1215',
-                  margin: 0,
-                  lineHeight: 1.5
-                }}
-              >
-                user tool innovation, creating a richer, more
-                <br />
-                personalised customer experiences.
-              </p>
-            </div>
-          </div>
-
-          {/* Footer Text */}
-          <p
-            style={{
-              fontFamily: 'Scandia, sans-serif',
-              fontSize: '16px',
-              fontWeight: 400,
-              color: '#0B1215',
-              lineHeight: 1.5,
-              margin: 0
-            }}
-          >
-            Our long tenure has allowed us to bring institutional knowledge,
-            established ways of working, and deliver high impact collaboration.
-            Enforced by expertise, agility and scalability, the client continues
-            to benefit from a reliable,
-            <br />
-            continuously embedded delivery capability - supporting initiative
-            after initiative with consistent governance,
-            <br />
-            stronger measurement foundations, and the confidence that critical
-            programmes can progress at pace without sacrificing quality or
-            continuity on a global scale.
-          </p>
-        </div>
-
-        {/* Mobile Content */}
-        <div
-          className="mobile-only"
-          style={{
-            backgroundColor: '#F8F8F8',
-            padding: '24px',
-            borderRadius: '0'
-          }}
-        >
-          {/* Card Header */}
-          <h3
-            style={{
-              fontFamily: 'Scandia, sans-serif',
-              fontSize: '20px',
-              fontWeight: 700,
-              color: '#0B1215',
-              marginBottom: '8px'
-            }}
-          >
-            Global Beauty & Personal Care Company
-          </h3>
-          <p
-            style={{
-              fontFamily: 'Scandia, sans-serif',
-              fontSize: '16px',
-              fontWeight: 400,
-              color: '#0B1215',
-              marginBottom: '24px',
-              lineHeight: 1.3
-            }}
-          >
-            global platform modernisation, omni-channel expansion, brand
-            experience innovation
-          </p>
-
-          {/* Tags */}
-          <div
-            style={{
-              display: 'flex',
-              flexWrap: 'wrap',
-              gap: '8px',
-              marginBottom: '32px'
-            }}
-          >
-            {TAGS.slice(0, 10).map(
-              (
-                tag,
-                i // Showing subset or all? Screenshot shows many. using all is safer.
-              ) => (
-                <span
-                  key={i}
+                {/* Title & Subtitle — always visible */}
+                <h3
                   style={{
-                    backgroundColor: '#0033FF',
-                    color: '#FFFFFF',
-                    padding: '4px 12px',
-                    borderRadius: '999px',
                     fontFamily: 'Scandia, sans-serif',
-                    fontSize: '12px',
-                    fontWeight: 500
+                    fontSize: '24px',
+                    fontWeight: 500,
+                    color: '#0B1215',
+                    marginBottom: '8px'
                   }}
                 >
-                  {tag}
-                </span>
-              )
-            )}
-            {TAGS.length > 10 &&
-              TAGS.slice(10).map(
-                (
-                  tag,
-                  i // Rendering the rest
-                ) => (
-                  <span
-                    key={i + 10}
-                    style={{
-                      backgroundColor: '#0033FF',
-                      color: '#FFFFFF',
-                      padding: '4px 12px',
-                      borderRadius: '999px',
-                      fontFamily: 'Scandia, sans-serif',
-                      fontSize: '12px',
-                      fontWeight: 500
-                    }}
-                  >
-                    {tag}
-                  </span>
-                )
-              )}
-          </div>
+                  {study.title}
+                </h3>
+                <p
+                  style={{
+                    fontFamily: 'Scandia, sans-serif',
+                    fontSize: '16px',
+                    fontWeight: 400,
+                    color: '#0B1215',
+                    marginBottom: '32px'
+                  }}
+                >
+                  {study.subtitle}
+                </p>
 
-          {/* Divider */}
-          <div
-            style={{
-              height: '1px',
-              backgroundColor: '#0B1215',
-              margin: '0 0 0 0'
-            }}
-          />
-
-          {/* Mobile Accordion */}
-          <div>
-            {ACCORDION_ITEMS.map((item, index) => {
-              const isOpen = openIndex === index;
-              return (
-                <div key={index} style={{ borderBottom: '1px solid #0B1215' }}>
-                  <button
-                    onClick={() => toggleAccordion(index)}
-                    style={{
-                      width: '100%',
-                      display: 'flex',
-                      justifyContent: 'space-between',
-                      alignItems: 'center',
-                      padding: '24px 0',
-                      background: 'none',
-                      border: 'none',
-                      cursor: 'pointer',
-                      textAlign: 'left'
-                    }}
-                  >
+                {/* Tags */}
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginBottom: '32px' }}>
+                  {study.tags.map((tag, i) => (
                     <span
+                      key={i}
                       style={{
+                        backgroundColor: '#0033FF',
+                        color: '#FFFFFF',
+                        padding: '6px 16px',
+                        borderRadius: '999px',
                         fontFamily: 'Scandia, sans-serif',
-                        fontSize: '18px',
-                        fontWeight: 700,
-                        color: '#0B1215'
+                        fontSize: '14px',
+                        fontWeight: 400
                       }}
                     >
-                      {item.title}
+                      {tag}
                     </span>
-                    <div
-                      style={{
-                        position: 'relative',
-                        width: '20px',
-                        height: '20px'
-                      }}
-                    >
-                      <span
-                        style={{
-                          position: 'absolute',
-                          top: '50%',
-                          left: '0',
-                          width: '100%',
-                          height: '2px',
-                          backgroundColor: '#0B1215',
-                          transform: 'translateY(-50%)'
-                        }}
-                      />
-                      <span
-                        style={{
-                          position: 'absolute',
-                          top: '0',
-                          left: '50%',
-                          width: '2px',
-                          height: '100%',
-                          backgroundColor: '#0B1215',
-                          transform: 'translateX(-50%)',
-                          opacity: isOpen ? 0 : 1,
-                          transition: 'opacity 0.2s'
-                        }}
-                      />
-                    </div>
-                  </button>
+                  ))}
+                </div>
 
+                {/* Text preview — always visible, 2 lines */}
+                <h4
+                  className="context-label"
+                  style={{
+                    fontFamily: 'Scandia, sans-serif',
+                    fontSize: '16px',
+                    fontWeight: 500,
+                    color: '#0B1215',
+                    marginBottom: '16px'
+                  }}
+                >
+                  Client Context:
+                </h4>
+                {/* Client Context preview — desktop only, 2-3 lines when collapsed */}
+                <div className="context-preview" style={{ position: 'relative', marginBottom: '0' }}>
                   <div
                     style={{
-                      maxHeight: isOpen ? '1000px' : '0', // Larger max-height for text content
+                      maxHeight: isExpanded ? 'none' : '60px',
                       overflow: 'hidden',
-                      transition: 'max-height 0.3s ease-out'
+                      position: 'relative'
                     }}
                   >
-                    <div style={{ paddingBottom: '24px' }}>
-                      {typeof item.content === 'string' ? (
-                        <p
-                          style={{
-                            fontFamily: 'Scandia, sans-serif',
-                            fontSize: '16px',
-                            fontWeight: 400,
-                            color: '#0B1215',
-                            margin: 0,
-                            lineHeight: 1.4
-                          }}
-                        >
-                          {item.content}
-                        </p>
-                      ) : (
-                        item.content
-                      )}
-                    </div>
+                    <p
+                      style={{
+                        fontFamily: 'Scandia, sans-serif',
+                        fontSize: '16px',
+                        fontWeight: 400,
+                        color: '#0B1215',
+                        lineHeight: 1.5,
+                        margin: 0
+                      }}
+                    >
+                      {study.clientContextP1}
+                    </p>
                   </div>
+                  {!isExpanded && (
+                    <div
+                      style={{
+                        position: 'absolute',
+                        bottom: 0,
+                        left: 0,
+                        width: '100%',
+                        height: '24px',
+                        background: 'linear-gradient(to bottom, transparent, #F8F8F8)',
+                        pointerEvents: 'none'
+                      }}
+                    />
+                  )}
                 </div>
-              );
-            })}
-          </div>
 
-          {/* Expandable Footer Text */}
-          <div style={{ marginTop: '32px' }}>
-            <div
-              style={{
-                maxHeight: isFooterExpanded ? 'none' : '72px',
-                overflow: 'hidden',
-                position: 'relative',
-                fontFamily: 'Scandia, sans-serif',
-                fontSize: '16px',
-                fontWeight: 400,
-                color: '#0B1215',
-                lineHeight: 1.5,
-                marginBottom: '8px'
-              }}
-            >
-              Our long tenure has allowed us to bring institutional knowledge,
-              established ways of working, and deliver high impact
-              collaboration. Enforced by expertise, agility and scalability, the
-              client continues to benefit from a reliable, continuously embedded
-              delivery capability – supporting initiative after initiative with
-              consistent governance, stronger measurement foundations, and the
-              confidence that critical programmes can progress at pace without
-              sacrificing quality or continuity on a global scale.
-              {!isFooterExpanded && (
+                {/* Collapsible Body */}
                 <div
                   style={{
-                    position: 'absolute',
-                    bottom: 0,
-                    left: 0,
-                    width: '100%',
-                    height: '40px',
-                    background:
-                      'linear-gradient(to bottom, transparent, #F8F8F8)'
+                    maxHeight: isExpanded ? '4000px' : '0',
+                    overflow: 'hidden',
+                    transition: 'max-height 0.4s ease'
                   }}
-                />
-              )}
-            </div>
-            <button
-              onClick={() => setIsFooterExpanded(!isFooterExpanded)}
-              style={{
-                background: 'none',
-                border: 'none',
-                padding: '8px 0',
-                cursor: 'pointer',
-                display: 'flex',
-                alignItems: 'center',
-                width: '100%',
-                justifyContent: 'flex-end'
-              }}
-            >
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                style={{
-                  transform: isFooterExpanded
-                    ? 'rotate(180deg)'
-                    : 'rotate(0deg)',
-                  transition: 'transform 0.3s'
-                }}
-              >
-                <path
-                  d="M7 10L12 15L17 10"
-                  stroke="#0B1215"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </button>
-          </div>
+                >
+                  <div style={{ marginBottom: '16px' }} />
+                  {/* P1 visible only on mobile (desktop shows it in preview above) */}
+                  <p
+                    className="context-p1-mobile"
+                    style={{
+                      fontFamily: 'Scandia, sans-serif',
+                      fontSize: '16px',
+                      fontWeight: 400,
+                      color: '#0B1215',
+                      lineHeight: 1.5,
+                      marginBottom: '16px'
+                    }}
+                  >
+                    {study.clientContextP1}
+                  </p>
+                  <p
+                    style={{
+                      fontFamily: 'Scandia, sans-serif',
+                      fontSize: '16px',
+                      fontWeight: 400,
+                      color: '#0B1215',
+                      lineHeight: 1.5,
+                      marginBottom: '48px'
+                    }}
+                  >
+                    {study.clientContextP2}
+                  </p>
+
+                  {/* Grid of Details */}
+                  <div
+                    className="case-study-grid"
+                    style={{
+                      display: 'grid',
+                      gridTemplateColumns: 'minmax(200px, auto) 1fr',
+                      rowGap: '32px',
+                      columnGap: '32px',
+                      marginBottom: '48px'
+                    }}
+                  >
+                    {study.grid.map((row, i) => (
+                      <React.Fragment key={i}>
+                        <div>
+                          <h5
+                            style={{
+                              fontFamily: 'Scandia, sans-serif',
+                              fontSize: '16px',
+                              fontWeight: 500,
+                              color: '#0B1215',
+                              margin: 0,
+                              whiteSpace: 'pre-line'
+                            }}
+                          >
+                            {row.label}
+                          </h5>
+                        </div>
+                        <div className="case-study-grid-content">
+                          {row.content.map((para, j) => (
+                            <p
+                              key={j}
+                              style={{
+                                fontFamily: 'Scandia, sans-serif',
+                                fontSize: '16px',
+                                fontWeight: 400,
+                                color: '#0B1215',
+                                margin: j < row.content.length - 1 ? '0 0 12px 0' : 0,
+                                lineHeight: 1.5
+                              }}
+                            >
+                              {para}
+                            </p>
+                          ))}
+                        </div>
+                      </React.Fragment>
+                    ))}
+                  </div>
+
+                  {/* Closing Text */}
+                  <p
+                    style={{
+                      fontFamily: 'Scandia, sans-serif',
+                      fontSize: '16px',
+                      fontWeight: 400,
+                      color: '#0B1215',
+                      lineHeight: 1.5,
+                      marginBottom: study.closingP2 ? '16px' : 0
+                    }}
+                  >
+                    {study.closingP1}
+                  </p>
+                  {study.closingP2 && (
+                    <p
+                      style={{
+                        fontFamily: 'Scandia, sans-serif',
+                        fontSize: '16px',
+                        fontWeight: 400,
+                        color: '#0B1215',
+                        lineHeight: 1.5,
+                        margin: 0
+                      }}
+                    >
+                      {study.closingP2}
+                    </p>
+                  )}
+                </div>
+
+                {/* Arrow — bottom right */}
+                <div className="card-arrow" style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '12px' }}>
+                  <button
+                    onClick={() => toggleCard(index)}
+                    style={{
+                      background: 'none',
+                      border: 'none',
+                      padding: 0,
+                      cursor: 'pointer',
+                      display: 'flex',
+                      alignItems: 'center'
+                    }}
+                  >
+                    <img
+                      src={`${basePath}/images/Arrow 7.svg`}
+                      alt=""
+                      style={{
+                        width: '16px',
+                        transform: isExpanded ? 'rotate(180deg)' : 'rotate(0deg)',
+                        transition: 'transform 0.3s ease'
+                      }}
+                    />
+                  </button>
+                </div>
+              </div>
+            );
+          })}
         </div>
 
-        {/* Part 3: Footer Link */}
+        {/* Footer Link */}
         <div style={{ marginTop: '60px' }}>
           <p
             style={{
@@ -718,7 +494,7 @@ export default function SectionSuccessStories() {
               color: '#0B1215',
               lineHeight: 1.5,
               marginBottom: '24px',
-              maxWidth: '560px'
+              maxWidth: '740px'
             }}
           >
             We'd love to show everything — but some projects are confidential.
@@ -744,7 +520,6 @@ export default function SectionSuccessStories() {
             }}
           >
             Request a Case Study
-            {/* Arrow Icon */}
             <svg
               className="case-study-arrow"
               width="20"

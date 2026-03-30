@@ -195,7 +195,7 @@ export default function Section4() {
               margin: 0,
             }}
           >
-            We help digital-first teams solve skill<br />gaps fast — with carefully selected<br />specialists who don't just fill seats, but add value from day one.
+            We help digital-first teams solve skill gaps fast — with carefully selected specialists who don't just fill seats, but add value from day one.
           </p>
         </div>
       </div>
@@ -212,7 +212,7 @@ export default function Section4() {
             lineHeight: 1.2,
           }}
         >
-          We don't sell CVs.
+          We don't sell CVs
         </p>
         <p
           style={{

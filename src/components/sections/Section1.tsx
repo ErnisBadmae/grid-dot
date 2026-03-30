@@ -80,11 +80,11 @@ export default function Section1() {
             style={{
               position: 'absolute',
               // top: '0px', // Handled by CSS class grid-vs-next-img
-              left: '50%',
+              left: '27%',
               transform: 'translateX(-50%)',
               width: '100%',
-              maxWidth: '1440px', // Cap width to prevent vertical scaling drift
-              height: 'auto',
+              maxWidth: '800px', // Cap width to prevent vertical scaling drift
+              height: '400px',
               zIndex: 1,
               pointerEvents: 'none'
             }}
@@ -100,8 +100,8 @@ export default function Section1() {
               fontFamily: 'Scandia, sans-serif',
               position: 'relative',
               zIndex: 2,
-              maxWidth: '1440px', // Match SVG max-width
-              margin: '0 auto' // Center the grid
+              maxWidth: '800px', // Match SVG max-width
+              margin: '0' // Center the grid
             }}
           >
             {/* Row 1 Headers */}
