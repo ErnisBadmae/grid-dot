@@ -1,4 +1,3 @@
-import React from 'react'
 import { SECTION_3 } from '@/lib/constants'
 
 export default function Section3() {
@@ -132,7 +131,7 @@ export default function Section3() {
             </span>
           </div>
           <p style={{ fontFamily: 'Scandia, sans-serif', fontSize: '16px', fontWeight: 400, lineHeight: 1.5, color: '#0B1215', margin: 0, maxWidth: '450px', paddingLeft: '72px' }}>
-            Once someone joins your team, our role doesn’t end.<br />
+            Once someone joins your team, our role doesn't end.<br />
             We support onboarding, alignment, and day-to-day collaboration to make sure things actually work.
           </p>
         </div>
@@ -148,7 +147,7 @@ export default function Section3() {
             </span>
           </div>
           <p style={{ fontFamily: 'Scandia, sans-serif', fontSize: '16px', fontWeight: 400, lineHeight: 1.5, color: '#0B1215', margin: 0, maxWidth: '450px', paddingLeft: '72px' }}>
-            If something isn’t right, we address it early.<br />
+            If something isn't right, we address it early.<br />
             Open feedback, clear decisions, no friction.
           </p>
         </div>
@@ -162,23 +161,41 @@ export default function Section3() {
         </div>
 
         {/* Col 2: Text */}
-        <div style={{ gridColumn: '2 / 3', paddingTop: '40px' }}>
-          <h3
-            style={{
-              fontFamily: 'Scandia, sans-serif',
-              fontSize: '44px',
-              fontWeight: 700,
-              color: '#0B1215',
-              lineHeight: 1.8,
-              margin: 0,
-              marginLeft: '-340px',
-              whiteSpace: 'normal',
-            }}
-          >
-            clarity at every step<br />
-            fewer introductions, better matches<br />
-            specialists who work as{' '}<span style={{ whiteSpace: 'nowrap' }}>part of your team</span>
-          </h3>
+        <div style={{ gridColumn: '2 / 3', paddingTop: '40px', marginLeft: '-340px' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>
+            {[
+              'clarity at every step',
+              'fewer introductions, better matches',
+            ].map((text) => (
+              <h3
+                key={text}
+                style={{
+                  fontFamily: 'Scandia, sans-serif',
+                  fontSize: '44px',
+                  fontWeight: 700,
+                  color: '#0B1215',
+                  lineHeight: 1.1,
+                  margin: 0,
+                  whiteSpace: 'nowrap',
+                }}
+              >
+                {text}
+              </h3>
+            ))}
+            <h3
+              style={{
+                fontFamily: 'Scandia, sans-serif',
+                fontSize: '44px',
+                fontWeight: 700,
+                color: '#0B1215',
+                lineHeight: 1.1,
+                margin: 0,
+              }}
+            >
+              specialists who work as<br />
+              <span style={{ whiteSpace: 'nowrap' }}>part of your team</span>
+            </h3>
+          </div>
         </div>
       </div>
 
@@ -225,64 +242,21 @@ export default function Section3() {
         </div>
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: '40px' }}>
-          {/* Step 0.1 */}
-          <div>
-            <div style={{ marginBottom: '16px' }}>
-              <span style={{ fontFamily: 'Scandia, sans-serif', fontSize: '24px', fontWeight: 700, color: '#0033FF', marginRight: '10px' }}>[1.0]</span>
-              <span style={{ fontFamily: 'Scandia, sans-serif', fontSize: '20px', fontWeight: 700, color: '#0B1215' }}>we start with context</span>
+          {[
+            { num: '[1.0]', title: 'we start with context', text: 'Before talking about roles, we talk about your team, your product, and where you need support.' },
+            { num: '[2.0]', title: 'we reach out — not outwards', text: 'Instead of searching everywhere, we approach a small number of specialists who are already relevant. No mass outreach. No long lists. Just focused conversations.' },
+            { num: '[3.0]', title: 'we stay involved', text: "Once someone joins your team, our role doesn't end. We support onboarding, alignment, and day-to-day collaboration to make sure things actually work." },
+            { num: '[4.0]', title: 'we curate, not filter', text: 'Every specialist we introduce is reviewed for more than experience. We look at how they think, communicate, and work inside a team. Fit is intentional.' },
+            { num: '[5.0]', title: 'we adjust and improve', text: "If something isn't right, we address it early. Open feedback, clear decisions, no friction." },
+          ].map(({ num, title, text }) => (
+            <div key={num} style={{ display: 'grid', gridTemplateColumns: 'auto 1fr', columnGap: '16px' }}>
+              <span style={{ fontFamily: 'Scandia, sans-serif', fontSize: '20px', fontWeight: 700, color: '#0033FF', whiteSpace: 'nowrap' }}>{num}</span>
+              <div>
+                <p style={{ fontFamily: 'Scandia, sans-serif', fontSize: '20px', fontWeight: 700, color: '#0B1215', margin: '0 0 8px 0' }}>{title}</p>
+                <p style={{ fontFamily: 'Scandia, sans-serif', fontSize: '16px', fontWeight: 400, lineHeight: 1.5, color: '#0B1215', margin: 0 }}>{text}</p>
+              </div>
             </div>
-            <p style={{ fontFamily: 'Scandia, sans-serif', fontSize: '16px', fontWeight: 400, lineHeight: 1.5, color: '#0B1215', margin: 0 }}>
-              Before talking about roles, we talk about your team, your product, and where you need support.
-            </p>
-          </div>
-
-          {/* Step 0.2 */}
-          <div>
-            <div style={{ marginBottom: '16px' }}>
-              <span style={{ fontFamily: 'Scandia, sans-serif', fontSize: '24px', fontWeight: 700, color: '#0033FF', marginRight: '10px' }}>[2.0]</span>
-              <span style={{ fontFamily: 'Scandia, sans-serif', fontSize: '20px', fontWeight: 700, color: '#0B1215' }}>we reach out — not outwards</span>
-            </div>
-            <p style={{ fontFamily: 'Scandia, sans-serif', fontSize: '16px', fontWeight: 400, lineHeight: 1.5, color: '#0B1215', margin: 0 }}>
-              Instead of searching everywhere, we approach a small number of specialists who are already relevant.<br />
-              No mass outreach. No long lists. Just focused conversations.
-            </p>
-          </div>
-
-          {/* Step 0.3 */}
-          <div>
-            <div style={{ marginBottom: '16px' }}>
-              <span style={{ fontFamily: 'Scandia, sans-serif', fontSize: '24px', fontWeight: 700, color: '#0033FF', marginRight: '10px' }}>[3.0]</span>
-              <span style={{ fontFamily: 'Scandia, sans-serif', fontSize: '20px', fontWeight: 700, color: '#0B1215' }}>we stay involved</span>
-            </div>
-            <p style={{ fontFamily: 'Scandia, sans-serif', fontSize: '16px', fontWeight: 400, lineHeight: 1.5, color: '#0B1215', margin: 0 }}>
-              Once someone joins your team, our role doesn’t end.<br />
-              We support onboarding, alignment, and day-to-day collaboration to make sure things actually work.
-            </p>
-          </div>
-
-          {/* Step 0.4 */}
-          <div>
-            <div style={{ marginBottom: '16px' }}>
-              <span style={{ fontFamily: 'Scandia, sans-serif', fontSize: '24px', fontWeight: 700, color: '#0033FF', marginRight: '10px' }}>[4.0]</span>
-              <span style={{ fontFamily: 'Scandia, sans-serif', fontSize: '20px', fontWeight: 700, color: '#0B1215' }}>we curate, not filter</span>
-            </div>
-            <p style={{ fontFamily: 'Scandia, sans-serif', fontSize: '16px', fontWeight: 400, lineHeight: 1.5, color: '#0B1215', margin: 0 }}>
-              Every specialist we introduce is reviewed for more than experience.<br />
-              We look at how they think, communicate, and work inside a team. Fit is intentional.
-            </p>
-          </div>
-
-          {/* Step 0.5 */}
-          <div>
-            <div style={{ marginBottom: '16px' }}>
-              <span style={{ fontFamily: 'Scandia, sans-serif', fontSize: '24px', fontWeight: 700, color: '#0033FF', marginRight: '10px' }}>[5.0]</span>
-              <span style={{ fontFamily: 'Scandia, sans-serif', fontSize: '20px', fontWeight: 700, color: '#0B1215' }}>we adjust and improve</span>
-            </div>
-            <p style={{ fontFamily: 'Scandia, sans-serif', fontSize: '16px', fontWeight: 400, lineHeight: 1.5, color: '#0B1215', margin: 0 }}>
-              If something isn’t right, we address it early.<br />
-              Open feedback, clear decisions, no friction.
-            </p>
-          </div>
+          ))}
         </div>
 
         {/* In Practice Section */}
@@ -293,9 +267,9 @@ export default function Section3() {
             </span>
           </div>
 
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
-            {['clarity at every step', 'fewer introductions,\nbetter matches', 'specialists who work\nas part of your team'].map((text, i) => (
-              <div key={i} style={{ backgroundColor: '#9AC2E4', padding: '0 8px', width: 'fit-content' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '40px' }}>
+            {['clarity at every step', 'fewer introductions, better matches'].map((text) => (
+              <div key={text} style={{ backgroundColor: '#9AC2E4', padding: '0 8px', width: 'fit-content' }}>
                 <h3
                   style={{
                     fontFamily: 'Scandia, sans-serif',
@@ -306,10 +280,25 @@ export default function Section3() {
                     margin: 0,
                   }}
                 >
-                  {text.split('\n').map((line, j) => <React.Fragment key={j}>{line}<br /></React.Fragment>)}
+                  {text}
                 </h3>
               </div>
             ))}
+            <div style={{ backgroundColor: '#9AC2E4', padding: '0 8px', width: 'fit-content' }}>
+              <h3
+                style={{
+                  fontFamily: 'Scandia, sans-serif',
+                  fontSize: '32px',
+                  fontWeight: 700,
+                  color: '#0B1215',
+                  lineHeight: 1.1,
+                  margin: 0,
+                }}
+              >
+                specialists who work as<br />
+                <span style={{ whiteSpace: 'nowrap' }}>part of your team</span>
+              </h3>
+            </div>
           </div>
         </div>
       </div>
