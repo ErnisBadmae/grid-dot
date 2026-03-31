@@ -1,0 +1,75 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2026-03-04",
+  "company": {
+    "name": "Grid & Dot",
+    "alternateName": "Grid and Dot",
+    "type": "EmploymentAgency",
+    "founded": "2024",
+    "slogan": "Extended Expertise. No CVs — Real Expertise.",
+    "description": "London-based extended expertise recruitment agency specializing in curated digital talent for product strategy, data architecture, and delivery teams.",
+    "url": "https://gridanddot.com",
+    "logo": "https://gridanddot.com/images/Grid&Dot.svg"
+  },
+  "contact": {
+    "email": "engagement@gridanddot.com",
+    "phone": "+447782795174",
+    "telegram": "Gridanddot",
+    "whatsapp": "447782795174"
+  },
+  "location": {
+    "city": "London",
+    "region": "Greater London",
+    "country": "United Kingdom",
+    "countryCode": "GB"
+  },
+  "areasServed": [
+    "United Kingdom",
+    "EMEA",
+    "APAC"
+  ],
+  "services": [
+    {
+      "name": "Talent Acquisition",
+      "description": "Finding the right digital specialists for your team"
+    },
+    {
+      "name": "HR Consulting",
+      "description": "Strategic advice for your HR needs"
+    },
+    {
+      "name": "Career Coaching",
+      "description": "Helping candidates reach their potential"
+    },
+    {
+      "name": "Extended Expertise",
+      "description": "Curated specialists in product strategy, data architecture, delivery, UX/design, and content"
+    }
+  ],
+  "expertise": [
+    "Product Strategy",
+    "Data Architecture",
+    "Delivery & Agile",
+    "UX & Design",
+    "Content Strategy",
+    "Digital Transformation",
+    "Talent Curation",
+    "Recruitment"
+  ],
+  "notableClients": [
+    "The Estée Lauder Companies"
+  ],
+  "pages": [
+    {
+      "path": "/",
+      "title": "Grid & Dot — Extended Expertise Talent Curation",
+      "description": "Homepage — hero, about, services, CTA, partners, contact"
+    }
+  ],
+  "aiFiles": {
+    "llms": "/llms.txt",
+    "llmsFull": "/llms-full.txt",
+    "metadata": "/ai-metadata.json",
+    "sitemap": "/sitemap.xml"
+  }
+}

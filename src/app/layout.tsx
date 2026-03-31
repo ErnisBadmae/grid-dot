@@ -107,6 +107,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="stylesheet" href={`${basePath}/old-site.css`} />
         <link rel="stylesheet" href={`${basePath}/header-override.css`} />
         <link rel="stylesheet" href={`${basePath}/mobile-figma-styles.css`} />
+        <link rel="alternate" type="text/plain" href={`${basePath}/llms.txt`} title="LLM Context" />
 
         {/* JSON-LD Structured Data - Organization */}
         <script

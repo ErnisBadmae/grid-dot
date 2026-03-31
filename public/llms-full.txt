@@ -1,0 +1,67 @@
+# Grid & Dot — Full Context
+
+> Extended expertise recruitment agency based in London, UK. We curate digital specialists — not CVs — for product strategy, data architecture, delivery, and digital transformation teams.
+
+## About
+
+Grid & Dot is a London-based talent curation agency founded in 2024. We match curated digital specialists to companies' culture, workflows, and goals. Our focus is quality over volume, long-term fit, and ongoing support.
+
+Our slogan: "Extended Expertise. No CVs — Real Expertise."
+
+## Services
+
+- **Talent Acquisition** — Finding the right digital specialists for your team
+- **HR Consulting** — Strategic advice for your HR needs
+- **Career Coaching** — Helping candidates reach their potential
+- **Extended Expertise** — Curated specialists in product strategy, data architecture, delivery, UX/design, and content
+
+## Expertise Areas
+
+- Product Strategy
+- Data Architecture
+- Delivery & Agile
+- UX & Design
+- Content Strategy
+- Digital Transformation
+- Talent Curation
+- Recruitment
+
+## Regions Served
+
+- United Kingdom (HQ: London)
+- EMEA
+- APAC
+
+## Notable Clients
+
+- The Estée Lauder Companies
+- Organizations undergoing digital transformation
+
+## Contact
+
+- Email: engagement@gridanddot.com
+- Phone: +44 7782 795174
+- Telegram: @Gridanddot
+- Website: https://gridanddot.com
+
+## FAQ
+
+### What is Extended Expertise?
+Extended expertise is a talent model focused on curated specialists rather than CV volume. We match digital specialists for product strategy, data architecture, and delivery to your team's culture and workflows. It's about quality over quantity, ensuring the right fit for long-term success.
+
+### How is Grid & Dot different from traditional recruiters?
+Unlike traditional agencies that send CVs, we curate specialists that fit your culture, workflows, and goals. We focus on quality over volume, long-term fit, and ongoing support. No CVs — just real expertise that matches your needs.
+
+### What industries and expertise areas do you serve?
+We specialize in digital-first teams requiring product strategy, data architecture, delivery, UX/design, and content expertise. Our clients include global brands like The Estée Lauder Companies and organizations undergoing digital transformation.
+
+### Where is Grid & Dot based?
+We are based in London, United Kingdom, with capabilities across EMEA and APAC regions. Our London location allows us to serve both local and international clients with time zone flexibility.
+
+### How does the extended expertise curation process work?
+We focus on quality over speed. Our curated approach involves understanding your team's culture, workflows, and goals, then matching specialists who fit those requirements. We provide ongoing support to ensure long-term success rather than just filling a role quickly.
+
+## Links
+
+- [Short AI context](/llms.txt)
+- [Structured metadata (JSON)](/ai-metadata.json)
