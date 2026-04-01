@@ -1,15 +1,15 @@
 {
-  "version": "1.0",
-  "lastUpdated": "2026-03-04",
+  "version": "1.1",
+  "lastUpdated": "2026-04-01",
   "company": {
     "name": "Grid & Dot",
     "alternateName": "Grid and Dot",
     "type": "EmploymentAgency",
     "founded": "2024",
-    "slogan": "Extended Expertise. No CVs — Real Expertise.",
-    "description": "London-based extended expertise recruitment agency specializing in curated digital talent for product strategy, data architecture, and delivery teams.",
+    "slogan": "Extended Expertise. No CVs—Real Expertise.",
+    "description": "London-based extended expertise recruitment agency. We curate digital specialists in product strategy, data architecture, and delivery for digital-first teams. No CVs—real expertise.",
     "url": "https://gridanddot.com",
-    "logo": "https://gridanddot.com/images/Grid&Dot.svg"
+    "logo": "https://gridanddot.com/images/grid-dot-logo.svg"
   },
   "contact": {
     "email": "engagement@gridanddot.com",
@@ -31,19 +31,19 @@
   "services": [
     {
       "name": "Talent Acquisition",
-      "description": "Finding the right digital specialists for your team"
+      "description": "Finding the right digital specialists for your team."
     },
     {
       "name": "HR Consulting",
-      "description": "Strategic advice for your HR needs"
+      "description": "Strategic advice for your HR needs."
     },
     {
       "name": "Career Coaching",
-      "description": "Helping candidates reach their potential"
+      "description": "Helping candidates reach their potential."
     },
     {
       "name": "Extended Expertise",
-      "description": "Curated specialists in product strategy, data architecture, delivery, UX/design, and content"
+      "description": "Curated specialists in product strategy, data architecture, delivery, UX/design, and content."
     }
   ],
   "expertise": [
@@ -52,24 +52,40 @@
     "Delivery & Agile",
     "UX & Design",
     "Content Strategy",
-    "Digital Transformation",
+    "Digital Transformation"
+  ],
+  "knowsAbout": [
+    "Extended Expertise",
     "Talent Curation",
+    "Product Strategy",
+    "Data Architecture",
+    "Delivery Management",
+    "UX & Design",
+    "Content Strategy",
+    "Digital Transformation",
     "Recruitment"
   ],
   "notableClients": [
-    "The Estée Lauder Companies"
+    "The Estée Lauder Companies",
+    "Organizations undergoing digital transformation"
   ],
   "pages": [
     {
       "path": "/",
       "title": "Grid & Dot — Extended Expertise Talent Curation",
-      "description": "Homepage — hero, about, services, CTA, partners, contact"
+      "description": "Homepage — hero, about, services, CTA, partners, and contact."
+    },
+    {
+      "path": "/privacy/",
+      "title": "Privacy Policy",
+      "description": "Privacy policy covering data handling, cookies, and contact information for Grid & Dot."
     }
   ],
   "aiFiles": {
     "llms": "/llms.txt",
     "llmsFull": "/llms-full.txt",
     "metadata": "/ai-metadata.json",
+    "legacyMetadata": "/api/metadata.json",
     "sitemap": "/sitemap.xml"
   }
 }

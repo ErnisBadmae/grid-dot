@@ -8,10 +8,10 @@ Grid & Dot is a London-based talent curation agency. We match curated digital sp
 
 ## Services
 
-- **Talent Acquisition** — Finding the right digital specialists for your team
-- **HR Consulting** — Strategic advice for your HR needs
-- **Career Coaching** — Helping candidates reach their potential
-- **Extended Expertise** — Curated specialists in product strategy, data architecture, delivery, UX/design, and content
+- **Talent Acquisition** — Finding the right digital specialists for your team.
+- **HR Consulting** — Strategic advice for your HR needs.
+- **Career Coaching** — Helping candidates reach their potential.
+- **Extended Expertise** — Curated specialists in product strategy, data architecture, delivery, UX/design, and content.
 
 ## Expertise Areas
 
@@ -31,7 +31,7 @@ Grid & Dot is a London-based talent curation agency. We match curated digital sp
 ## Contact
 
 - Email: engagement@gridanddot.com
-- Phone: +44 7782 795174
+- Phone: +44 7782 795 174
 - Telegram: @Gridanddot
 - Website: https://gridanddot.com
 
