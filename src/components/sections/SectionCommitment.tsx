@@ -136,9 +136,8 @@ export default function SectionCommitment() {
                             >
                                 digital atelier
                             </span>
+                            <img className="commitment-arrow" src={`${basePath}/images/Arrow Our Commitment.svg`} alt="arrow" />
                         </a>
-
-                        <img className="commitment-arrow" src={`${basePath}/images/Arrow Our Commitment.svg`} alt="arrow" />
 
                         <span
                             className="commitment-text"
@@ -147,7 +146,7 @@ export default function SectionCommitment() {
                                 fontSize: '24px',
                                 fontWeight: 700,
                                 color: '#0B1215',
-                                minWidth: '250px', // Ensure alignment if text lengths vary
+                                minWidth: '250px',
                             }}
                         >
                             craft & realisation
@@ -176,9 +175,8 @@ export default function SectionCommitment() {
                             >
                                 extended expertise
                             </span>
+                            <img className="commitment-arrow" src={`${basePath}/images/Arrow Our Commitment.svg`} alt="arrow" />
                         </a>
-
-                        <img className="commitment-arrow" src={`${basePath}/images/Arrow Our Commitment.svg`} alt="arrow" />
 
                         <span
                             className="commitment-text"

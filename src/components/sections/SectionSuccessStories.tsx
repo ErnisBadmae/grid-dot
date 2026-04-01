@@ -151,6 +151,24 @@ export default function SectionSuccessStories() {
       }}
     >
       <style jsx>{`
+        @media (min-width: 1701px) and (max-width: 1800px) {
+          .bg-svg { top: -500px !important; }
+        }
+        @media (min-width: 1801px) and (max-width: 1900px) {
+          .bg-svg { top: -500px !important; }
+        }
+        @media (min-width: 1901px) and (max-width: 2000px) {
+          .bg-svg { top: -550px !important; }
+        }
+        @media (min-width: 2001px) and (max-width: 2200px) {
+          .bg-svg { top: -570px !important; }
+        }
+          @media (min-width: 2101px) and (max-width: 2500px) {
+          .bg-svg { top: -620px !important; }
+        }
+        @media (min-width: 2201px) and (max-width: 2500px) {
+          .bg-svg { top: -650px !important; }
+        }
         @media (max-width: 639px) {
           #section-success-stories {
             padding: 60px 20px !important;
@@ -167,6 +185,10 @@ export default function SectionSuccessStories() {
           }
           .case-study-grid-content {
             margin-bottom: 20px;
+          }
+          .tags-collapsed {
+            max-height: 103px;
+            overflow: hidden;
           }
           .card-arrow {
             margin-top: 4px !important;
@@ -186,7 +208,7 @@ export default function SectionSuccessStories() {
       <img
         src={`${basePath}/images/text-on-path-4-desktop.svg`}
         alt=""
-        className="desktop-only"
+        className="desktop-only bg-svg"
         style={{
           position: 'absolute',
           top: '-450px',
@@ -273,7 +295,7 @@ export default function SectionSuccessStories() {
                 </p>
 
                 {/* Tags */}
-                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginBottom: '32px' }}>
+                <div className={!isExpanded ? 'tags-collapsed' : ''} style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginBottom: '32px' }}>
                   {study.tags.map((tag, i) => (
                     <span
                       key={i}
