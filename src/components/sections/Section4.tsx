@@ -1,11 +1,12 @@
 'use client'
 
-import { useApp } from '@/contexts/AppContext'
-import { SECTION_4 } from '@/lib/constants'
+import { BOOK_A_CALL_URL, SECTION_4 } from '@/lib/constants'
 import { basePath } from '@/lib/basePath'
 
 export default function Section4() {
-  const { scrollTo } = useApp()
+  const handleBookCall = () => {
+    window.open(BOOK_A_CALL_URL, '_blank')
+  }
 
   return (
     <section
@@ -121,7 +122,7 @@ export default function Section4() {
               lineHeight: 1.2,
             }}
           >
-            We don't sell CVs.
+            We don&apos;t sell CVs.
           </p>
           <p
             style={{
@@ -136,7 +137,7 @@ export default function Section4() {
             We curate<br />specialists who<br />deliver.
           </p>
           <button
-            onClick={() => window.open('https://calendly.com/et-gridanddot/30min', '_blank')}
+            onClick={handleBookCall}
             style={{
               display: 'inline-flex',
               alignItems: 'center',
@@ -165,7 +166,7 @@ export default function Section4() {
               if (arrow) arrow.style.filter = 'none';
             }}
           >
-            Let's Talk
+            Let&apos;s Talk
             <img
               src={`${basePath}/images/Arrow 6.svg`}
               alt=""
@@ -195,7 +196,7 @@ export default function Section4() {
               margin: 0,
             }}
           >
-            We help digital-first teams solve skill gaps fast — with carefully selected specialists who don't just fill seats, but add value from day one.
+            We help digital-first teams solve skill gaps fast — with carefully selected specialists who don&apos;t just fill seats, but add value from day one.
           </p>
         </div>
       </div>
@@ -212,7 +213,7 @@ export default function Section4() {
             lineHeight: 1.2,
           }}
         >
-          We don't sell CVs
+          We don&apos;t sell CVs
         </p>
         <p
           style={{
@@ -244,11 +245,11 @@ export default function Section4() {
               margin: 0,
             }}
           >
-            We help digital-first teams solve skill gaps fast — with carefully selected specialists who don't just fill seats, but add value from day one.
+            We help digital-first teams solve skill gaps fast — with carefully selected specialists who don&apos;t just fill seats, but add value from day one.
           </p>
         </div>
         <button
-          onClick={() => window.open('https://calendly.com/et-gridanddot/30min', '_blank')}
+          onClick={handleBookCall}
           style={{
             display: 'flex',
             alignItems: 'center',
@@ -267,7 +268,7 @@ export default function Section4() {
             transition: 'all 150ms ease',
           }}
         >
-          Let's Talk
+          Let&apos;s Talk
           <img
             src={`${basePath}/images/Arrow 6.svg`}
             alt=""
@@ -278,3 +279,4 @@ export default function Section4() {
     </section>
   )
 }
+

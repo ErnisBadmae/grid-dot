@@ -1,19 +1,3 @@
-// Контент сайта (извлечен из CraftCMS)
-import { basePath } from '@/lib/basePath'
-
-export const SITE_CONFIG = {
-  title: 'Grid & Dot - Extended Expertise',
-  description: 'Professional web development and design services',
-  url: 'https://gridanddot.com',
-  email: '[email protected]',
-}
-
-export const SECTION_1 = {
-  heroTitle: 'we are a recruiting agency',
-  ourGoalsHeader: 'What are our goals?',
-  ourGoalsParagraph: 'Find talent, match personalities and respond precisely to companies\' needs.',
-}
-
 export const SECTION_2 = {
   header: '<strong>Helping you achieve your</strong> <em class="color-blue">goals</em>',
   paragraph: 'With a presence in UK and abroad, we make your recruitment success a priority.',
@@ -49,34 +33,13 @@ export const SECTION_4 = {
   button: 'I need to hire',
 }
 
-export const SECTION_5 = {
-  header: 'Our Partners',
-  partners: [
-    { name: 'Partner 1', logo: `${basePath}/images/partners/partner1.png` },
-  ],
-}
-
-export const SECTION_6 = {
-  paragraph: 'Have a project in mind?',
-  slogan: '<h1><strong>Let\'s work</strong> <em class="color-blue">together</em></h1>',
-  subhead: 'Contact us today',
-  button: 'Send Message',
-}
-
-export const SECTION_7 = {
-  subheader: 'Get in touch',
-  paragraph: '<p>We\'d love to hear from you. Send us a message and we\'ll respond as soon as possible.</p>',
-  header: 'Contact Us',
-  submitUrl: '/api/contact',
-}
-
-export const FOOTER = {
-  basedIn: 'Based in San Francisco, CA',
-}
-
 export const CONTACTS = {
   email: 'engagement@gridanddot.com',
-  phone: '+447782795174', // Removed placeholder
-  telegram: 'Gridanddot', // Removed placeholder
-  whatsapp: '447782795174', // Removed placeholder
+  phone: '+447782795174',
+  telegram: 'Gridanddot',
+  whatsapp: '447782795174',
 }
+
+export const BOOK_A_CALL_URL = 'https://calendly.com/et-gridanddot/30min'
+
+export const COOKIE_CONSENT_STORAGE_KEY = 'cookieConsent'

@@ -2,7 +2,7 @@
 User-agent: *
 Allow: /
 
-# AI Crawlers - Explicitly allowed for better indexing in AI systems
+# AI crawlers explicitly allowed for retrieval and future agent search
 User-agent: GPTBot
 Allow: /
 
@@ -26,3 +26,8 @@ Allow: /
 
 # Sitemap
 Sitemap: https://gridanddot.com/sitemap.xml
+
+# AI agent context files
+# LLM-readable site description (llmstxt.org style): https://gridanddot.com/llms.txt
+# Extended LLM context with FAQ: https://gridanddot.com/llms-full.txt
+# Structured AI metadata (JSON): https://gridanddot.com/ai-metadata.json

@@ -1,6 +1,7 @@
 'use client'
 
 import React from 'react'
+import { CONTACTS } from '@/lib/constants'
 import { basePath } from '@/lib/basePath'
 
 const linkStyle: React.CSSProperties = {
@@ -99,8 +100,8 @@ export default function Footer() {
           </div>
 
           {/* Email */}
-          <a href="mailto:engagement@gridanddot.com" style={linkStyle}>
-            engagement@gridanddot.com
+          <a href={`mailto:${CONTACTS.email}`} style={linkStyle}>
+            {CONTACTS.email}
           </a>
 
           {/* Privacy Policy */}

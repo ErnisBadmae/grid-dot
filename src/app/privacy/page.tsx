@@ -1,29 +1,13 @@
 import React from 'react'
 import Link from 'next/link'
 import { basePath } from '@/lib/basePath'
-import type { Metadata } from 'next'
+import { buildPageMetadata } from '@/lib/seo'
 
-export const metadata: Metadata = {
-  title: 'Privacy Policy - Grid & Dot',
+export const metadata = buildPageMetadata({
+  path: '/privacy/',
+  title: 'Privacy Policy',
   description: 'Our commitment to data protection and privacy. Learn how Grid & Dot handles personal data in compliance with UK GDPR and data protection regulations.',
-  alternates: {
-    canonical: 'https://gridanddot.com/privacy/'
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true
-    }
-  },
-  openGraph: {
-    title: 'Privacy Policy - Grid & Dot',
-    description: 'Our commitment to data protection and privacy in compliance with UK GDPR.',
-    url: 'https://gridanddot.com/privacy/',
-    type: 'website'
-  }
-}
+})
 
 export default function PrivacyPage() {
     return (

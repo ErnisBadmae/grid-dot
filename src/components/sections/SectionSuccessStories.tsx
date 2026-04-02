@@ -1,24 +1,11 @@
 'use client';
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useApp } from '@/contexts/AppContext';
 import { basePath } from '@/lib/basePath';
+import SuccessStoriesList from './success-stories/SuccessStoriesList';
+import type { CaseStudy } from './success-stories/types';
 
-interface GridRow {
-  label: string;
-  content: string[];
-}
-
-interface CaseStudy {
-  title: string;
-  subtitle: string;
-  tags: string[];
-  clientContextP1: string;
-  clientContextP2: string;
-  grid: GridRow[];
-  closingP1: string;
-  closingP2?: string;
-}
 
 const CASE_STUDIES: CaseStudy[] = [
   {
@@ -173,34 +160,6 @@ export default function SectionSuccessStories() {
           #section-success-stories {
             padding: 60px 20px !important;
           }
-          .context-preview {
-            display: none;
-          }
-          .context-label {
-            display: none;
-          }
-          .case-study-grid {
-            grid-template-columns: 1fr !important;
-            row-gap: 4px !important;
-          }
-          .case-study-grid-content {
-            margin-bottom: 20px;
-          }
-          .tags-collapsed {
-            max-height: 103px;
-            overflow: hidden;
-          }
-          .card-arrow {
-            margin-top: 4px !important;
-          }
-          .context-p1-mobile {
-            display: block !important;
-          }
-        }
-        @media (min-width: 640px) {
-          .context-p1-mobile {
-            display: none;
-          }
         }
       `}</style>
 
@@ -256,255 +215,7 @@ export default function SectionSuccessStories() {
           Success Stories —<br />
           Case Highlights
         </h2>
-
-        {/* Cards */}
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-          {CASE_STUDIES.map((study, index) => {
-            const isExpanded = expandedCards[index];
-            return (
-              <div
-                key={index}
-                style={{
-                  backgroundColor: '#F8F8F8',
-                  padding: '30px',
-                  position: 'relative'
-                }}
-              >
-                {/* Title & Subtitle — always visible */}
-                <h3
-                  style={{
-                    fontFamily: 'Scandia, sans-serif',
-                    fontSize: '24px',
-                    fontWeight: 500,
-                    color: '#0B1215',
-                    marginBottom: '8px'
-                  }}
-                >
-                  {study.title}
-                </h3>
-                <p
-                  style={{
-                    fontFamily: 'Scandia, sans-serif',
-                    fontSize: '16px',
-                    fontWeight: 400,
-                    color: '#0B1215',
-                    marginBottom: '32px'
-                  }}
-                >
-                  {study.subtitle}
-                </p>
-
-                {/* Tags */}
-                <div className={!isExpanded ? 'tags-collapsed' : ''} style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginBottom: '32px' }}>
-                  {study.tags.map((tag, i) => (
-                    <span
-                      key={i}
-                      style={{
-                        backgroundColor: '#0033FF',
-                        color: '#FFFFFF',
-                        padding: '6px 16px',
-                        borderRadius: '999px',
-                        fontFamily: 'Scandia, sans-serif',
-                        fontSize: '14px',
-                        fontWeight: 400
-                      }}
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-
-                {/* Text preview — always visible, 2 lines */}
-                <h4
-                  className="context-label"
-                  style={{
-                    fontFamily: 'Scandia, sans-serif',
-                    fontSize: '16px',
-                    fontWeight: 500,
-                    color: '#0B1215',
-                    marginBottom: '16px'
-                  }}
-                >
-                  Client Context:
-                </h4>
-                {/* Client Context preview — desktop only, 2-3 lines when collapsed */}
-                <div className="context-preview" style={{ position: 'relative', marginBottom: '0' }}>
-                  <div
-                    style={{
-                      maxHeight: isExpanded ? 'none' : '60px',
-                      overflow: 'hidden',
-                      position: 'relative'
-                    }}
-                  >
-                    <p
-                      style={{
-                        fontFamily: 'Scandia, sans-serif',
-                        fontSize: '16px',
-                        fontWeight: 400,
-                        color: '#0B1215',
-                        lineHeight: 1.5,
-                        margin: 0
-                      }}
-                    >
-                      {study.clientContextP1}
-                    </p>
-                  </div>
-                  {!isExpanded && (
-                    <div
-                      style={{
-                        position: 'absolute',
-                        bottom: 0,
-                        left: 0,
-                        width: '100%',
-                        height: '24px',
-                        background: 'linear-gradient(to bottom, transparent, #F8F8F8)',
-                        pointerEvents: 'none'
-                      }}
-                    />
-                  )}
-                </div>
-
-                {/* Collapsible Body */}
-                <div
-                  style={{
-                    maxHeight: isExpanded ? '4000px' : '0',
-                    overflow: 'hidden',
-                    transition: 'max-height 0.4s ease'
-                  }}
-                >
-                  <div style={{ marginBottom: '16px' }} />
-                  {/* P1 visible only on mobile (desktop shows it in preview above) */}
-                  <p
-                    className="context-p1-mobile"
-                    style={{
-                      fontFamily: 'Scandia, sans-serif',
-                      fontSize: '16px',
-                      fontWeight: 400,
-                      color: '#0B1215',
-                      lineHeight: 1.5,
-                      marginBottom: '16px'
-                    }}
-                  >
-                    {study.clientContextP1}
-                  </p>
-                  <p
-                    style={{
-                      fontFamily: 'Scandia, sans-serif',
-                      fontSize: '16px',
-                      fontWeight: 400,
-                      color: '#0B1215',
-                      lineHeight: 1.5,
-                      marginBottom: '48px'
-                    }}
-                  >
-                    {study.clientContextP2}
-                  </p>
-
-                  {/* Grid of Details */}
-                  <div
-                    className="case-study-grid"
-                    style={{
-                      display: 'grid',
-                      gridTemplateColumns: 'minmax(200px, auto) 1fr',
-                      rowGap: '32px',
-                      columnGap: '32px',
-                      marginBottom: '48px'
-                    }}
-                  >
-                    {study.grid.map((row, i) => (
-                      <React.Fragment key={i}>
-                        <div>
-                          <h5
-                            style={{
-                              fontFamily: 'Scandia, sans-serif',
-                              fontSize: '16px',
-                              fontWeight: 500,
-                              color: '#0B1215',
-                              margin: 0,
-                              whiteSpace: 'pre-line'
-                            }}
-                          >
-                            {row.label}
-                          </h5>
-                        </div>
-                        <div className="case-study-grid-content">
-                          {row.content.map((para, j) => (
-                            <p
-                              key={j}
-                              style={{
-                                fontFamily: 'Scandia, sans-serif',
-                                fontSize: '16px',
-                                fontWeight: 400,
-                                color: '#0B1215',
-                                margin: j < row.content.length - 1 ? '0 0 12px 0' : 0,
-                                lineHeight: 1.5
-                              }}
-                            >
-                              {para}
-                            </p>
-                          ))}
-                        </div>
-                      </React.Fragment>
-                    ))}
-                  </div>
-
-                  {/* Closing Text */}
-                  <p
-                    style={{
-                      fontFamily: 'Scandia, sans-serif',
-                      fontSize: '16px',
-                      fontWeight: 400,
-                      color: '#0B1215',
-                      lineHeight: 1.5,
-                      marginBottom: study.closingP2 ? '16px' : 0
-                    }}
-                  >
-                    {study.closingP1}
-                  </p>
-                  {study.closingP2 && (
-                    <p
-                      style={{
-                        fontFamily: 'Scandia, sans-serif',
-                        fontSize: '16px',
-                        fontWeight: 400,
-                        color: '#0B1215',
-                        lineHeight: 1.5,
-                        margin: 0
-                      }}
-                    >
-                      {study.closingP2}
-                    </p>
-                  )}
-                </div>
-
-                {/* Arrow — bottom right */}
-                <div className="card-arrow" style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '12px' }}>
-                  <button
-                    onClick={() => toggleCard(index)}
-                    style={{
-                      background: 'none',
-                      border: 'none',
-                      padding: 0,
-                      cursor: 'pointer',
-                      display: 'flex',
-                      alignItems: 'center'
-                    }}
-                  >
-                    <img
-                      src={`${basePath}/images/Arrow 7.svg`}
-                      alt=""
-                      style={{
-                        width: '16px',
-                        transform: isExpanded ? 'rotate(180deg)' : 'rotate(0deg)',
-                        transition: 'transform 0.3s ease'
-                      }}
-                    />
-                  </button>
-                </div>
-              </div>
-            );
-          })}
-        </div>
+        <SuccessStoriesList studies={CASE_STUDIES} expandedCards={expandedCards} onToggle={toggleCard} />
 
         {/* Footer Link */}
         <div style={{ marginTop: '60px' }}>
@@ -519,8 +230,8 @@ export default function SectionSuccessStories() {
               maxWidth: '740px'
             }}
           >
-            We'd love to show everything — but some projects are confidential.
-            Tell us what you're working on and we'll pull together similar work
+            We&apos;d love to show everything — but some projects are confidential.
+            Tell us what you&apos;re working on and we&apos;ll pull together similar work
             we can share.
           </p>
           <button
@@ -570,3 +281,5 @@ export default function SectionSuccessStories() {
     </section>
   );
 }
+
+

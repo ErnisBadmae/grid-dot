@@ -49,16 +49,16 @@ export function AppProvider({ children }: { children: ReactNode }) {
 
   const value: AppContextType = {
     mobileMenuOn,
-    toggleMobileMenu: () => setMobileMenuOn(!mobileMenuOn),
+    toggleMobileMenu: () => setMobileMenuOn((previousState) => !previousState),
     sidebarDesktopOn,
     sidebarDesktopHover,
     setSidebarDesktopHover,
     toggleSidebarDesktop: () => {
-      setSidebarDesktopOn(!sidebarDesktopOn)
+      setSidebarDesktopOn((previousState) => !previousState)
       setSidebarDesktopHover(false)
     },
     sidebarMobileExpanded,
-    toggleSidebarMobile: () => setSidebarMobileExpanded(!sidebarMobileExpanded),
+    toggleSidebarMobile: () => setSidebarMobileExpanded((previousState) => !previousState),
     scrollTo,
   }
 

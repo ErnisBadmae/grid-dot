@@ -1,0 +1,41 @@
+# Grid & Dot
+
+> Extended expertise recruitment agency based in London, UK. We curate digital specialists — not CVs — for product strategy, data architecture, delivery, and digital transformation teams.
+
+## About
+
+Grid & Dot is a London-based talent curation agency. We match curated digital specialists to companies' culture, workflows, and goals. Our focus is quality over volume, long-term fit, and ongoing support.
+
+## Services
+
+- **Talent Acquisition** — Finding the right digital specialists for your team.
+- **HR Consulting** — Strategic advice for your HR needs.
+- **Career Coaching** — Helping candidates reach their potential.
+- **Extended Expertise** — Curated specialists in product strategy, data architecture, delivery, UX/design, and content.
+
+## Expertise Areas
+
+- Product Strategy
+- Data Architecture
+- Delivery & Agile
+- UX & Design
+- Content Strategy
+- Digital Transformation
+
+## Regions Served
+
+- United Kingdom (HQ: London)
+- EMEA
+- APAC
+
+## Contact
+
+- Email: engagement@gridanddot.com
+- Phone: +44 7782 795 174
+- Telegram: @Gridanddot
+- Website: https://gridanddot.com
+
+## Links
+
+- [Full AI context](/llms-full.txt)
+- [Structured metadata (JSON)](/ai-metadata.json)

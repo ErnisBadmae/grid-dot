@@ -4,9 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "sync:seo": "node scripts/sync-seo-assets.mjs",
+    "prebuild": "node scripts/sync-seo-assets.mjs",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "eslint .",
     "export": "next build"
   },
   "dependencies": {

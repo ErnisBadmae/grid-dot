@@ -1,10 +1,13 @@
 /** @type {import('next').NextConfig} */
+const isStaticExport = process.env.NEXT_OUTPUT_MODE === 'export'
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
+
 const nextConfig = {
-  output: 'export', // Статический экспорт для GoDaddy
-  basePath: process.env.NEXT_PUBLIC_BASE_PATH || '',
-  assetPrefix: process.env.NEXT_PUBLIC_BASE_PATH || '',
+  ...(isStaticExport ? { output: 'export' } : {}),
+  basePath,
+  assetPrefix: basePath,
   images: {
-    unoptimized: true, // Для статического экспорта
+    unoptimized: isStaticExport,
   },
   trailingSlash: true,
 }
