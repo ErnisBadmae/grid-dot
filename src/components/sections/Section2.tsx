@@ -30,10 +30,10 @@ const EXPERTISE_DATA = [
 
 export default function Section2() {
   // State for mobile accordion
-  const [openIndex, setOpenIndex] = useState<number | null>(null)
+  const [openIndices, setOpenIndices] = useState<boolean[]>(EXPERTISE_DATA.map(() => false))
 
   const toggleAccordion = (index: number) => {
-    setOpenIndex(openIndex === index ? null : index)
+    setOpenIndices(prev => prev.map((v, i) => i === index ? !v : v))
   }
 
   return (
@@ -152,7 +152,7 @@ export default function Section2() {
       <div className="mobile-only">
         <div style={{ borderTop: '1px solid #0B1215' }}>
           {EXPERTISE_DATA.map((item, index) => {
-            const isOpen = openIndex === index
+            const isOpen = openIndices[index]
             return (
               <div key={index} style={{ borderBottom: '1px solid #0B1215' }}>
                 <button
