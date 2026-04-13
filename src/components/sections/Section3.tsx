@@ -10,7 +10,6 @@ export default function Section3() {
         backgroundColor: '#F2F0EF',
       }}
     >
-      {/* Desktop Layout */}
       <div
         className="desktop-only"
         style={{
@@ -20,8 +19,6 @@ export default function Section3() {
           rowGap: '60px',
         }}
       >
-        {/* === ROW 1 === */}
-        {/* Col 1: Header */}
         <div style={{ gridColumn: '1 / 2' }}>
           <h2
             style={{
@@ -35,12 +32,11 @@ export default function Section3() {
               textAlign: 'left',
             }}
           >
-            <span style={{ whiteSpace: 'nowrap' }}>How It Works — Simple</span><br />
+            <span style={{ whiteSpace: 'nowrap' }}>How It Works - Simple</span><br />
             & Transparent
           </h2>
         </div>
 
-        {/* Col 2: Gray Box */}
         <div style={{ gridColumn: '2 / 3', position: 'relative', top: '120px' }}>
           <div
             style={{
@@ -60,15 +56,13 @@ export default function Section3() {
                 margin: 0,
               }}
             >
-              Most of the work starts inside our own networking — people we already know, trust, and have worked with in real projects.<br /><br />
+              Most of the work starts inside our own networking - people we already know, trust, and have worked with in real projects.<br /><br />
               That makes the process simpler.<br />
               And far more reliable.
             </p>
           </div>
         </div>
 
-        {/* === ROW 2 === */}
-        {/* Col 1: Step [0.1] */}
         <div style={{ gridColumn: '1 / 2', marginTop: '-70px' }}>
           <div style={{ marginBottom: '16px' }}>
             <span style={{ fontFamily: 'Scandia, sans-serif', fontSize: '24px', fontWeight: 700, color: '#0033FF', marginRight: '16px' }}>
@@ -83,18 +77,15 @@ export default function Section3() {
           </p>
         </div>
 
-        {/* Col 2: Empty */}
         <div style={{ gridColumn: '2 / 3' }}></div>
 
-        {/* === ROW 3 === */}
-        {/* Col 1: Step [0.2] */}
         <div style={{ gridColumn: '1 / 2' }}>
           <div style={{ marginBottom: '16px' }}>
             <span style={{ fontFamily: 'Scandia, sans-serif', fontSize: '24px', fontWeight: 700, color: '#0033FF', marginRight: '16px' }}>
               [2.0]
             </span>
             <span style={{ fontFamily: 'Scandia, sans-serif', fontSize: '24px', fontWeight: 700, color: '#0B1215' }}>
-              we reach out — not outwards
+              we reach out - not outwards
             </span>
           </div>
           <p style={{ fontFamily: 'Scandia, sans-serif', fontSize: '16px', fontWeight: 400, lineHeight: 1.5, color: '#0B1215', margin: 0, maxWidth: '450px', paddingLeft: '72px' }}>
@@ -103,7 +94,6 @@ export default function Section3() {
           </p>
         </div>
 
-        {/* Col 2: Step [0.4] */}
         <div style={{ gridColumn: '2 / 3' }}>
           <div style={{ marginBottom: '16px' }}>
             <span style={{ fontFamily: 'Scandia, sans-serif', fontSize: '24px', fontWeight: 700, color: '#0033FF', marginRight: '16px' }}>
@@ -119,8 +109,6 @@ export default function Section3() {
           </p>
         </div>
 
-        {/* === ROW 4 === */}
-        {/* Col 1: Step [0.3] */}
         <div style={{ gridColumn: '1 / 2' }}>
           <div style={{ marginBottom: '16px' }}>
             <span style={{ fontFamily: 'Scandia, sans-serif', fontSize: '24px', fontWeight: 700, color: '#0033FF', marginRight: '16px' }}>
@@ -136,7 +124,6 @@ export default function Section3() {
           </p>
         </div>
 
-        {/* Col 2: Step [0.5] */}
         <div style={{ gridColumn: '2 / 3' }}>
           <div style={{ marginBottom: '16px' }}>
             <span style={{ fontFamily: 'Scandia, sans-serif', fontSize: '24px', fontWeight: 700, color: '#0033FF', marginRight: '16px' }}>
@@ -152,15 +139,12 @@ export default function Section3() {
           </p>
         </div>
 
-        {/* === ROW 5: Footer === */}
-        {/* Col 1: Label */}
         <div style={{ gridColumn: '1 / 2', alignSelf: 'baseline', paddingTop: '40px' }}>
           <span style={{ fontFamily: 'Scandia, sans-serif', fontSize: '24px', fontWeight: 700, color: '#0033FF' }}>
             [in practice]
           </span>
         </div>
 
-        {/* Col 2: Text */}
         <div style={{ gridColumn: '2 / 3', paddingTop: '40px', marginLeft: '-340px' }}>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>
             {[
@@ -199,7 +183,6 @@ export default function Section3() {
         </div>
       </div>
 
-      {/* Mobile Layout */}
       <div className="mobile-only">
         <h2
           style={{
@@ -213,7 +196,7 @@ export default function Section3() {
             textAlign: 'left',
           }}
         >
-          How It Works —<br />
+          How It Works -<br />
           Simple & Transparent
         </h2>
 
@@ -235,7 +218,7 @@ export default function Section3() {
               margin: 0,
             }}
           >
-            Most of the work starts inside our own networking — people we already know, trust, and have worked with in real projects.<br /><br />
+            Most of the work starts inside our own networking - people we already know, trust, and have worked with in real projects.<br /><br />
             That makes the process simpler.<br />
             And far more reliable.
           </p>
@@ -244,7 +227,7 @@ export default function Section3() {
         <div style={{ display: 'flex', flexDirection: 'column', gap: '40px' }}>
           {[
             { num: '[1.0]', title: 'we start with context', text: 'Before talking about roles, we talk about your team, your product, and where you need support.' },
-            { num: '[2.0]', title: 'we reach out — not outwards', text: 'Instead of searching everywhere, we approach a small number of specialists who are already relevant. No mass outreach. No long lists. Just focused conversations.' },
+            { num: '[2.0]', title: 'we reach out - not outwards', text: 'Instead of searching everywhere, we approach a small number of specialists who are already relevant. No mass outreach. No long lists. Just focused conversations.' },
             { num: '[3.0]', title: 'we stay involved', text: "Once someone joins your team, our role doesn't end. We support onboarding, alignment, and day-to-day collaboration to make sure things actually work." },
             { num: '[4.0]', title: 'we curate, not filter', text: 'Every specialist we introduce is reviewed for more than experience. We look at how they think, communicate, and work inside a team. Fit is intentional.' },
             { num: '[5.0]', title: 'we adjust and improve', text: "If something isn't right, we address it early. Open feedback, clear decisions, no friction." },
@@ -259,7 +242,6 @@ export default function Section3() {
           ))}
         </div>
 
-        {/* In Practice Section */}
         <div style={{ marginTop: '60px' }}>
           <div style={{ marginBottom: '32px' }}>
             <span style={{ fontFamily: 'Scandia, sans-serif', fontSize: '24px', fontWeight: 700, color: '#0033FF' }}>

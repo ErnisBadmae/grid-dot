@@ -1,10 +1,15 @@
 'use client'
 
 import { useApp } from '@/contexts/AppContext'
+import { BOOK_A_CALL_URL } from '@/lib/constants'
 import { basePath } from '@/lib/basePath'
 
 export default function Header() {
-  const { mobileMenuOn, toggleMobileMenu, scrollTo } = useApp()
+  const { mobileMenuOn, toggleMobileMenu } = useApp()
+
+  const handleBookCall = () => {
+    window.open(BOOK_A_CALL_URL, '_blank')
+  }
 
   return (
     <header
@@ -28,7 +33,7 @@ export default function Header() {
         <a href={`${basePath}/`} style={{ flexShrink: 0, textDecoration: 'none' }}>
           <img
             src={`${basePath}/images/Grid&Dot.svg`}
-            alt="Grid&Dot"
+            alt="Grid & Dot"
             className="header-logo-img"
             style={{ height: '24px', width: 'auto' }}
           />
@@ -46,7 +51,7 @@ export default function Header() {
 
       {/* Book a Call Button - Desktop */}
       <button
-        onClick={() => window.open('https://calendly.com/et-gridanddot/30min', '_blank')}
+        onClick={handleBookCall}
         className="book-call-btn hidden md:flex"
       >
         Book a Call

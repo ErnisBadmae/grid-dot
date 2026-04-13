@@ -25,7 +25,7 @@ export default function AtelierHeader() {
                 <a href={`${basePath}/`} style={{ flexShrink: 0, textDecoration: 'none' }}>
                     <img
                         src={`${basePath}/images/Grid&Dot.svg`}
-                        alt="Grid&Dot"
+                        alt="Grid & Dot"
                         className="header-logo-img"
                         style={{ height: '24px', width: 'auto' }}
                     />
