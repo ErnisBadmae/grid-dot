@@ -1,26 +1,19 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { basePath } from '@/lib/basePath'
+import { COOKIE_CONSENT_STORAGE_KEY } from '@/lib/constants'
 
 export default function CookieBanner() {
-  const [isVisible, setIsVisible] = useState(true) // Always visible for testing as requested
-
-  // useEffect(() => {
-  //   // Check if user has already made a choice
-  //   const cookieConsent = localStorage.getItem('cookieConsent')
-  //   if (!cookieConsent) {
-  //     setIsVisible(true)
-  //   }
-  // }, [])
+  const [isVisible, setIsVisible] = useState(true)
 
   const handleAccept = () => {
-    localStorage.setItem('cookieConsent', 'accepted')
+    localStorage.setItem(COOKIE_CONSENT_STORAGE_KEY, 'accepted')
     setIsVisible(false)
   }
 
   const handleReject = () => {
-    localStorage.setItem('cookieConsent', 'rejected')
+    localStorage.setItem(COOKIE_CONSENT_STORAGE_KEY, 'rejected')
     setIsVisible(false)
   }
 
@@ -47,7 +40,7 @@ export default function CookieBanner() {
             running and to learn how the site is used.
           </p>
           <p>
-            By clicking "Accept", you consent to our use of<br />
+            By clicking &quot;Accept&quot;, you consent to our use of<br />
             cookies. <a href={`${basePath}/privacy`} style={{ textDecoration: 'underline', color: '#0B1215' }}>Privacy policy</a>.
           </p>
         </div>
@@ -118,3 +111,4 @@ export default function CookieBanner() {
     </div>
   )
 }
+

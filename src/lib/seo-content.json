@@ -1,0 +1,144 @@
+{
+  "metadata": {
+    "version": "1.1",
+    "lastUpdated": "2026-04-01"
+  },
+  "site": {
+    "name": "Grid & Dot",
+    "alternateName": "Grid and Dot",
+    "legalName": "Grid & Dot Ltd",
+    "productionUrl": "https://www.gridanddot.com",
+    "defaultTitle": "Grid & Dot - Extended Expertise Talent Curation | London",
+    "titleTemplate": "%s | Grid & Dot",
+    "openGraphTitle": "Grid & Dot - Extended Expertise Talent Curation",
+    "description": "Grid & Dot is a London-based extended expertise recruitment agency. Also searched as Grid and Dot, Grid&Dot Ltd, and common typo Gird and Dot. We curate digital specialists in product strategy, data architecture, and delivery for digital-first teams. No CVs - real expertise.",
+    "shortDescription": "Curated digital specialists solving skill gaps fast. Extended expertise for digital-first teams.",
+    "tagline": "Extended Expertise. No CVs - Real Expertise.",
+    "locale": "en_GB",
+    "language": "en",
+    "keywords": [
+      "grid & dot",
+      "grid and dot",
+      "grid&dot ltd",
+      "gird and dot",
+      "extended expertise",
+      "talent curation",
+      "recruitment agency",
+      "digital specialists",
+      "product strategy",
+      "data architecture",
+      "delivery management",
+      "London recruitment",
+      "UK recruitment"
+    ],
+    "ogImagePath": "/og-image.jpg",
+    "ogImageAlt": "Grid & Dot - Extended Expertise",
+    "faviconPath": "/favicon.svg",
+    "logoPath": "/images/grid-dot-logo.svg",
+    "searchAliases": [
+      "Grid & Dot",
+      "Grid and Dot",
+      "Grid&Dot Ltd",
+      "Gird and Dot",
+      "Extended Expertise"
+    ]
+  },
+  "company": {
+    "type": "EmploymentAgency",
+    "founded": "2024",
+    "email": "engagement@gridanddot.com",
+    "phone": "+447782795174",
+    "telegram": "Gridanddot",
+    "whatsapp": "447782795174",
+    "city": "London",
+    "region": "Greater London",
+    "country": "United Kingdom",
+    "countryCode": "GB",
+    "latitude": "51.5074",
+    "longitude": "-0.1278",
+    "areasServed": [
+      "United Kingdom",
+      "EMEA",
+      "APAC"
+    ],
+    "knowsAbout": [
+      "Extended Expertise",
+      "Talent Curation",
+      "Product Strategy",
+      "Data Architecture",
+      "Delivery Management",
+      "UX & Design",
+      "Content Strategy",
+      "Digital Transformation",
+      "Recruitment"
+    ],
+    "notableClients": [
+      "The Estee Lauder Companies",
+      "Organizations undergoing digital transformation"
+    ]
+  },
+  "services": [
+    {
+      "name": "Talent Acquisition",
+      "description": "Finding the right digital specialists for your team."
+    },
+    {
+      "name": "HR Consulting",
+      "description": "Strategic advice for your HR needs."
+    },
+    {
+      "name": "Career Coaching",
+      "description": "Helping candidates reach their potential."
+    },
+    {
+      "name": "Extended Expertise",
+      "description": "Curated specialists in product strategy, data architecture, delivery, UX/design, and content."
+    }
+  ],
+  "expertise": [
+    "Product Strategy",
+    "Data Architecture",
+    "Delivery & Agile",
+    "UX & Design",
+    "Content Strategy",
+    "Digital Transformation"
+  ],
+  "pages": [
+    {
+      "path": "/",
+      "title": "Grid & Dot - Extended Expertise Talent Curation",
+      "description": "Homepage - extended expertise positioning, services, case highlights, brand partners, and contact.",
+      "changeFrequency": "weekly",
+      "priority": 1
+    },
+    {
+      "path": "/privacy/",
+      "title": "Privacy Policy",
+      "description": "Privacy policy covering data handling, cookies, and contact information for Grid & Dot.",
+      "changeFrequency": "monthly",
+      "priority": 0.5
+    }
+  ],
+  "faq": [
+    {
+      "question": "What is Extended Expertise?",
+      "answer": "Extended expertise is a talent model focused on curated specialists rather than CV volume. We match digital specialists for product strategy, data architecture, and delivery to your team's culture and workflows. It is about quality over quantity and the right fit for long-term success."
+    },
+    {
+      "question": "How is Grid & Dot different from traditional recruiters?",
+      "answer": "Unlike traditional agencies that send CVs, Grid & Dot curates specialists who fit your culture, workflows, and goals. The focus is on quality over volume, long-term fit, and ongoing support."
+    },
+    {
+      "question": "What industries and expertise areas do you serve?",
+      "answer": "Grid & Dot supports digital-first teams that need product strategy, data architecture, delivery, UX/design, and content expertise. The work includes organizations such as The Estee Lauder Companies and businesses undergoing digital transformation."
+    },
+    {
+      "question": "Where is Grid & Dot based?",
+      "answer": "Grid & Dot is based in London, United Kingdom, and works across the United Kingdom, EMEA, and APAC."
+    },
+    {
+      "question": "How does the extended expertise curation process work?",
+      "answer": "The process starts with understanding team culture, workflows, and goals, then matching curated specialists who can add value quickly. The emphasis is on long-term fit and ongoing support rather than fast CV volume."
+    }
+  ]
+}

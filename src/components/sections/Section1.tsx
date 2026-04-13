@@ -398,9 +398,58 @@ export default function Section1() {
           top: 0px;
           transition: top 0.3s ease;
         }
+          @media (min-width: 701px) {
+          .grid-vs-next-img {
+            top: -50px !important;
+            left: 300px !important;
+          }
+        }
+          @media (min-width: 801px) {
+          .grid-vs-next-img {
+            top: -70px !important;
+            left: 380px !important;
+          }
+        }
+          @media (min-width: 901px) {
+          .grid-vs-next-img {
+            top: -50px !important;
+            left: 410px !important;
+          }
+        }
+          @media (min-width: 1001px) {
+          .grid-vs-next-img {
+            top: -30px !important;
+            left: 430px !important;
+          }
+        }
+          @media (min-width: 1101px) {
+          .grid-vs-next-img {
+            top: -30px !important;
+            left: 430px !important;
+          }
+        }
+          @media (min-width: 1201px) {
+          .grid-vs-next-img {
+            top: -30px !important;
+            left: 430px !important;
+          }
+        }
+          @media (min-width: 1301px) {
+          .grid-vs-next-img {
+            top: -30px !important;
+            left: 430px !important;
+          }
+        }
+          @media (min-width: 1401px) {
+          .grid-vs-next-img {
+            top: -30px !important;
+            left: 430px !important;
+          }
+        }
         @media (min-width: 1501px) {
           .grid-vs-next-img {
-            top: -15px !important;
+            top: -30px !important;
+            left: 430px !important;
           }
         }
         @media (min-width: 1601px) {
