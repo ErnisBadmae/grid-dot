@@ -9,7 +9,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
-    "export": "next build"
+    "export": "node scripts/build-static.mjs"
   },
   "dependencies": {
     "framer-motion": "11.18.2",
