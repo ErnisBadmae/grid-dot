@@ -1,7 +1,8 @@
 'use client'
 
-import { type CSSProperties, type FormEvent, useState } from 'react'
+import { type CSSProperties, type FormEvent, useState, useEffect } from 'react'
 import { basePath } from '@/lib/basePath'
+import { useApp } from '@/contexts/AppContext'
 
 type FormStatus = 'idle' | 'success' | 'error' | 'server-error'
 
@@ -142,8 +143,16 @@ function StatusMessage({ formStatus }: { formStatus: FormStatus }) {
 }
 
 export default function ContactForm() {
+  const { contactPreset, setContactPreset } = useApp()
   const [dropdownOpen, setDropdownOpen] = useState(false)
   const [selectedOption, setSelectedOption] = useState('')
+
+  useEffect(() => {
+    if (contactPreset) {
+      setSelectedOption(contactPreset)
+      setContactPreset('')
+    }
+  }, [contactPreset, setContactPreset])
   const [privacyAccepted, setPrivacyAccepted] = useState(false)
   const [dataPopupOpen, setDataPopupOpen] = useState(false)
   const [firstName, setFirstName] = useState('')
@@ -269,6 +278,27 @@ export default function ContactForm() {
           color: #C00000;
           margin-top: 5px;
         }
+        .field-wrapper {
+          position: relative;
+          padding-top: 18px;
+        }
+        .floating-label {
+          position: absolute;
+          top: 18px;
+          left: 0;
+          font-family: 'Scandia', sans-serif;
+          font-size: 14px;
+          color: #656565;
+          pointer-events: none;
+          transition: top 0.15s ease, font-size 0.15s ease;
+        }
+        .floating-input:focus + .floating-label,
+        .floating-input:not(:placeholder-shown) + .floating-label,
+        .floating-textarea:focus + .floating-label,
+        .floating-textarea:not(:placeholder-shown) + .floating-label {
+          top: 0;
+          font-size: 11px;
+        }
         .form-status-success {
           font-family: 'Scandia', sans-serif;
           font-size: 18px;
@@ -281,7 +311,7 @@ export default function ContactForm() {
           font-size: 18px;
           font-weight: 700;
           color: #C00000;
-          margin-bottom: 24px;
+          margin-bottom: 40px;
         }
         .start-conversation-btn:hover .conversation-arrow {
           transform: translate(4px, -4px);
@@ -304,44 +334,44 @@ export default function ContactForm() {
 
       <StatusMessage formStatus={formStatus} />
 
-      <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '20px' }} noValidate>
+      <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '20px', marginTop: formStatus === 'idle' ? 0 : '24px' }} noValidate>
         <div className="form-row-name">
-          <div style={{ flex: 1 }}>
-            <label style={fieldLabelStyle}>
-              first name*
-            </label>
+          <div style={{ flex: 1 }} className="field-wrapper">
             <input
               type="text"
+              placeholder=" "
               value={firstName}
               onChange={(event) => { setFirstName(event.target.value); clearFieldError('firstName') }}
               style={fieldErrors.firstName ? inputErrorStyle : inputStyle}
+              className="floating-input"
             />
+            <label className="floating-label">first name*</label>
             {fieldErrors.firstName && <p className="form-field-error">{fieldErrors.firstName}</p>}
           </div>
-          <div style={{ flex: 1 }}>
-            <label style={fieldLabelStyle}>
-              last name*
-            </label>
+          <div style={{ flex: 1 }} className="field-wrapper">
             <input
               type="text"
+              placeholder=" "
               value={lastName}
               onChange={(event) => { setLastName(event.target.value); clearFieldError('lastName') }}
               style={fieldErrors.lastName ? inputErrorStyle : inputStyle}
+              className="floating-input"
             />
+            <label className="floating-label">last name*</label>
             {fieldErrors.lastName && <p className="form-field-error">{fieldErrors.lastName}</p>}
           </div>
         </div>
 
-        <div>
-          <label style={fieldLabelStyle}>
-            e-mail address*
-          </label>
+        <div className="field-wrapper">
           <input
             type="email"
+            placeholder=" "
             value={email}
             onChange={(event) => { setEmail(event.target.value); clearFieldError('email') }}
             style={fieldErrors.email ? inputErrorStyle : inputStyle}
+            className="floating-input"
           />
+          <label className="floating-label">e-mail address*</label>
           {fieldErrors.email && <p className="form-field-error">{fieldErrors.email}</p>}
         </div>
 
@@ -364,7 +394,7 @@ export default function ContactForm() {
                 fontFamily: 'Scandia, sans-serif',
                 fontSize: '14px',
                 fontWeight: 400,
-                color: '#656565',
+                color: selectedOption ? '#0B1215' : '#656565',
                 minHeight: '24px',
               }}>
                 {selectedOption || 'what are you looking for?*'}
@@ -401,16 +431,16 @@ export default function ContactForm() {
           </div>
         </div>
 
-        <div>
-          <label style={fieldLabelStyle}>
-            tell us about your context
-          </label>
+        <div className="field-wrapper">
           <textarea
+            placeholder=" "
             value={context}
             onChange={(event) => setContext(event.target.value)}
             rows={3}
             style={textareaStyle}
+            className="floating-textarea"
           />
+          <label className="floating-label">tell us about your context</label>
         </div>
 
         <div style={{ marginTop: '5px' }}>

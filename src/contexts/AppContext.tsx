@@ -12,6 +12,8 @@ interface AppContextType {
   sidebarMobileExpanded: boolean
   toggleSidebarMobile: () => void
   scrollTo: (target: string, offset?: string) => void
+  contactPreset: string
+  setContactPreset: (value: string) => void
 }
 
 const AppContext = createContext<AppContextType | undefined>(undefined)
@@ -21,6 +23,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
   const [sidebarDesktopOn, setSidebarDesktopOn] = useState(false)
   const [sidebarDesktopHover, setSidebarDesktopHover] = useState(false)
   const [sidebarMobileExpanded, setSidebarMobileExpanded] = useState(false)
+  const [contactPreset, setContactPreset] = useState('')
 
   const scrollTo = (target: string, offset: string = '25%') => {
     const element = document.querySelector(target)
@@ -60,6 +63,8 @@ export function AppProvider({ children }: { children: ReactNode }) {
     sidebarMobileExpanded,
     toggleSidebarMobile: () => setSidebarMobileExpanded((previousState) => !previousState),
     scrollTo,
+    contactPreset,
+    setContactPreset,
   }
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>

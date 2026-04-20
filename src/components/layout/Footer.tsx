@@ -48,6 +48,7 @@ export default function Footer() {
             }
             .footer-main {
               flex-direction: column !important;
+              align-items: flex-end !important;
               gap: 40px !important;
               margin-bottom: 48px !important;
             }
@@ -55,15 +56,23 @@ export default function Footer() {
               display: flex;
               flex-direction: column;
               gap: 24px;
+              align-items: flex-end;
+              text-align: right;
             }
             .footer-meta {
               display: flex;
               flex-direction: column;
               gap: 16px;
+              align-items: flex-end;
+              text-align: right;
             }
             .footer-legal {
               padding-top: 24px;
               gap: 6px;
+            }
+            .footer-link-right {
+              text-align: right;
+              align-self: flex-end;
             }
           }
           a:hover {
@@ -100,7 +109,7 @@ export default function Footer() {
           </div>
 
           {/* Email */}
-          <a href={`mailto:${CONTACTS.email}`} style={linkStyle}>
+          <a href={`mailto:${CONTACTS.email}`} style={linkStyle} className="footer-link-right">
             {CONTACTS.email}
           </a>
 
@@ -108,6 +117,7 @@ export default function Footer() {
           <a
             href={`${basePath}/privacy`}
             style={{ ...linkStyle, textDecoration: 'underline', textUnderlineOffset: '4px' }}
+            className="footer-link-right"
           >
             Privacy Policy
           </a>
