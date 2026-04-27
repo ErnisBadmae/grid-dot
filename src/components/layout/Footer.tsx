@@ -48,7 +48,7 @@ export default function Footer() {
             }
             .footer-main {
               flex-direction: column !important;
-              align-items: flex-end !important;
+              align-items: flex-start !important;
               gap: 40px !important;
               margin-bottom: 48px !important;
             }
@@ -56,23 +56,23 @@ export default function Footer() {
               display: flex;
               flex-direction: column;
               gap: 24px;
-              align-items: flex-end;
-              text-align: right;
+              align-items: flex-start;
+              text-align: left;
             }
             .footer-meta {
               display: flex;
               flex-direction: column;
               gap: 16px;
-              align-items: flex-end;
-              text-align: right;
+              align-items: flex-start;
+              text-align: left;
             }
             .footer-legal {
               padding-top: 24px;
               gap: 6px;
             }
             .footer-link-right {
-              text-align: right;
-              align-self: flex-end;
+              text-align: left;
+              align-self: flex-start;
             }
           }
           a:hover {
@@ -124,7 +124,7 @@ export default function Footer() {
         </div>
 
         {/* Legal */}
-        <div className="footer-legal">
+        <div className="footer-legal" style={{ textAlign: 'left' }}>
           <p style={{ fontFamily: "'Overpass Mono', monospace", fontSize: '16px', fontWeight: 600, color: '#F8F8F8', margin: 0, letterSpacing: '0.02em' }}>
             © 2026 GRID&amp;DOT LTD. All rights reserved.
           </p>
