@@ -223,7 +223,7 @@ export function getGlobalStructuredDataSchemas() {
       },
       hasOfferCatalog: {
         '@type': 'OfferCatalog',
-        name: 'Grid & Dot Services',
+        name: 'Grid&Dot Services',
         itemListElement: seoContent.services.map((service) => ({
           '@type': 'Offer',
           itemOffered: {

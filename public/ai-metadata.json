@@ -1,23 +1,22 @@
 {
   "version": "1.1",
-  "lastUpdated": "2026-04-01",
+  "lastUpdated": "2026-04-15",
   "company": {
-    "name": "Grid & Dot",
-    "alternateName": "Grid and Dot",
+    "name": "Grid&Dot",
+    "alternateName": "Grid & Dot",
     "legalName": "Grid & Dot Ltd",
     "type": "EmploymentAgency",
     "founded": "2024",
     "slogan": "Extended Expertise. No CVs - Real Expertise.",
-    "description": "Grid & Dot is a London-based extended expertise recruitment agency. Also searched as Grid and Dot, Grid&Dot Ltd, and common typo Gird and Dot. We curate digital specialists in product strategy, data architecture, and delivery for digital-first teams. No CVs - real expertise.",
+    "description": "Grid&Dot is a London-based talent curation company, also found via searches for grid&dot, grid & dot, gird and dot, and grid&dot ltd. We help digital-first teams find carefully selected specialists in product strategy, data architecture, delivery, UX, design, and content. No CVs - real expertise.",
     "url": "https://www.gridanddot.com",
     "logo": "https://www.gridanddot.com/images/grid-dot-logo.svg"
   },
   "searchPatterns": [
+    "Grid&Dot",
     "Grid & Dot",
-    "Grid and Dot",
-    "Grid&Dot Ltd",
     "Gird and Dot",
-    "Extended Expertise"
+    "Grid&Dot Ltd"
   ],
   "contact": {
     "email": "engagement@gridanddot.com",
@@ -80,13 +79,13 @@
   "pages": [
     {
       "path": "/",
-      "title": "Grid & Dot - Extended Expertise Talent Curation",
-      "description": "Homepage - extended expertise positioning, services, case highlights, brand partners, and contact."
+      "title": "Grid&Dot | London-Based Talent Curation",
+      "description": "Homepage for Grid&Dot, the London-based talent curation company behind the Extended Expertise approach."
     },
     {
       "path": "/privacy/",
       "title": "Privacy Policy",
-      "description": "Privacy policy covering data handling, cookies, and contact information for Grid & Dot."
+      "description": "Privacy policy for Grid&Dot, the London-based talent curation company behind Grid&Dot."
     }
   ],
   "aiFiles": {
