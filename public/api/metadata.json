@@ -1,11 +1,11 @@
 {
   "company": {
-    "name": "Grid & Dot",
+    "name": "Grid&Dot",
     "legalName": "Grid & Dot Ltd",
     "type": "Recruitment Agency",
     "specialty": "Extended Expertise Talent Curation",
     "tagline": "Extended Expertise. No CVs - Real Expertise.",
-    "description": "Grid & Dot is a London-based extended expertise recruitment agency. Also searched as Grid and Dot, Grid&Dot Ltd, and common typo Gird and Dot. We curate digital specialists in product strategy, data architecture, and delivery for digital-first teams. No CVs - real expertise.",
+    "description": "Grid&Dot is a London-based talent curation company, also found via searches for grid&dot, grid & dot, gird and dot, and grid&dot ltd. We help digital-first teams find carefully selected specialists in product strategy, data architecture, delivery, UX, design, and content. No CVs - real expertise.",
     "founded": "2024",
     "location": {
       "city": "London",
@@ -22,11 +22,10 @@
     "website": "https://www.gridanddot.com"
   },
   "searchPatterns": [
+    "Grid&Dot",
     "Grid & Dot",
-    "Grid and Dot",
-    "Grid&Dot Ltd",
     "Gird and Dot",
-    "Extended Expertise"
+    "Grid&Dot Ltd"
   ],
   "services": {
     "primary": "Extended Expertise Recruitment",
@@ -96,16 +95,16 @@
       "answer": "Extended expertise is a talent model focused on curated specialists rather than CV volume. We match digital specialists for product strategy, data architecture, and delivery to your team's culture and workflows. It is about quality over quantity and the right fit for long-term success."
     },
     {
-      "question": "How is Grid & Dot different from traditional recruiters?",
-      "answer": "Unlike traditional agencies that send CVs, Grid & Dot curates specialists who fit your culture, workflows, and goals. The focus is on quality over volume, long-term fit, and ongoing support."
+      "question": "How is Grid&Dot different from traditional recruiters?",
+      "answer": "Unlike traditional agencies that send CVs, Grid&Dot curates specialists who fit your culture, workflows, and goals. The focus is on quality over volume, long-term fit, and ongoing support."
     },
     {
       "question": "What industries and expertise areas do you serve?",
-      "answer": "Grid & Dot supports digital-first teams that need product strategy, data architecture, delivery, UX/design, and content expertise. The work includes organizations such as The Estee Lauder Companies and businesses undergoing digital transformation."
+      "answer": "Grid&Dot supports digital-first teams that need product strategy, data architecture, delivery, UX/design, and content expertise. The work includes organizations such as The Estee Lauder Companies and businesses undergoing digital transformation."
     },
     {
-      "question": "Where is Grid & Dot based?",
-      "answer": "Grid & Dot is based in London, United Kingdom, and works across the United Kingdom, EMEA, and APAC."
+      "question": "Where is Grid&Dot based?",
+      "answer": "Grid&Dot is based in London, United Kingdom, and works across the United Kingdom, EMEA, and APAC."
     },
     {
       "question": "How does the extended expertise curation process work?",
@@ -114,7 +113,7 @@
   ],
   "metadata": {
     "version": "1.1",
-    "last_updated": "2026-04-01",
+    "last_updated": "2026-04-15",
     "format": "JSON",
     "purpose": "Machine-readable company information for AI agents and automated systems.",
     "schema": "https://www.gridanddot.com/api/metadata.json"

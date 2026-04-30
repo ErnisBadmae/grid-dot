@@ -122,19 +122,22 @@ export default function ContactsSidebar() {
             object-fit: contain;
             filter: brightness(0) invert(1); /* Make icon white */
           }
+          .toggle-arrow {
+            width: 12px;
+            height: 12px;
+            transition: transform 0.3s ease;
+            transform: rotate(0deg) !important;
+          }
+          .toggle-arrow-expanded {
+            transform: rotate(180deg) !important;
+          }
         `}</style>
         <button id="contact-sidebar-mobile__toggle" onClick={toggleSidebarMobile} style={{ backgroundColor: '#9AC2E4', color: '#0033FF' }}>
           Contact us
           <img
             src={`${basePath}/images/Arrow-for-mobile.svg`}
             alt="Toggle"
-            className="contact-sidebar-toggle__icon"
-            style={{
-              transform: sidebarMobileExpanded ? 'rotate(180deg)' : 'none',
-              transition: 'transform 0.3s ease',
-              width: '12px',
-              height: '12px'
-            }}
+            className={`toggle-arrow${sidebarMobileExpanded ? ' toggle-arrow-expanded' : ''}`}
           />
         </button>
 

@@ -17,7 +17,7 @@ const CASE_STUDIES: CaseStudy[] = [
     grid: [
       {
         label: 'Global Data',
-        content: ['data stream and GA4 architecture creation, data visualisation for non-technical stakeholder enablement and accessibility.']
+        content: ['Data stream and GA4 architecture creation, data visualisation for non-technical stakeholder enablement and accessibility.']
       },
       {
         label: 'Global Product',
@@ -25,11 +25,11 @@ const CASE_STUDIES: CaseStudy[] = [
       },
       {
         label: 'Regional Delivery\nEMEA, APAC',
-        content: ['platform modernisation and CMS delivery to support regional speed and consistency.']
+        content: ['Platform modernisation and CMS delivery to support regional speed and consistency.']
       },
       {
         label: 'Brand Experience',
-        content: ['user tool innovation, creating a richer, more personalised customer experiences.']
+        content: ['User tool innovation, creating a richer, more personalised customer experiences.']
       }
     ],
     closingP1: 'Our long tenure has allowed us to bring institutional knowledge, established ways of working, and deliver high impact collaboration. Enforced by expertise, agility and scalability, the client continues to benefit from a reliable, continuously embedded delivery capability - supporting initiative after initiative with consistent governance, stronger measurement foundations, and the confidence that critical programmes can progress at pace without sacrificing quality or continuity on a global scale.'
@@ -119,7 +119,7 @@ const CASE_STUDIES: CaseStudy[] = [
 ];
 
 export default function SectionSuccessStories() {
-  const { scrollTo } = useApp();
+  const { scrollTo, setContactPreset } = useApp();
   const [expandedCards, setExpandedCards] = useState<boolean[]>(
     CASE_STUDIES.map(() => false)
   );
@@ -235,7 +235,7 @@ export default function SectionSuccessStories() {
             we can share.
           </p>
           <button
-            onClick={() => scrollTo('#section-contacts', 'start')}
+            onClick={() => { setContactPreset('requesting a case'); scrollTo('#section-contacts', 'start'); }}
             className="request-case-study-btn"
             style={{
               display: 'inline-flex',

@@ -34,7 +34,8 @@ export default function SuccessStoriesList({ studies, expandedCards, onToggle }:
           .desktop-body { display: none !important; }
           .mobile-body { display: block !important; }
           .tags-collapsed { max-height: 103px; overflow: hidden; }
-          .card-arrow { margin-top: 8px !important; }
+          .card-arrow { margin-top: 16px !important; }
+          .case-card { padding-bottom: 16px !important; }
         }
         @media (min-width: 640px) {
           .mobile-body { display: none !important; }
@@ -55,6 +56,7 @@ export default function SuccessStoriesList({ studies, expandedCards, onToggle }:
           return (
             <div
               key={study.title}
+              className="case-card"
               style={{ backgroundColor: '#F8F8F8', padding: '30px', position: 'relative' }}
             >
               {/* Title */}
@@ -143,7 +145,7 @@ export default function SuccessStoriesList({ studies, expandedCards, onToggle }:
 
                   <div
                     className="case-study-grid"
-                    style={{ display: 'grid', gridTemplateColumns: 'minmax(200px, auto) 1fr', rowGap: '32px', columnGap: '32px', marginBottom: '48px' }}
+                    style={{ display: 'grid', gridTemplateColumns: '220px 1fr', rowGap: '32px', columnGap: '32px', marginBottom: '48px' }}
                   >
                     {study.grid.map(row => (
                       <Fragment key={row.label}>

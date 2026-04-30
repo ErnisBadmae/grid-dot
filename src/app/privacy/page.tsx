@@ -6,7 +6,7 @@ import { buildPageMetadata } from '@/lib/seo'
 export const metadata = buildPageMetadata({
   path: '/privacy/',
   title: 'Privacy Policy',
-  description: 'Our commitment to data protection and privacy. Learn how Grid & Dot handles personal data in compliance with UK GDPR and data protection regulations.',
+  description: 'Privacy policy for Grid&Dot, the London-based talent curation company. Learn how Grid&Dot handles personal data in compliance with UK GDPR and data protection regulations.',
 })
 
 export default function PrivacyPage() {
@@ -51,7 +51,7 @@ export default function PrivacyPage() {
 
         <div style={{ fontSize: '16px', fontWeight: 400, letterSpacing: '0em', lineHeight: 1.6, marginBottom: '60px' }}>
           <p style={{ marginBottom: '24px' }}>
-            This Privacy Policy explains how Grid & Dot ("we", "us", "our") collects, uses, and protects<br />
+            This Privacy Policy explains how Grid&Dot ("we", "us", "our") collects, uses, and protects<br />
             personal data when you visit our website or contact us.<br />
             We are committed to handling personal data responsibly, transparently, and in line with UK<br />
             GDPR.
@@ -63,7 +63,7 @@ export default function PrivacyPage() {
             <h2 style={{ fontSize: '24px', fontWeight: 600, letterSpacing: '0.02em', marginBottom: '24px' }}>1. Who We Are</h2>
             <div style={{ fontSize: '16px', fontWeight: 400, letterSpacing: '0em', lineHeight: 1.6 }}>
               <p style={{ marginBottom: '16px' }}>
-                Grid & Dot<br />
+                Grid&Dot<br />
                 Based in Mayfair, London.<br />
                 If you have any questions about this policy or how we handle your data, you can contact us at:
               </p>
@@ -202,7 +202,7 @@ export default function PrivacyPage() {
             <h2 style={{ fontSize: '24px', fontWeight: 600, letterSpacing: '0.02em', marginBottom: '24px' }}>11. Contact</h2>
             <div style={{ fontSize: '16px', fontWeight: 400, letterSpacing: '0em', lineHeight: 1.6 }}>
               <p style={{ marginBottom: '16px' }}>If you have questions about this Privacy Policy or how your data is handled, please contact:</p>
-              <p style={{ marginBottom: '16px', fontWeight: 600, letterSpacing: '0.02em' }}>Grid & Dot</p>
+              <p style={{ marginBottom: '16px', fontWeight: 600, letterSpacing: '0.02em' }}>Grid&Dot</p>
               <a href="mailto:engagement@gridanddot.com" style={{ textDecoration: 'underline' }}>engagement@gridanddot.com</a>
             </div>
           </section>
