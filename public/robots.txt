@@ -2,11 +2,21 @@
 User-agent: *
 Allow: /
 
-# AI crawlers explicitly allowed for retrieval and future agent search
-User-agent: GPTBot
+# AI search and user-triggered retrieval crawlers
+User-agent: OAI-SearchBot
 Allow: /
 
 User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# AI training, indexing, and corpus crawlers
+User-agent: GPTBot
 Allow: /
 
 User-agent: Google-Extended

@@ -134,141 +134,193 @@ export function buildPageMetadata({
   }
 }
 
-export function getGlobalStructuredDataSchemas() {
-  const organizationId = `${siteOrigin}#organization`
-  const websiteId = `${siteOrigin}#website`
-  const homepageId = `${siteOrigin}#webpage`
-  const employmentAgencyId = `${siteOrigin}#employment-agency`
-  const serviceId = `${siteOrigin}#service`
-  const heroImageId = `${siteOrigin}#primary-image`
+const structuredDataIds = {
+  organization: `${siteOrigin}#organization`,
+  website: `${siteOrigin}#website`,
+  homepage: `${siteOrigin}#webpage`,
+  privacyPage: `${siteOrigin}/privacy/#webpage`,
+  employmentAgency: `${siteOrigin}#employment-agency`,
+  service: `${siteOrigin}#service`,
+  heroImage: `${siteOrigin}#primary-image`,
+} as const
 
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  '@id': structuredDataIds.organization,
+  name: seoContent.site.name,
+  alternateName: seoContent.site.alternateName,
+  legalName: seoContent.site.legalName,
+  url: siteOrigin,
+  logo: absoluteUrl(seoContent.site.logoPath),
+  image: absoluteUrl(seoContent.site.logoPath),
+  description: seoContent.site.description,
+  email: seoContent.company.email,
+  telephone: seoContent.company.phone,
+  foundingDate: seoContent.company.founded,
+  slogan: seoContent.site.tagline,
+  knowsAbout: seoContent.company.knowsAbout,
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: seoContent.company.city,
+    addressRegion: seoContent.company.region,
+    addressCountry: seoContent.company.countryCode,
+  },
+  areaServed: areaServedSchema,
+  contactPoint: {
+    '@type': 'ContactPoint',
+    telephone: seoContent.company.phone,
+    contactType: 'customer service',
+    email: seoContent.company.email,
+    availableLanguage: ['English'],
+  },
+}
+
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  '@id': structuredDataIds.website,
+  url: siteOrigin,
+  name: seoContent.site.name,
+  description: seoContent.site.shortDescription,
+  publisher: { '@id': structuredDataIds.organization },
+  inLanguage: seoContent.site.language,
+}
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': structuredDataIds.service,
+  name: 'Extended Expertise Talent Curation',
+  serviceType: 'Extended Expertise Recruitment',
+  description: seoContent.site.shortDescription,
+  provider: { '@id': structuredDataIds.organization },
+  areaServed: areaServedSchema,
+  audience: {
+    '@type': 'Audience',
+    audienceType: 'Digital-first teams',
+  },
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Grid&Dot Extended Expertise Services',
+    itemListElement: seoContent.services.map((service) => ({
+      '@type': 'Offer',
+      itemOffered: {
+        '@type': 'Service',
+        name: service.name,
+        description: service.description,
+      },
+    })),
+  },
+}
+
+const employmentAgencySchema = {
+  '@context': 'https://schema.org',
+  '@type': 'EmploymentAgency',
+  '@id': structuredDataIds.employmentAgency,
+  name: seoContent.site.name,
+  alternateName: seoContent.site.alternateName,
+  description: seoContent.site.description,
+  url: siteOrigin,
+  image: absoluteUrl(seoContent.site.logoPath),
+  logo: absoluteUrl(seoContent.site.logoPath),
+  telephone: seoContent.company.phone,
+  email: seoContent.company.email,
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: seoContent.company.city,
+    addressRegion: seoContent.company.region,
+    addressCountry: seoContent.company.countryCode,
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: seoContent.company.latitude,
+    longitude: seoContent.company.longitude,
+  },
+  areaServed: areaServedSchema,
+  slogan: seoContent.site.tagline,
+  knowsAbout: seoContent.company.knowsAbout,
+  contactPoint: {
+    '@type': 'ContactPoint',
+    telephone: seoContent.company.phone,
+    contactType: 'customer service',
+    email: seoContent.company.email,
+    availableLanguage: ['English'],
+  },
+  parentOrganization: { '@id': structuredDataIds.organization },
+}
+
+const heroImageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ImageObject',
+  '@id': structuredDataIds.heroImage,
+  contentUrl: absoluteUrl(seoContent.site.ogImagePath),
+  url: absoluteUrl(seoContent.site.ogImagePath),
+  name: seoContent.site.ogImageAlt,
+  caption: `${seoContent.site.name} - ${seoContent.site.tagline}`,
+  inLanguage: seoContent.site.language,
+  representativeOfPage: true,
+  about: { '@id': structuredDataIds.organization },
+}
+
+function buildWebPageSchema({
+  id,
+  path,
+  name,
+  description,
+  about,
+  primaryImageOfPage,
+}: {
+  id: string
+  path: string
+  name: string
+  description: string
+  about?: { '@id': string }
+  primaryImageOfPage?: { '@id': string }
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': id,
+    url: absoluteUrl(path),
+    name,
+    description,
+    isPartOf: { '@id': structuredDataIds.website },
+    ...(about ? { about } : {}),
+    ...(primaryImageOfPage ? { primaryImageOfPage } : {}),
+    inLanguage: seoContent.site.language,
+  }
+}
+
+export function getGlobalStructuredDataSchemas() {
+  return [organizationSchema, websiteSchema, serviceSchema, employmentAgencySchema]
+}
+
+export function getHomeStructuredDataSchemas() {
   return [
-    {
-      '@context': 'https://schema.org',
-      '@type': 'Organization',
-      '@id': organizationId,
-      name: seoContent.site.name,
-      alternateName: seoContent.site.alternateName,
-      legalName: seoContent.site.legalName,
-      url: siteOrigin,
-      logo: absoluteUrl(seoContent.site.logoPath),
-      image: absoluteUrl(seoContent.site.logoPath),
-      description: seoContent.site.description,
-      email: seoContent.company.email,
-      telephone: seoContent.company.phone,
-      foundingDate: seoContent.company.founded,
-      slogan: seoContent.site.tagline,
-      knowsAbout: seoContent.company.knowsAbout,
-      address: {
-        '@type': 'PostalAddress',
-        addressLocality: seoContent.company.city,
-        addressRegion: seoContent.company.region,
-        addressCountry: seoContent.company.countryCode,
-      },
-      areaServed: areaServedSchema,
-      contactPoint: {
-        '@type': 'ContactPoint',
-        telephone: seoContent.company.phone,
-        contactType: 'customer service',
-        email: seoContent.company.email,
-        availableLanguage: ['English'],
-      },
-    },
-    {
-      '@context': 'https://schema.org',
-      '@type': 'WebSite',
-      '@id': websiteId,
-      url: siteOrigin,
-      name: seoContent.site.name,
-      description: seoContent.site.shortDescription,
-      publisher: { '@id': organizationId },
-      inLanguage: seoContent.site.language,
-    },
-    {
-      '@context': 'https://schema.org',
-      '@type': 'WebPage',
-      '@id': homepageId,
-      url: absoluteUrl('/'),
+    buildWebPageSchema({
+      id: structuredDataIds.homepage,
+      path: '/',
       name: seoContent.pages[0]?.title ?? seoContent.site.openGraphTitle,
       description: seoContent.site.description,
-      isPartOf: { '@id': websiteId },
-      about: { '@id': employmentAgencyId },
-      primaryImageOfPage: { '@id': heroImageId },
-      inLanguage: seoContent.site.language,
-    },
-    {
-      '@context': 'https://schema.org',
-      '@type': 'ImageObject',
-      '@id': heroImageId,
-      contentUrl: absoluteUrl(seoContent.site.ogImagePath),
-      url: absoluteUrl(seoContent.site.ogImagePath),
-      name: seoContent.site.ogImageAlt,
-      caption: `${seoContent.site.name} - ${seoContent.site.tagline}`,
-      inLanguage: seoContent.site.language,
-      representativeOfPage: true,
-      about: { '@id': organizationId },
-    },
-    {
-      '@context': 'https://schema.org',
-      '@type': 'Service',
-      '@id': serviceId,
-      name: 'Extended Expertise Talent Curation',
-      serviceType: 'Extended Expertise Recruitment',
-      description: seoContent.site.shortDescription,
-      provider: { '@id': organizationId },
-      areaServed: areaServedSchema,
-      audience: {
-        '@type': 'Audience',
-        audienceType: 'Digital-first teams',
-      },
-      hasOfferCatalog: {
-        '@type': 'OfferCatalog',
-        name: 'Grid&Dot Services',
-        itemListElement: seoContent.services.map((service) => ({
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: service.name,
-            description: service.description,
-          },
-        })),
-      },
-    },
-    {
-      '@context': 'https://schema.org',
-      '@type': 'EmploymentAgency',
-      '@id': employmentAgencyId,
-      name: seoContent.site.name,
-      alternateName: seoContent.site.alternateName,
-      description: seoContent.site.description,
-      url: siteOrigin,
-      image: absoluteUrl(seoContent.site.logoPath),
-      logo: absoluteUrl(seoContent.site.logoPath),
-      telephone: seoContent.company.phone,
-      email: seoContent.company.email,
-      address: {
-        '@type': 'PostalAddress',
-        addressLocality: seoContent.company.city,
-        addressRegion: seoContent.company.region,
-        addressCountry: seoContent.company.countryCode,
-      },
-      geo: {
-        '@type': 'GeoCoordinates',
-        latitude: seoContent.company.latitude,
-        longitude: seoContent.company.longitude,
-      },
-      areaServed: areaServedSchema,
-      slogan: seoContent.site.tagline,
-      knowsAbout: seoContent.company.knowsAbout,
-      contactPoint: {
-        '@type': 'ContactPoint',
-        telephone: seoContent.company.phone,
-        contactType: 'customer service',
-        email: seoContent.company.email,
-        availableLanguage: ['English'],
-      },
-      parentOrganization: { '@id': organizationId },
-    },
+      about: { '@id': structuredDataIds.employmentAgency },
+      primaryImageOfPage: { '@id': structuredDataIds.heroImage },
+    }),
+    heroImageSchema,
+  ]
+}
+
+export function getPrivacyStructuredDataSchemas() {
+  const privacyPage = getSeoPage('/privacy/')
+
+  return [
+    buildWebPageSchema({
+      id: structuredDataIds.privacyPage,
+      path: '/privacy/',
+      name: privacyPage?.title ?? 'Privacy Policy',
+      description: privacyPage?.description ?? 'Privacy policy for Grid&Dot.',
+      about: { '@id': structuredDataIds.organization },
+    }),
   ]
 }
 

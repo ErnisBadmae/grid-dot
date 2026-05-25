@@ -20,13 +20,24 @@ const buildRobotsText = (seoContent) => {
   const lines = []
 
   if (isIndexableDeployment()) {
+    const searchRetrievalBots = ['OAI-SearchBot', 'ChatGPT-User', 'Claude-User', 'Perplexity-User']
+    const aiTrainingAndIndexBots = ['GPTBot', 'Google-Extended', 'anthropic-ai', 'ClaudeBot', 'CCBot', 'PerplexityBot']
+
     lines.push('# General search engine crawlers')
     lines.push('User-agent: *')
     lines.push('Allow: /')
     lines.push('')
-    lines.push('# AI crawlers explicitly allowed for retrieval and future agent search')
+    lines.push('# AI search and user-triggered retrieval crawlers')
 
-    for (const bot of ['GPTBot', 'ChatGPT-User', 'Google-Extended', 'anthropic-ai', 'ClaudeBot', 'CCBot', 'PerplexityBot']) {
+    for (const bot of searchRetrievalBots) {
+      lines.push(`User-agent: ${bot}`)
+      lines.push('Allow: /')
+      lines.push('')
+    }
+
+    lines.push('# AI training, indexing, and corpus crawlers')
+
+    for (const bot of aiTrainingAndIndexBots) {
       lines.push(`User-agent: ${bot}`)
       lines.push('Allow: /')
       lines.push('')

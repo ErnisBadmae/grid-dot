@@ -5,7 +5,7 @@
     "type": "Recruitment Agency",
     "specialty": "Extended Expertise Talent Curation",
     "tagline": "Extended Expertise. No CVs - Real Expertise.",
-    "description": "Grid&Dot is a London-based talent curation company, also found via searches for grid&dot, grid & dot, gird and dot, and grid&dot ltd. We help digital-first teams find carefully selected specialists in product strategy, data architecture, delivery, UX, design, and content. No CVs - real expertise.",
+    "description": "Grid&Dot is a London-based extended expertise and talent curation company for digital-first teams. We help B2B product, data, UX, design, content, and delivery teams find carefully selected specialists who fit the work, culture, and goals. No CVs - real expertise.",
     "founded": "2024",
     "location": {
       "city": "London",
@@ -112,8 +112,8 @@
     }
   ],
   "metadata": {
-    "version": "1.1",
-    "last_updated": "2026-04-15",
+    "version": "1.2",
+    "last_updated": "2026-05-25",
     "format": "JSON",
     "purpose": "Machine-readable company information for AI agents and automated systems.",
     "schema": "https://www.gridanddot.com/api/metadata.json"

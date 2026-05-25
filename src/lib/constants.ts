@@ -7,15 +7,15 @@ export const SECTION_3 = {
   items: [
     {
       number: '01',
-      description: 'Talent Acquisition - Finding the right people for your team',
+      description: 'Extended Expertise - Curated digital specialists for your team',
     },
     {
       number: '02',
-      description: 'HR Consulting - Strategic advice for your HR needs',
+      description: 'Product, data, UX, content, and delivery specialists',
     },
     {
       number: '03',
-      description: 'Career Coaching - Helping candidates reach their potential',
+      description: 'Quality-driven matching for long-term team fit',
     },
   ],
 }

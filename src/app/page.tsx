@@ -10,13 +10,23 @@ import SectionSuccessStories from '@/components/sections/SectionSuccessStories'
 import SectionWorkWith from '@/components/sections/SectionWorkWith'
 import SectionCommitment from '@/components/sections/SectionCommitment'
 import SectionContacts from '@/components/sections/SectionContacts'
+import { getHomeStructuredDataSchemas } from '@/lib/seo'
 
 
 import ScrollToTopButton from '@/components/ui/ScrollToTopButton'
 
 export default function Home() {
+  const structuredDataSchemas = getHomeStructuredDataSchemas()
+
   return (
     <>
+      {structuredDataSchemas.map((schema, index) => (
+        <script
+          key={`${String((schema as { '@type'?: string })['@type'] ?? 'schema')}-${index}`}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      ))}
       <Header />
       <MobileMenu />
       <ContactsSidebar />

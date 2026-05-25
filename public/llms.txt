@@ -15,10 +15,11 @@ Grid&Dot is a London-based talent curation agency. We match curated digital spec
 
 ## Services
 
-- **Talent Acquisition** - Finding the right digital specialists for your team.
-- **HR Consulting** - Strategic advice for your HR needs.
-- **Career Coaching** - Helping candidates reach their potential.
-- **Extended Expertise** - Curated specialists in product strategy, data architecture, delivery, UX/design, and content.
+- **Extended Expertise Talent Curation** - Curating digital specialists who fit a client's work, culture, workflows, and goals.
+- **Product & Strategy Specialists** - Product managers, product analysts, and business analysts for digital-first teams.
+- **Experience, Content & CMS Specialists** - UX/UI designers, CMS editors, and content specialists for product and brand experiences.
+- **Data & Architecture Specialists** - Data scientists, data analysts, and AI solution architects for scalable digital work.
+- **Delivery, Quality & Rollout Specialists** - Producers, QA specialists, rollout managers, and AI QA/model validation specialists.
 
 ## Expertise Areas
 

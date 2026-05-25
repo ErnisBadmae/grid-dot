@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { basePath } from '@/lib/basePath'
-import { buildPageMetadata } from '@/lib/seo'
+import { buildPageMetadata, getPrivacyStructuredDataSchemas } from '@/lib/seo'
 
 export const metadata = buildPageMetadata({
   path: '/privacy/',
@@ -10,17 +10,27 @@ export const metadata = buildPageMetadata({
 })
 
 export default function PrivacyPage() {
+  const structuredDataSchemas = getPrivacyStructuredDataSchemas()
+
   return (
-    <main
-      style={{
-        backgroundColor: '#F2F0EF',
-        minHeight: '100vh',
-        padding: '60px 73px 120px',
-        fontFamily: "'Overpass Mono', monospace",
-        color: '#0B1215',
-        position: 'relative',
-      }}
-    >
+    <>
+      {structuredDataSchemas.map((schema, index) => (
+        <script
+          key={`${String((schema as { '@type'?: string })['@type'] ?? 'schema')}-${index}`}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      ))}
+      <main
+        style={{
+          backgroundColor: '#F2F0EF',
+          minHeight: '100vh',
+          padding: '60px 73px 120px',
+          fontFamily: "'Overpass Mono', monospace",
+          color: '#0B1215',
+          position: 'relative',
+        }}
+      >
       <Link href={`${basePath}/`} style={{ position: 'fixed', top: '40px', right: '40px', cursor: 'pointer', zIndex: 10 }}>
         <img src={`${basePath}/images/Close button.svg`} alt="Close" style={{ width: '40px', height: '40px' }} />
       </Link>
@@ -46,12 +56,12 @@ export default function PrivacyPage() {
             color: '#0B1215',
           }}
         >
-          Last updated: Jan '26
+          Last updated: Jan &apos;26
         </p>
 
         <div style={{ fontSize: '16px', fontWeight: 400, letterSpacing: '0em', lineHeight: 1.6, marginBottom: '60px' }}>
           <p style={{ marginBottom: '24px' }}>
-            This Privacy Policy explains how Grid&Dot ("we", "us", "our") collects, uses, and protects<br />
+            This Privacy Policy explains how Grid&Dot (&quot;we&quot;, &quot;us&quot;, &quot;our&quot;) collects, uses, and protects<br />
             personal data when you visit our website or contact us.<br />
             We are committed to handling personal data responsibly, transparently, and in line with UK<br />
             GDPR.
@@ -222,6 +232,7 @@ export default function PrivacyPage() {
       >
         We respect your data, your time, and your trust.
       </div>
-    </main>
+      </main>
+    </>
   )
 }
