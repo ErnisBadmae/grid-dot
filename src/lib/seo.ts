@@ -30,6 +30,9 @@ const areaServedSchema = seoContent.company.areasServed.map((area) => ({
   name: area,
 }))
 
+// Verifiable public profiles that disambiguate the Grid&Dot entity for search and AI agents.
+const socialProfiles = seoContent.company.socialProfiles ?? []
+
 export function absoluteUrl(path = '/') {
   return new URL(path, siteOrigin).toString()
 }
@@ -139,8 +142,10 @@ const structuredDataIds = {
   website: `${siteOrigin}#website`,
   homepage: `${siteOrigin}#webpage`,
   privacyPage: `${siteOrigin}/privacy/#webpage`,
+  privacyBreadcrumb: `${siteOrigin}/privacy/#breadcrumb`,
   employmentAgency: `${siteOrigin}#employment-agency`,
   service: `${siteOrigin}#service`,
+  faq: `${siteOrigin}#faq`,
   heroImage: `${siteOrigin}#primary-image`,
 } as const
 
@@ -160,6 +165,7 @@ const organizationSchema = {
   foundingDate: seoContent.company.founded,
   slogan: seoContent.site.tagline,
   knowsAbout: seoContent.company.knowsAbout,
+  ...(socialProfiles.length > 0 ? { sameAs: socialProfiles } : {}),
   address: {
     '@type': 'PostalAddress',
     addressLocality: seoContent.company.city,
@@ -240,6 +246,7 @@ const employmentAgencySchema = {
   areaServed: areaServedSchema,
   slogan: seoContent.site.tagline,
   knowsAbout: seoContent.company.knowsAbout,
+  ...(socialProfiles.length > 0 ? { sameAs: socialProfiles } : {}),
   contactPoint: {
     '@type': 'ContactPoint',
     telephone: seoContent.company.phone,
@@ -261,6 +268,22 @@ const heroImageSchema = {
   inLanguage: seoContent.site.language,
   representativeOfPage: true,
   about: { '@id': structuredDataIds.organization },
+}
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  '@id': structuredDataIds.faq,
+  inLanguage: seoContent.site.language,
+  isPartOf: { '@id': structuredDataIds.website },
+  mainEntity: seoContent.faq.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer,
+    },
+  })),
 }
 
 function buildWebPageSchema({
@@ -286,9 +309,24 @@ function buildWebPageSchema({
     name,
     description,
     isPartOf: { '@id': structuredDataIds.website },
+    dateModified: seoContent.metadata.lastUpdated,
     ...(about ? { about } : {}),
     ...(primaryImageOfPage ? { primaryImageOfPage } : {}),
     inLanguage: seoContent.site.language,
+  }
+}
+
+function buildBreadcrumbSchema(id: string, items: { name: string; path: string }[]) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    '@id': id,
+    itemListElement: items.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: item.name,
+      item: absoluteUrl(item.path),
+    })),
   }
 }
 
@@ -307,6 +345,7 @@ export function getHomeStructuredDataSchemas() {
       primaryImageOfPage: { '@id': structuredDataIds.heroImage },
     }),
     heroImageSchema,
+    faqSchema,
   ]
 }
 
@@ -321,6 +360,10 @@ export function getPrivacyStructuredDataSchemas() {
       description: privacyPage?.description ?? 'Privacy policy for Grid&Dot.',
       about: { '@id': structuredDataIds.organization },
     }),
+    buildBreadcrumbSchema(structuredDataIds.privacyBreadcrumb, [
+      { name: 'Home', path: '/' },
+      { name: privacyPage?.title ?? 'Privacy Policy', path: '/privacy/' },
+    ]),
   ]
 }
 

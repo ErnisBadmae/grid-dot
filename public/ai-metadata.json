@@ -1,6 +1,6 @@
 {
-  "version": "1.2",
-  "lastUpdated": "2026-05-25",
+  "version": "1.3",
+  "lastUpdated": "2026-06-04",
   "company": {
     "name": "Grid&Dot",
     "alternateName": "Grid & Dot",
@@ -10,7 +10,10 @@
     "slogan": "Extended Expertise. No CVs - Real Expertise.",
     "description": "Grid&Dot is a London-based extended expertise and talent curation company for digital-first teams. We help B2B product, data, UX, design, content, and delivery teams find carefully selected specialists who fit the work, culture, and goals. No CVs - real expertise.",
     "url": "https://www.gridanddot.com",
-    "logo": "https://www.gridanddot.com/images/grid-dot-logo.svg"
+    "logo": "https://www.gridanddot.com/images/grid-dot-logo.svg",
+    "sameAs": [
+      "https://www.linkedin.com/company/gridanddot"
+    ]
   },
   "searchPatterns": [
     "Grid&Dot",

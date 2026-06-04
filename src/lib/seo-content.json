@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "version": "1.2",
-    "lastUpdated": "2026-05-25"
+    "version": "1.3",
+    "lastUpdated": "2026-06-04"
   },
   "site": {
     "name": "Grid&Dot",
@@ -39,12 +39,7 @@
     "ogImageAlt": "Grid&Dot - Extended Expertise",
     "faviconPath": "/favicon.svg",
     "logoPath": "/images/grid-dot-logo.svg",
-    "searchAliases": [
-      "Grid&Dot",
-      "Grid & Dot",
-      "Gird and Dot",
-      "Grid&Dot Ltd"
-    ]
+    "searchAliases": ["Grid&Dot", "Grid & Dot", "Gird and Dot", "Grid&Dot Ltd"]
   },
   "company": {
     "type": "EmploymentAgency",
@@ -53,17 +48,14 @@
     "phone": "+447782795174",
     "telegram": "Gridanddot",
     "whatsapp": "447782795174",
+    "socialProfiles": ["https://www.linkedin.com/company/gridanddot"],
     "city": "London",
     "region": "Greater London",
     "country": "United Kingdom",
     "countryCode": "GB",
     "latitude": "51.5074",
     "longitude": "-0.1278",
-    "areasServed": [
-      "United Kingdom",
-      "EMEA",
-      "APAC"
-    ],
+    "areasServed": ["United Kingdom", "EMEA", "APAC"],
     "knowsAbout": [
       "Extended Expertise",
       "Talent Curation",

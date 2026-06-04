@@ -43,6 +43,10 @@ Grid&Dot is a London-based talent curation agency. We match curated digital spec
 - Telegram: @Gridanddot
 - Website: https://www.gridanddot.com
 
+## Profiles
+
+- https://www.linkedin.com/company/gridanddot
+
 ## Links
 
 - [Full AI context](/llms-full.txt)

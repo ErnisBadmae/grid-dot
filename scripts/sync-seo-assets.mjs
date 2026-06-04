@@ -118,6 +118,7 @@ const buildLlmsText = (seoContent) => {
     `- Telegram: ${formatTelegramHandle(seoContent.company.telegram)}`,
     `- Website: ${seoContent.site.productionUrl}`,
     '',
+    ...buildProfileLines(seoContent),
     '## Links',
     '',
     '- [Full AI context](/llms-full.txt)',
@@ -125,6 +126,16 @@ const buildLlmsText = (seoContent) => {
   ]
 
   return `${lines.join('\n')}\n`
+}
+
+const buildProfileLines = (seoContent) => {
+  const profiles = seoContent.company.socialProfiles ?? []
+
+  if (profiles.length === 0) {
+    return []
+  }
+
+  return ['## Profiles', '', ...profiles.map((url) => `- ${url}`), '']
 }
 
 const buildLlmsFullText = (seoContent) => {
@@ -168,6 +179,7 @@ const buildLlmsFullText = (seoContent) => {
     `- Telegram: ${formatTelegramHandle(seoContent.company.telegram)}`,
     `- Website: ${seoContent.site.productionUrl}`,
     '',
+    ...buildProfileLines(seoContent),
     '## FAQ',
     '',
     ...seoContent.faq.flatMap((item) => [
@@ -197,6 +209,7 @@ const buildAiMetadata = (seoContent) => ({
     description: seoContent.site.description,
     url: seoContent.site.productionUrl,
     logo: absoluteUrl(seoContent.site.productionUrl, seoContent.site.logoPath),
+    sameAs: seoContent.company.socialProfiles ?? [],
   },
   searchPatterns: seoContent.site.searchAliases,
   contact: {
